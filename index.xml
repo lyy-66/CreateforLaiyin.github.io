@@ -7,7 +7,23 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Lyy</copyright>
-        <lastBuildDate>Sun, 18 Jan 2026 20:44:33 +0800</lastBuildDate><atom:link href="https://lyy-66.github.io/CreateforLaiyin.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 18 Jan 2026 23:39:39 +0800</lastBuildDate><atom:link href="https://lyy-66.github.io/CreateforLaiyin.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Chapter1</title>
+        <link>https://lyy-66.github.io/CreateforLaiyin.github.io/p/chapter1/</link>
+        <pubDate>Sun, 18 Jan 2026 23:39:39 +0800</pubDate>
+        
+        <guid>https://lyy-66.github.io/CreateforLaiyin.github.io/p/chapter1/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>FirstofAll</title>
+        <link>https://lyy-66.github.io/CreateforLaiyin.github.io/p/firstofall/</link>
+        <pubDate>Sun, 18 Jan 2026 23:06:37 +0800</pubDate>
+        
+        <guid>https://lyy-66.github.io/CreateforLaiyin.github.io/p/firstofall/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>MyFirstBlog</title>
         <link>https://lyy-66.github.io/CreateforLaiyin.github.io/p/myfirstblog/</link>
         <pubDate>Sun, 18 Jan 2026 20:44:33 +0800</pubDate>
