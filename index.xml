@@ -13,7 +13,7 @@
         <pubDate>Tue, 20 Jan 2026 21:25:54 +0800</pubDate>
         
         <guid>https://lyy-66.github.io/CreateforLaiyin.github.io/p/markdown/</guid>
-        <description>&lt;h1 id=&#34;chapter-1-markdown-基础语法&#34;&gt;Chapter 1 Markdown 基础语法
+        <description>&lt;img src="https://lyy-66.github.io/CreateforLaiyin.github.io/p/markdown/17.jpg" alt="Featured image of post Markdown" /&gt;&lt;h1 id=&#34;chapter-1-markdown-基础语法&#34;&gt;Chapter 1 Markdown 基础语法
 &lt;/h1&gt;&lt;h2 id=&#34;标题&#34;&gt;标题
 &lt;/h2&gt;&lt;p&gt;Markdown利用#来表示标题，#的个数越多，字体越小，最多可以有6级标题&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -174,16 +174,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;表格&#34;&gt;表格
 &lt;/h2&gt;&lt;p&gt;这个可以手动打但是很麻烦,我一般不手打&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://lyy-66.github.io/CreateforLaiyin.github.io/CreateforLaiyin.github.io/index.assets/image-20260120155842257.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;image-20260120155842257&#34;
-	
-	
-&gt;&lt;/p&gt;
+&lt;img src=&#34;2.png&#34;&gt;
 &lt;p&gt;直接在这上面找就行&lt;/p&gt;
 &lt;h2 id=&#34;分割线&#34;&gt;分割线
 &lt;/h2&gt;&lt;p&gt;形式有两种&lt;/p&gt;
@@ -204,16 +195,7 @@
 &lt;h2 id=&#34;公式&#34;&gt;公式
 &lt;/h2&gt;&lt;h3 id=&#34;字母&#34;&gt;字母
 &lt;/h3&gt;&lt;h4 id=&#34;希腊字母&#34;&gt;希腊字母
-&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://lyy-66.github.io/CreateforLaiyin.github.io/CreateforLaiyin.github.io/index.assets/image-20260120160724250.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;image-20260120160724250&#34;
-	
-	
-&gt;&lt;/p&gt;
+&lt;/h4&gt;&lt;img src=&#34;3.png&#34;&gt;
 &lt;p&gt;如果要&lt;em&gt;&lt;strong&gt;大写&lt;/strong&gt;&lt;/em&gt;希腊字母则大写首字母即可，例子如下:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -346,99 +328,27 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;各种箭头(我有点懒，直接上图吧):&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://lyy-66.github.io/CreateforLaiyin.github.io/CreateforLaiyin.github.io/index.assets/image-20260120163658901.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;image-20260120163658901&#34;
-	
-	
-&gt;&lt;/p&gt;
+&lt;img src=&#34;4.png&#34;&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;括号(个人感觉不常用，忘了来翻就行):&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://lyy-66.github.io/CreateforLaiyin.github.io/CreateforLaiyin.github.io/index.assets/image-20260120163729279.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;image-20260120163729279&#34;
-	
-	
-&gt;&lt;/p&gt;
+&lt;img src=&#34;5.png&#34;&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;数学符号&#34;&gt;数学符号
 &lt;/h3&gt;&lt;h4 id=&#34;运算符&#34;&gt;运算符
-&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://lyy-66.github.io/CreateforLaiyin.github.io/CreateforLaiyin.github.io/index.assets/image-20260120165545655.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;image-20260120165545655&#34;
-	
-	
-&gt;&lt;/p&gt;
+&lt;/h4&gt;&lt;img src=&#34;6.png&#34;&gt;
 &lt;h4 id=&#34;集合&#34;&gt;集合
-&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://lyy-66.github.io/CreateforLaiyin.github.io/CreateforLaiyin.github.io/index.assets/image-20260120165604757.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;image-20260120165604757&#34;
-	
-	
-&gt;&lt;/p&gt;
-&lt;h4 id=&#34;集合-1&#34;&gt;集合
-&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://lyy-66.github.io/CreateforLaiyin.github.io/CreateforLaiyin.github.io/index.assets/image-20260120165632074.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;image-20260120165632074&#34;
-	
-	
-&gt;&lt;/p&gt;
+&lt;/h4&gt;&lt;img src=&#34;7.png&#34;&gt;
+&lt;h4 id=&#34;几何图形&#34;&gt;几何图形
+&lt;/h4&gt;&lt;img src=&#34;8.png&#34;&gt;
 &lt;h4 id=&#34;微积分与逻辑&#34;&gt;微积分与逻辑
-&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://lyy-66.github.io/CreateforLaiyin.github.io/CreateforLaiyin.github.io/index.assets/image-20260120165705352.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;image-20260120165705352&#34;
-	
-	
-&gt;&lt;/p&gt;
+&lt;/h4&gt;&lt;img src=&#34;9.png&#34;&gt;
 &lt;h4 id=&#34;特殊运算&#34;&gt;特殊运算
 &lt;/h4&gt;&lt;h5 id=&#34;求和&#34;&gt;求和
-&lt;/h5&gt;&lt;p&gt;&lt;img src=&#34;https://lyy-66.github.io/CreateforLaiyin.github.io/CreateforLaiyin.github.io/index.assets/image-20260120165853804.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;image-20260120165853804&#34;
-	
-	
-&gt;&lt;/p&gt;
+&lt;/h5&gt;&lt;img src=&#34;10.png&#34;&gt;
 &lt;h5 id=&#34;极限&#34;&gt;极限
-&lt;/h5&gt;&lt;p&gt;&lt;img src=&#34;https://lyy-66.github.io/CreateforLaiyin.github.io/CreateforLaiyin.github.io/index.assets/image-20260120165908580.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;image-20260120165908580&#34;
-	
-	
-&gt;&lt;/p&gt;
+&lt;/h5&gt;&lt;img src=&#34;11.png&#34;&gt;
 &lt;h5 id=&#34;积分这个可能比较常用&#34;&gt;积分(这个可能比较常用)
 &lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -453,27 +363,9 @@
 &lt;/div&gt;&lt;p&gt;效果是这样的:&lt;/p&gt;
 &lt;p&gt;$\int f(x)dx$&lt;/p&gt;
 &lt;p&gt;$\iiiint _{0}^{\infty}f(x)dx$&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://lyy-66.github.io/CreateforLaiyin.github.io/CreateforLaiyin.github.io/index.assets/image-20260120165924232.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;image-20260120165924232&#34;
-	
-	
-&gt;&lt;/p&gt;
+&lt;img src=&#34;12.png&#34;&gt;
 &lt;h5 id=&#34;连乘&#34;&gt;连乘
-&lt;/h5&gt;&lt;p&gt;&lt;img src=&#34;https://lyy-66.github.io/CreateforLaiyin.github.io/CreateforLaiyin.github.io/index.assets/image-20260120165954686.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;image-20260120165954686&#34;
-	
-	
-&gt;&lt;/p&gt;
+&lt;/h5&gt;&lt;img src=&#34;13.png&#34;&gt;
 &lt;h5 id=&#34;分式和根式&#34;&gt;分式和根式
 &lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -540,36 +432,9 @@ $$
 \begin{split}A&amp;amp;=B+C\&amp;amp;=C+D\&amp;amp;=E+F\end{split}
 $$&lt;/p&gt;
 &lt;h4 id=&#34;矩阵&#34;&gt;矩阵
-&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://lyy-66.github.io/CreateforLaiyin.github.io/CreateforLaiyin.github.io/index.assets/image-20260120174855084.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;image-20260120174855084&#34;
-	
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://lyy-66.github.io/CreateforLaiyin.github.io/CreateforLaiyin.github.io/index.assets/image-20260120174912789.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;image-20260120174912789&#34;
-	
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://lyy-66.github.io/CreateforLaiyin.github.io/CreateforLaiyin.github.io/index.assets/image-20260120174932160.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;image-20260120174932160&#34;
-	
-	
-&gt;&lt;/p&gt;
+&lt;/h4&gt;&lt;img src=&#34;14.png&#34;&gt;
+&lt;img src=&#34;15.png&#34;&gt;
+&lt;img src=&#34;16.png&#34;&gt;
 </description>
         </item>
         <item>
