@@ -42,7 +42,371 @@
         }
     })();
 </script>
-<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+
+        <div id="global-music-player" style="position: fixed; bottom: 80px; left: 10px; z-index: 9999; background: var(--card-bg); padding: 3px 6px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); cursor: pointer;">
+            
+            <div id="minimize-btn" style="display: flex; align-items: center; justify-content: center; font-size: 14px; color: var(--text-color);">
+                🎵 音乐
+            </div>
+            
+            
+            <div id="player-controls" style="display: none; margin-top: 4px; transition: all 0.3s ease;">
+                <p style="color: var(--text-color); font-size: 12px; margin: 0 0 2px 0; text-align: center;" id="music-title">正在播放：see you soon</p>
+                
+                
+                <div style="display: flex; flex-direction: column; gap: 2px; margin-bottom: 4px; padding: 0 4px;">
+                    
+                    <input 
+                        type="range" 
+                        id="progress-bar" 
+                        min="0" 
+                        max="100" 
+                        step="0.1" 
+                        value="0"
+                        style="width: 100%; height: 4px; cursor: pointer; accent-color: var(--link-color); margin: 0;"
+                    >
+                    
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span id="current-time" style="color: var(--text-color); font-size: 9px;">00:00</span>
+                        <span id="total-time" style="color: var(--text-color); font-size: 9px;">00:00</span>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 6px; align-items: center; justify-content: center; margin-bottom: 2px;">
+                    <button onclick="prevMusic(); event.stopPropagation();" style="border: none; background: transparent; color: var(--text-color); cursor: pointer; font-size: 11px;">←上曲</button>
+                    
+                    <button onclick="togglePlay(); event.stopPropagation();" style="border: none; background: transparent; color: var(--text-color); cursor: pointer; font-size: 11px;" id="play-btn">▶️ 播放</button>
+                    <button onclick="nextMusic(); event.stopPropagation();" style="border: none; background: transparent; color: var(--text-color); cursor: pointer; font-size: 11px;">下曲→</button>
+                    
+                    <button onclick="toggleMusicList(); event.stopPropagation();" style="border: none; background: transparent; color: var(--text-color); cursor: pointer; font-size: 11px;">📜 列表</button>
+                </div>
+                <div style="display: flex; justify-content: center; align-items: center; gap: 4px;">
+                    <span style="color: var(--text-color); font-size: 10px;">音量🔊</span>
+                    <input type="range" id="volume-control" min="0" max="1" step="0.05" value="0.3" 
+                           style="width: 120px; height: 4px; cursor: pointer; accent-color: var(--link-color);">
+                </div>
+            </div>
+            <audio id="bg-music" preload="metadata" style="display: none;"></audio>
+        </div>
+
+        
+        <div id="music-list-modal" style="position: fixed; bottom: 140px; left: 10px; z-index: 9998; background: var(--card-bg); padding: 8px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.2); display: none; max-height: 200px; overflow-y: auto; min-width: 150px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; padding-bottom: 4px; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                <span style="color: var(--text-color); font-size: 12px; font-weight: bold;">🎵 播放列表</span>
+                <button onclick="toggleMusicList(); event.stopPropagation();" style="border: none; background: transparent; color: var(--text-color); cursor: pointer; font-size: 10px; padding: 0;">✕</button>
+            </div>
+            <div id="music-list-container" style="display: flex; flex-direction: column; gap: 3px;">
+                
+            </div>
+        </div>
+
+        
+        <script>
+            
+            const musicList = [
+                 { src: "/audio/song1.mp3", title: "song1" },
+                 { src: "/audio/song2.mp3", title: "song2" },
+                 { src: "/audio/song3.mp3", title: "song3" },
+            ];
+
+            
+            const audio = document.getElementById('bg-music');
+            const titleEl = document.getElementById('music-title');
+            const playBtn = document.getElementById('play-btn');
+            const volumeControl = document.getElementById('volume-control');
+            const playerContainer = document.getElementById('global-music-player');
+            const playerControls = document.getElementById('player-controls');
+            const minimizeBtn = document.getElementById('minimize-btn');
+            
+            const musicListModal = document.getElementById('music-list-modal');
+            const musicListContainer = document.getElementById('music-list-container');
+            
+            const progressBar = document.getElementById('progress-bar');
+            const currentTimeEl = document.getElementById('current-time');
+            const totalTimeEl = document.getElementById('total-time');
+            
+            
+            let currentTrack = 0;
+            let isExpanded = false;
+            let isListShow = false; 
+            audio.volume = 0.3;
+            let isDraggingProgress = false; 
+
+            
+            const STORAGE = {
+                TRACK: 'blog_music_current_track',
+                TIME: 'blog_music_play_time',
+                PLAYING: 'blog_music_is_playing',
+                VOLUME: 'blog_music_volume'
+            };
+
+            
+            function formatTime(seconds) {
+                if (isNaN(seconds)) return '00:00';
+                const mins = Math.floor(seconds / 60);
+                const secs = Math.floor(seconds % 60);
+                return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+            }
+
+            
+            function updateProgressBar() {
+                if (isDraggingProgress) return; 
+                if (audio.duration) {
+                    const progress = (audio.currentTime / audio.duration) * 100;
+                    progressBar.value = progress;
+                    currentTimeEl.textContent = formatTime(audio.currentTime);
+                }
+            }
+
+            
+            function setAudioProgress() {
+                if (!audio.duration) return;
+                const progress = parseFloat(progressBar.value);
+                const newTime = (progress / 100) * audio.duration;
+                audio.currentTime = newTime;
+                currentTimeEl.textContent = formatTime(newTime);
+                saveAllState(); 
+            }
+
+            
+            function initMusicList() {
+                musicListContainer.innerHTML = '';
+                musicList.forEach((item, index) => {
+                    const listItem = document.createElement('div');
+                    listItem.style = `
+                        padding: 4px 8px;
+                        border-radius: 4px;
+                        color: var(--text-color);
+                        font-size: 11px;
+                        cursor: pointer;
+                        transition: background 0.2s;
+                    `;
+                    
+                    if (index === currentTrack) {
+                        listItem.style.background = 'var(--link-color)';
+                        listItem.style.color = '#fff';
+                    }
+                    listItem.innerHTML = `${index + 1}. ${item.title}`;
+                    
+                    listItem.onclick = function() {
+                        selectMusic(index);
+                        toggleMusicList(); 
+                    };
+                    musicListContainer.appendChild(listItem);
+                });
+            }
+
+            
+            function toggleMusicList() {
+                isListShow = !isListShow;
+                musicListModal.style.display = isListShow ? 'block' : 'none';
+                if (isListShow) {
+                    initMusicList(); 
+                }
+            }
+
+            
+            function selectMusic(index) {
+                currentTrack = index;
+                audio.src = musicList[currentTrack].src;
+                audio.currentTime = 0; 
+                audio.play();
+                playBtn.innerHTML = '⏸️ 暂停';
+                titleEl.textContent = `正在播放：${musicList[currentTrack].title}`;
+                updateMinimizeBtn();
+                saveAllState();
+                initMusicList(); 
+                
+                progressBar.value = 0;
+                currentTimeEl.textContent = '00:00';
+            }
+
+            
+            function togglePlayer() {
+                isExpanded = !isExpanded;
+                playerControls.style.display = isExpanded ? 'block' : 'none';
+                
+                if (musicListModal.style.display === 'block') {
+                    toggleMusicList();
+                }
+                updateMinimizeBtn();
+            }
+
+            
+            function updateMinimizeBtn() {
+                const statusIcon = audio.paused ? '▶️' : '⏸️';
+                minimizeBtn.innerHTML = `${statusIcon} ${musicList[currentTrack].title}`;
+            }
+
+            
+            function saveAllState() {
+                localStorage.setItem(STORAGE.TRACK, currentTrack);
+                localStorage.setItem(STORAGE.TIME, audio.currentTime); 
+                localStorage.setItem(STORAGE.PLAYING, !audio.paused);
+                localStorage.setItem(STORAGE.VOLUME, audio.volume);
+            }
+
+            
+            function restoreAllState() {
+                
+                const savedTrack = localStorage.getItem(STORAGE.TRACK);
+                if (savedTrack !== null) {
+                    currentTrack = parseInt(savedTrack);
+                    
+                    currentTrack = Math.max(0, Math.min(currentTrack, musicList.length - 1));
+                }
+
+                
+                const savedTime = localStorage.getItem(STORAGE.TIME);
+                const playTime = savedTime !== null ? parseFloat(savedTime) : 0;
+
+                
+                const savedVolume = localStorage.getItem(STORAGE.VOLUME);
+                if (savedVolume !== null) {
+                    audio.volume = parseFloat(savedVolume);
+                    volumeControl.value = audio.volume;
+                }
+
+                
+                audio.src = musicList[currentTrack].src;
+                audio.currentTime = playTime; 
+                titleEl.textContent = `正在播放：${musicList[currentTrack].title}`;
+                updateMinimizeBtn();
+                initMusicList(); 
+
+                
+                const isPlaying = localStorage.getItem(STORAGE.PLAYING) === 'true';
+                if (isPlaying) {
+                    
+                    audio.play().then(() => {
+                        playBtn.innerHTML = '⏸️ 暂停';
+                        updateMinimizeBtn();
+                    }).catch(err => {
+                        console.log('自动播放需手动触发（浏览器安全策略）：', err);
+                        playBtn.innerHTML = '▶️ 播放';
+                    });
+                } else {
+                    playBtn.innerHTML = '▶️ 播放';
+                }
+            }
+
+            
+            function togglePlay() {
+                if (audio.paused) {
+                    audio.play();
+                    playBtn.innerHTML = '⏸️ 暂停';
+                } else {
+                    audio.pause();
+                    playBtn.innerHTML = '▶️ 播放';
+                }
+                updateMinimizeBtn();
+                saveAllState();
+            }
+
+            
+            function prevMusic() {
+                currentTrack = (currentTrack - 1 + musicList.length) % musicList.length;
+                audio.src = musicList[currentTrack].src;
+                audio.currentTime = 0; 
+                audio.play();
+                playBtn.innerHTML = '⏸️ 暂停';
+                titleEl.textContent = `正在播放：${musicList[currentTrack].title}`;
+                updateMinimizeBtn();
+                saveAllState();
+                initMusicList(); 
+                
+                progressBar.value = 0;
+                currentTimeEl.textContent = '00:00';
+            }
+
+            
+            function nextMusic() {
+                currentTrack = (currentTrack + 1) % musicList.length;
+                audio.src = musicList[currentTrack].src;
+                audio.currentTime = 0; 
+                audio.play();
+                playBtn.innerHTML = '⏸️ 暂停';
+                titleEl.textContent = `正在播放：${musicList[currentTrack].title}`;
+                updateMinimizeBtn();
+                saveAllState();
+                initMusicList(); 
+                
+                progressBar.value = 0;
+                currentTimeEl.textContent = '00:00';
+            }
+
+            
+            volumeControl.addEventListener('input', function() {
+                audio.volume = this.value;
+                saveAllState();
+            });
+
+            
+            audio.addEventListener('ended', nextMusic);
+
+            
+            let saveTimer = null;
+            audio.addEventListener('timeupdate', function() {
+                
+                updateProgressBar();
+                
+                clearTimeout(saveTimer);
+                saveTimer = setTimeout(saveAllState, 300);
+            });
+
+            
+            audio.addEventListener('loadedmetadata', function() {
+                totalTimeEl.textContent = formatTime(audio.duration);
+                updateProgressBar();
+            });
+
+            
+            
+            progressBar.addEventListener('mousedown', function() {
+                isDraggingProgress = true;
+            });
+            
+            document.addEventListener('mouseup', function() {
+                if (isDraggingProgress) {
+                    isDraggingProgress = false;
+                    setAudioProgress();
+                }
+            });
+            
+            progressBar.addEventListener('input', function() {
+                if (!isDraggingProgress) {
+                    setAudioProgress();
+                }
+            });
+            
+            progressBar.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+
+            
+            window.addEventListener('beforeunload', saveAllState);
+
+            
+            document.addEventListener('click', function(e) {
+                if (isListShow && 
+                    !musicListModal.contains(e.target) && 
+                    !playerContainer.contains(e.target)) {
+                    toggleMusicList();
+                }
+            });
+
+            
+            playerContainer.addEventListener('click', togglePlayer);
+            audio.addEventListener('play', saveAllState);
+            audio.addEventListener('pause', saveAllState);
+
+            
+            document.addEventListener('DOMContentLoaded', function() {
+                restoreAllState();
+            });
+        </script>
+
+        <div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
     <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
