@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Chapter 1 Matlab as a Calculator \u200b \u200b ——罗雪芮 2026.2.1-2.8 运算符号以及法则 基础加减乘除乘方符号如下 ： 1 + - * / ^ 比较全面的运算使用写法 1 2 3 4 5 6 7 8 9 10 11 12 % 加减乘除 a">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Chapter 1 Matlab as a Calculator \u200b \u200b ——罗雪芮 2026.2.1-2.8 Chapter1 运算符号以及法则 基础加减乘除乘方符号如下 ： 1 + - * / ^ 比较全面的运算使用写法 1 2 3 4 5 6 7 8 9 10 11 12 % 加减乘除">
 <title>Matlab</title>
 
 <link rel='canonical' href='https://lyy-66.github.io/CreateforLaiyin.github.io/p/matlab/'>
 
 <link rel="stylesheet" href="/CreateforLaiyin.github.io/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Matlab">
-<meta property='og:description' content="Chapter 1 Matlab as a Calculator \u200b \u200b ——罗雪芮 2026.2.1-2.8 运算符号以及法则 基础加减乘除乘方符号如下 ： 1 + - * / ^ 比较全面的运算使用写法 1 2 3 4 5 6 7 8 9 10 11 12 % 加减乘除 a">
+<meta property='og:description' content="Chapter 1 Matlab as a Calculator \u200b \u200b ——罗雪芮 2026.2.1-2.8 Chapter1 运算符号以及法则 基础加减乘除乘方符号如下 ： 1 + - * / ^ 比较全面的运算使用写法 1 2 3 4 5 6 7 8 9 10 11 12 % 加减乘除">
 <meta property='og:url' content='https://lyy-66.github.io/CreateforLaiyin.github.io/p/matlab/'>
 <meta property='og:site_name' content='莱茵好!'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Matlab' /><meta property='article:published_time' content='2026-02-08T11:51:08&#43;08:00'/><meta property='article:modified_time' content='2026-02-08T11:51:08&#43;08:00'/><meta property='og:image' content='https://lyy-66.github.io/CreateforLaiyin.github.io/p/matlab/1.jpg' />
 <meta name="twitter:title" content="Matlab">
-<meta name="twitter:description" content="Chapter 1 Matlab as a Calculator \u200b \u200b ——罗雪芮 2026.2.1-2.8 运算符号以及法则 基础加减乘除乘方符号如下 ： 1 + - * / ^ 比较全面的运算使用写法 1 2 3 4 5 6 7 8 9 10 11 12 % 加减乘除 a"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Chapter 1 Matlab as a Calculator \u200b \u200b ——罗雪芮 2026.2.1-2.8 Chapter1 运算符号以及法则 基础加减乘除乘方符号如下 ： 1 + - * / ^ 比较全面的运算使用写法 1 2 3 4 5 6 7 8 9 10 11 12 % 加减乘除"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://lyy-66.github.io/CreateforLaiyin.github.io/p/matlab/1.jpg' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
@@ -271,7 +271,7 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#运算符号以及法则">运算符号以及法则</a>
+    <li><a href="#chapter1-运算符号以及法则">Chapter1 运算符号以及法则</a>
       <ol>
         <li><a href="#基础加减乘除乘方符号如下">基础加减乘除乘方符号如下	：</a></li>
         <li><a href="#比较全面的运算使用写法">比较全面的运算使用写法</a></li>
@@ -324,6 +324,116 @@
             <li><a href="#球坐标补充说明">球坐标补充说明:</a></li>
           </ol>
         </li>
+      </ol>
+    </li>
+  </ol>
+
+  <ol>
+    <li><a href="#chapter2-变量命名原则">Chapter2 变量命名原则</a>
+      <ol>
+        <li><a href="#一流程控制"><strong>一、流程控制</strong></a></li>
+        <li><a href="#二函数与脚本"><strong>二、函数与脚本</strong></a></li>
+        <li><a href="#三并行计算"><strong>三、并行计算</strong></a></li>
+        <li><a href="#四特殊常量"><strong>四、特殊常量</strong></a></li>
+        <li><a href="#-特别注意"><strong>⚠️ 特别注意：</strong></a></li>
+        <li><a href="#完整列表获取"><strong>完整列表获取：</strong></a></li>
+        <li><a href="#可能出现的问题">可能出现的问题</a></li>
+      </ol>
+    </li>
+    <li><a href="#与变量相关的一些操作">与变量相关的一些操作</a>
+      <ol>
+        <li><a href="#清除变量">清除变量</a></li>
+        <li><a href="#查看变量类型">查看变量类型</a></li>
+        <li><a href="#清空">清空</a>
+          <ol>
+            <li><a href="#清空命令窗口">清空命令窗口</a></li>
+            <li><a href="#清空工作空间变量">清空工作空间变量</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#向量矩阵">向量、矩阵</a>
+      <ol>
+        <li><a href="#向量矩阵的写法">向量矩阵的写法</a>
+          <ol>
+            <li><a href="#特殊矩阵或者向量">特殊矩阵或者向量</a></li>
+            <li><a href="#zerosn1-n2"><strong><code>zeros(n1, n2)</code></strong></a></li>
+            <li><a href="#onesn1-n2"><strong><code>ones(n1, n2)</code></strong></a></li>
+            <li><a href="#diag"><strong><code>diag()</code></strong></a></li>
+            <li><a href="#randn1-n2"><strong><code>rand(n1, n2)</code></strong></a></li>
+          </ol>
+        </li>
+        <li><a href="#向量矩阵的运算">向量矩阵的运算</a>
+          <ol>
+            <li><a href="#基础运算">基础运算</a></li>
+            <li><a href="#转置">转置</a></li>
+            <li><a href="#找到其中一个元素">找到其中一个元素</a></li>
+            <li><a href="#矩阵整合">矩阵整合</a></li>
+            <li><a href="#冒号运算符">冒号运算符</a></li>
+            <li><a href="#矩阵统计函数">矩阵统计函数</a></li>
+          </ol>
+        </li>
+        <li><a href="#maxmaxa"><strong><code>max(max(A))</code></strong></a></li>
+        <li><a href="#mina"><strong><code>min(A)</code></strong></a></li>
+        <li><a href="#suma"><strong><code>sum(A)</code></strong></a></li>
+        <li><a href="#meana"><strong><code>mean(A)</code></strong></a></li>
+        <li><a href="#sorta"><strong><code>sort(A)</code></strong></a></li>
+        <li><a href="#sortrowsa"><strong><code>sortrows(A)</code></strong></a></li>
+        <li><a href="#sizea"><strong><code>size(A)</code></strong></a></li>
+        <li><a href="#lengtha"><strong><code>length(A)</code></strong></a></li>
+        <li><a href="#finda"><strong><code>find(A)</code></strong></a></li>
+      </ol>
+    </li>
+  </ol>
+
+  <ol>
+    <li><a href="#chapter3-matlab里面的控制流程">Chapter3 Matlab里面的控制流程</a>
+      <ol>
+        <li><a href="#控制流程提示词">控制流程提示词</a></li>
+        <li><a href="#表判断的操作符">表判断的操作符</a></li>
+      </ol>
+    </li>
+    <li><a href="#预分配">预分配</a>
+      <ol>
+        <li><a href="#预分配能大幅提速的原因">预分配能大幅提速的原因</a></li>
+        <li><a href="#实测对比示意">实测对比（示意）</a></li>
+      </ol>
+    </li>
+    <li><a href="#小技巧">小技巧</a>
+      <ol>
+        <li><a href="#clear-all-与-close-all"><code>clear all</code> 与 <code>close all</code></a></li>
+        <li><a href="#使用分号--抑制输出">使用分号 <code>;</code> 抑制输出</a></li>
+        <li><a href="#使用省略号--换行">使用省略号 <code>...</code> 换行</a></li>
+        <li><a href="#按-ctrlc-终止脚本">按 <code>Ctrl+C</code> 终止脚本</a></li>
+      </ol>
+    </li>
+    <li><a href="#函数">函数</a>
+      <ol>
+        <li><a href="#对比脚本">对比脚本</a></li>
+        <li><a href="#函数的基本语法">函数的基本语法</a>
+          <ol>
+            <li><a href="#示例-1单输入单输出">示例 1：单输入单输出</a></li>
+            <li><a href="#示例-2多输入多输出">示例 2：多输入多输出</a></li>
+            <li><a href="#示例-3无输入或无输出">示例 3：无输入或无输出</a></li>
+          </ol>
+        </li>
+        <li><a href="#函数文件与函数名">函数文件与函数名</a></li>
+        <li><a href="#多组变量">多组变量</a></li>
+        <li><a href="#点运算符的含义">点运算符的含义</a>
+          <ol>
+            <li><a href="#如果不使用点运算符">如果不使用点运算符</a></li>
+            <li><a href="#使用点运算符的正确版本">使用点运算符的正确版本</a></li>
+          </ol>
+        </li>
+        <li><a href="#变量作用域--隔离与持久化">变量作用域 —— 隔离与持久化</a>
+          <ol>
+            <li><a href="#-局部变量local">① 局部变量（Local）</a></li>
+            <li><a href="#-全局变量global">② 全局变量（Global）</a></li>
+            <li><a href="#-持久变量persistent">③ 持久变量（Persistent）</a></li>
+          </ol>
+        </li>
+        <li><a href="#完整示例温度转换工具">完整示例：温度转换工具</a></li>
+        <li><a href="#总结">总结</a></li>
       </ol>
     </li>
   </ol>
@@ -407,7 +517,7 @@
 </h1><p>​</p>
 <p>​                                                                                                                                                   ——罗雪芮 2026.2.1-2.8</p>
 <img src="2.png">
-<h2 id="运算符号以及法则">运算符号以及法则
+<h2 id="chapter1-运算符号以及法则">Chapter1 运算符号以及法则
 </h2><h3 id="基础加减乘除乘方符号如下">基础加减乘除乘方符号如下	：
 </h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -984,7 +1094,1547 @@ $$</p>
 <pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="n">elevation</span> <span class="p">=</span> <span class="nb">asin</span><span class="p">(</span><span class="n">z</span> <span class="o">/</span> <span class="n">r</span><span class="p">)</span>  <span class="c">% 或者 atan2(z, sqrt(x² + y²))</span>
 </span></span></code></pre></td></tr></table>
 </div>
+</div><h1 id="chapter-2-variable-in-matlab">Chapter 2 Variable in Matlab
+</h1><p>​                                                                                                                                                   ——罗雪芮 2026 2 10</p>
+<img src="./index.assets/8.png">
+<h2 id="chapter2-变量命名原则">Chapter2 变量命名原则
+</h2><p>在MATLAB中，以下关键词具有特殊含义，<strong>不能用作变量名</strong>：</p>
+<h3 id="一流程控制"><strong>一、流程控制</strong>
+</h3><ol>
+<li><strong>if</strong>、<strong>else</strong>、<strong>elseif</strong>、<strong>end</strong> - 条件语句</li>
+<li><strong>switch</strong>、<strong>case</strong>、<strong>otherwise</strong> - 多分支选择</li>
+<li><strong>for</strong>、<strong>while</strong> - 循环</li>
+<li><strong>break</strong>、<strong>continue</strong> - 循环控制</li>
+<li><strong>try</strong>、<strong>catch</strong> - 异常处理</li>
+<li><strong>return</strong> - 函数返回</li>
+</ol>
+<h3 id="二函数与脚本"><strong>二、函数与脚本</strong>
+</h3><ol start="7">
+<li><strong>function</strong> - 定义函数</li>
+<li><strong>classdef</strong>、<strong>properties</strong>、<strong>methods</strong>、<strong>events</strong>、<strong>enumeration</strong> - 面向对象编程</li>
+<li><strong>global</strong>、<strong>persistent</strong> - 变量作用域</li>
+</ol>
+<h3 id="三并行计算"><strong>三、并行计算</strong>
+</h3><ol start="10">
+<li><strong>parfor</strong>、<strong>spmd</strong> - 并行计算工具箱</li>
+</ol>
+<h3 id="四特殊常量"><strong>四、特殊常量</strong>
+</h3><ol start="11">
+<li><strong>true</strong>、<strong>false</strong> - 逻辑值</li>
+<li><strong>inf</strong>、<strong>NaN</strong> - 特殊数值（无穷大、非数字）</li>
+<li><strong>pi</strong> - 圆周率π（虽不是关键词，但强烈建议不要覆盖）</li>
+</ol>
+<h3 id="-特别注意"><strong>⚠️ 特别注意：</strong>
+</h3><ul>
+<li><strong>i</strong> 和 <strong>j</strong>：默认表示虚数单位，但可以被覆盖（覆盖后失去原义）</li>
+<li><strong>ans</strong>：最近一次计算结果（非关键词但应避免使用）</li>
+<li><strong>end</strong>：还可作为索引（如 <code>A(end)</code>），但仍是关键词</li>
+</ul>
+<h3 id="完整列表获取"><strong>完整列表获取：</strong>
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="o">&gt;&gt;</span> <span class="n">iskeyword</span>  <span class="c">% 列出所有关键词</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;</span> <span class="n">help</span> <span class="n">iskeyword</span>  <span class="c">% 查看帮助</span>
+</span></span></code></pre></td></tr></table>
 </div>
+</div><h3 id="可能出现的问题">可能出现的问题
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="nb">cos</span><span class="p">=</span><span class="s">&#39;This string.&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cos</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>本来cos是余弦，但是这里我们定义它为一段字符串，就会导致我们定义的优先级高于原本设置的函数cos，ans就会输出这串字符的第八位，也就是r</p>
+<h2 id="与变量相关的一些操作">与变量相关的一些操作
+</h2><h3 id="清除变量">清除变量
+</h3><p>如果不小心使用了上一个板块提到的关键字，我们需要消除这个变量</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="n">clear</span> 变量名
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>也就是clear后面直接加要清除的变量名</p>
+<h3 id="查看变量类型">查看变量类型
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="o">&gt;&gt;</span> <span class="n">x</span> <span class="p">=</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;</span> <span class="n">whos</span> <span class="n">x</span>
+</span></span><span class="line"><span class="cl">  <span class="n">Name</span>      <span class="n">Size</span>            <span class="n">Bytes</span>  <span class="n">Class</span>     <span class="n">Attributes</span>
+</span></span><span class="line"><span class="cl">  <span class="n">x</span>         <span class="mi">1</span><span class="n">x3</span>                <span class="mi">24</span>  <span class="n">double</span>              
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="o">&gt;&gt;</span> <span class="n">x</span> <span class="p">=</span> <span class="nb">rand</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;</span> <span class="n">s</span> <span class="p">=</span> <span class="n">sparse</span><span class="p">(</span><span class="nb">eye</span><span class="p">(</span><span class="mi">100</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;</span> <span class="n">whos</span>
+</span></span><span class="line"><span class="cl">  <span class="n">Name</span>      <span class="n">Size</span>              <span class="n">Bytes</span>  <span class="n">Class</span>     <span class="n">Attributes</span>
+</span></span><span class="line"><span class="cl">  <span class="n">s</span>       <span class="mi">100</span><span class="n">x100</span>             <span class="mi">16008</span>  <span class="n">double</span>    <span class="n">sparse</span>    
+</span></span><span class="line"><span class="cl">  <span class="n">x</span>       <span class="mi">100</span><span class="n">x100</span>             <span class="mi">80000</span>  <span class="n">double</span>   
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="清空">清空
+</h3><h4 id="清空命令窗口">清空命令窗口
+</h4><ul>
+<li><strong>功能：</strong> 清除命令窗口中显示的所有输出内容
+<strong>特点：</strong>
+<ul>
+<li>只清除显示，不影响工作空间变量</li>
+<li>不删除命令历史（仍可用↑键查看之前命令）</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="n">clc</span>  <span class="c">% Clear Command Window</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="清空工作空间变量">清空工作空间变量
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="n">clear</span>          <span class="c">% 清除所有变量</span>
+</span></span><span class="line"><span class="cl"><span class="n">clear</span> <span class="n">var1</span> <span class="n">var2</span> <span class="c">% 清除指定变量</span>
+</span></span><span class="line"><span class="cl"><span class="n">clear</span> <span class="n">all</span>      <span class="c">% 清除变量、函数、MEX文件等</span>
+</span></span><span class="line"><span class="cl"><span class="n">clear</span> <span class="n">classes</span>  <span class="c">% 清除类定义</span>
+</span></span><span class="line"><span class="cl"><span class="n">clear</span> <span class="n">functions</span> <span class="c">% 清除编译的函数</span>
+</span></span><span class="line"><span class="cl"><span class="n">clear</span> <span class="k">global</span>   <span class="c">% 清除全局变量</span>
+</span></span><span class="line"><span class="cl"><span class="n">clear</span> <span class="n">import</span>   <span class="c">% 清除Java导入</span>
+</span></span><span class="line"><span class="cl"><span class="n">clear</span> <span class="n">variables</span> <span class="c">% 只清除变量（推荐）</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="向量矩阵">向量、矩阵
+</h2><h3 id="向量矩阵的写法">向量矩阵的写法
+</h3><ul>
+<li>
+<p>行矩阵</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="n">a</span><span class="p">=[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>使用方括号[]，其次，每个数之间有一个空格</li>
+</ul>
+</li>
+<li>
+<p>列向量</p>
+<ul>
+<li>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="n">b</span><span class="p">=[</span><span class="mi">1</span>；<span class="mi">2</span>；<span class="mi">3</span>；<span class="mi">4</span><span class="p">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>彼此之间用分号；隔开</p>
+<p>写出来的效果大概是:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="n">b</span><span class="p">=</span>
+</span></span><span class="line"><span class="cl">  <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">  <span class="mi">2</span>
+</span></span><span class="line"><span class="cl">  <span class="mi">3</span>
+</span></span><span class="line"><span class="cl">  <span class="mi">4</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>
+<p>一个一般一点的矩阵</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="n">A</span><span class="p">=[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">;</span><span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span><span class="p">;</span><span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span><span class="p">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>简单来说就是同一行的中间是空格</li>
+<li>不同行的中间用分号隔开</li>
+</ul>
+</li>
+</ul>
+<h4 id="特殊矩阵或者向量">特殊矩阵或者向量
+</h4><h5 id="linspacea-b-n"><strong><code>linspace(a, b, n)</code></strong>
+</h5><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="nb">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>结果是:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="mi">0</span>    <span class="mf">2.6</span>    <span class="mf">5.2</span>    <span class="mf">7.8</span>    <span class="mf">10.4</span>    <span class="mi">13</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="eyen"><strong><code>eye(n)</code></strong>
+</h5><p>生成一个 <code>n×n</code> 的<strong>单位矩阵</strong>（对角线上为 1，其余为 0）。
+示例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="nb">eye</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>结果：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="mi">1</span>   <span class="mi">0</span>   <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="mi">0</span>   <span class="mi">1</span>   <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="mi">0</span>   <span class="mi">0</span>   <span class="mi">1</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="zerosn1-n2"><strong><code>zeros(n1, n2)</code></strong>
+</h4><p>生成一个 <code>n1×n2</code> 的<strong>全零矩阵</strong>。
+示例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="nb">zeros</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>结果：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="mi">0</span>   <span class="mi">0</span>   <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="mi">0</span>   <span class="mi">0</span>   <span class="mi">0</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="onesn1-n2"><strong><code>ones(n1, n2)</code></strong>
+</h4><p>生成一个 <code>n1×n2</code> 的<strong>全一矩阵</strong>。
+示例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="nb">ones</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>结果：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="mi">1</span>   <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="mi">1</span>   <span class="mi">1</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="diag"><strong><code>diag()</code></strong>
+</h4><p>有两种常见用法：</p>
+<ul>
+<li><strong>提取对角元素</strong>：<code>diag(A)</code> 提取矩阵 <code>A</code> 的对角线元素为向量。</li>
+<li><strong>生成对角矩阵</strong>：<code>diag(v)</code> 将以向量 <code>v</code> 为对角线生成一个对角矩阵。</li>
+</ul>
+<p>示例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="nb">diag</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>结果：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="mi">1</span>   <span class="mi">0</span>   <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="mi">0</span>   <span class="mi">2</span>   <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="mi">0</span>   <span class="mi">0</span>   <span class="mi">3</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="randn1-n2"><strong><code>rand(n1, n2)</code></strong>
+</h4><p>生成一个 <code>n1×n2</code> 的矩阵，其元素为<strong>均匀分布在 [0,1] 之间的随机数</strong>。
+示例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="nb">rand</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>可能的结果（每次运行不同）：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="mf">0.8147</span>    <span class="mf">0.1270</span>
+</span></span><span class="line"><span class="cl"><span class="mf">0.9058</span>    <span class="mf">0.9134</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="向量矩阵的运算">向量矩阵的运算
+</h3><h4 id="基础运算">基础运算
+</h4><img src="./index.assets/9.png">
+<h5 id="乘法除法">乘法除法
+</h5><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="n">a</span><span class="o">*</span><span class="n">b</span>
+</span></span><span class="line"><span class="cl"><span class="n">b</span><span class="o">*</span><span class="n">a</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">A</span><span class="o">/</span><span class="n">B</span>
+</span></span><span class="line"><span class="cl"><span class="n">B</span><span class="o">/</span><span class="n">AP</span><span class="p">[]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>要注意矩阵相乘不能交换顺序，结果会不一样</p>
+<ul>
+<li>有一种比较特殊的乘除法，是对应位置相乘作为新矩阵该位置的值，比如:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="n">A</span><span class="o">.*</span><span class="n">B</span>
+</span></span><span class="line"><span class="cl"><span class="n">A</span><span class="o">./</span><span class="n">B</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><img src="./index.assets/3.png">
+<h5 id="加法减法">加法减法
+</h5><img src="./index.assets/4.png">
+<p>即:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="n">A</span><span class="o">+</span><span class="n">B</span>
+</span></span><span class="line"><span class="cl"><span class="n">A</span><span class="o">-</span><span class="n">B</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="转置">转置
+</h4><img src="./index.assets/5.png">
+<h4 id="找到其中一个元素">找到其中一个元素
+</h4><ul>
+<li>
+<p>对于单行或者单列的矩阵，找某个元素直接使用()即可，比如</p>
+</li>
+<li>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="n">A</span><span class="p">=[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">A</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c">%这个就直接表示找第二个元素，也就是2，最后ans输出也是2</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>但是对于一般一点的就不一样了</p>
+</li>
+<li>
+<p>比如:</p>
+</li>
+<li>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="n">A</span><span class="p">=</span> <span class="mi">1</span> <span class="mi">21</span> <span class="mi">6</span>
+</span></span><span class="line"><span class="cl">   <span class="mi">5</span> <span class="mi">17</span> <span class="mi">9</span>
+</span></span><span class="line"><span class="cl">   <span class="mi">4</span> <span class="mi">87</span> <span class="mi">0</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>(那个大括号我没法打将就看)</p>
+</li>
+<li>
+<p>则任然可以用(),不过是(行，列)这样的格式，比如A（1，2）就是A矩阵第一行第二列的元素，也就是21</p>
+</li>
+<li>
+<p>不过也可以用A（）一个数字表示，每个元素对应的数字是这样排序的:先数第一列，1对应1，5对应2，4对应3，再数第二列，以此类推</p>
+</li>
+<li>
+<p>总结如下:</p>
+</li>
+<li>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="n">A</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>            第八个元素
+</span></span><span class="line"><span class="cl"><span class="n">A</span>（<span class="p">[</span><span class="mi">1</span> <span class="mi">3</span> <span class="mi">5</span><span class="p">])</span>     和上面的方法一样，相当于<span class="n">A</span>（<span class="mi">1</span><span class="p">)</span><span class="n">A</span>（<span class="mi">2</span><span class="p">)</span><span class="n">A</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>，输出三个数
+</span></span><span class="line"><span class="cl"><span class="n">A</span>（<span class="p">[</span><span class="mi">1</span> <span class="mi">3</span>； <span class="mi">1</span> <span class="mi">3</span><span class="p">])</span>  相当于做了一个矩阵，第一行是<span class="n">A矩阵的1</span> <span class="mi">3</span>号元素，第二行是<span class="n">A</span>                 矩阵的<span class="mi">1</span> <span class="mi">3</span>号元素
+</span></span><span class="line"><span class="cl"><span class="n">A</span><span class="p">(</span><span class="mi">3</span>，<span class="mi">2</span><span class="p">)</span>         第三行第二列
+</span></span><span class="line"><span class="cl"><span class="n">A</span><span class="p">([</span><span class="mi">1</span> <span class="mi">3</span><span class="p">],[</span><span class="mi">1</span> <span class="mi">3</span><span class="p">])</span>  构成的矩阵第一列第一个是<span class="n">A</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>第一列第二个是<span class="n">A</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>，然后                 是第二列第一个是<span class="n">A</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>第二个是<span class="n">A</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">A</span><span class="p">(</span><span class="mi">3</span><span class="p">,)</span>           表示第三行
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h4 id="矩阵整合">矩阵整合
+</h4><img src="./index.assets/6.png">
+<p>想让A与B直接并列整合，可以使用:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="n">N</span><span class="p">=[</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><img src="./index.assets/7.png">
+<p>如果想让A和B竖着整合，可以使用:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="p">[</span><span class="n">A</span><span class="p">;</span><span class="n">B</span><span class="p">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>，是横向</p>
+<p>；是纵向</p>
+</blockquote>
+<h4 id="冒号运算符">冒号运算符
+</h4><h5 id="jk"><code>j:k</code>
+</h5><p>生成从 <code>j</code> 到 <code>k</code>，步长为 1 的整数序列。
+例如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="mi">1</span><span class="p">:</span><span class="mi">5</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>输出</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="mi">1</span>   <span class="mi">2</span>   <span class="mi">3</span>   <span class="mi">4</span>   <span class="mi">5</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="jik"><code>j:i:k</code>
+</h5><p>生成从 <code>j</code> 开始，步长为 <code>i</code>，直到不超过 <code>k</code> 的序列。
+例如:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>输出:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="mi">1</span>   <span class="mi">3</span>   <span class="mi">5</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="str--a2z"><code>str = 'a':2:'z'</code>
+</h5><p>字符序列，从 <code>'a'</code> 开始，每隔一个字符取一个，直到 <code>'z'</code>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="s">&#39;acegikmoqsuwy&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="矩阵统计函数">矩阵统计函数
+</h4><ul>
+<li><strong><code>max(A)</code></strong></li>
+</ul>
+<p>返回矩阵 <strong>每一列的最大值</strong> 组成的行向量</p>
+<ul>
+<li>
+<h3 id="maxmaxa"><strong><code>max(max(A))</code></strong>
+</h3><p>先求每列的最大值，再求这些最大值中的最大值，即 <strong>整个矩阵的最大值</strong></p>
+</li>
+<li>
+<h3 id="mina"><strong><code>min(A)</code></strong>
+</h3><p>返回矩阵 <strong>每一列的最小值</strong> 组成的行向量</p>
+</li>
+<li>
+<h3 id="suma"><strong><code>sum(A)</code></strong>
+</h3><p>返回矩阵 <strong>每一列的和</strong> 组成的行向量</p>
+</li>
+<li>
+<h3 id="meana"><strong><code>mean(A)</code></strong>
+</h3><p>返回矩阵 <strong>每一列的均值</strong> 组成的行向量</p>
+</li>
+<li>
+<h3 id="sorta"><strong><code>sort(A)</code></strong>
+</h3><p>对 <strong>每一列进行升序排序</strong>，返回排序后的矩阵</p>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="o">&gt;&gt;</span> <span class="n">sort</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">ans</span> <span class="p">=</span>
+</span></span><span class="line"><span class="cl">     <span class="mi">0</span>     <span class="mi">0</span>     <span class="mi">3</span>
+</span></span><span class="line"><span class="cl">     <span class="mi">1</span>     <span class="mi">2</span>     <span class="mi">6</span>
+</span></span><span class="line"><span class="cl">     <span class="mi">7</span>     <span class="mi">5</span>     <span class="mi">9</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<h3 id="sortrowsa"><strong><code>sortrows(A)</code></strong>
+</h3><p><strong>按行排序</strong>：以第一列为基准，对整个行进行升序排序</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="o">&gt;&gt;</span> <span class="n">sortrows</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">ans</span> <span class="p">=</span>
+</span></span><span class="line"><span class="cl">     <span class="mi">0</span>     <span class="mi">5</span>     <span class="mi">6</span>
+</span></span><span class="line"><span class="cl">     <span class="mi">1</span>     <span class="mi">2</span>     <span class="mi">3</span>
+</span></span><span class="line"><span class="cl">     <span class="mi">7</span>     <span class="mi">0</span>     <span class="mi">9</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<h3 id="sizea"><strong><code>size(A)</code></strong>
+</h3><p>返回矩阵的 <strong>行数和列数</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="o">&gt;&gt;</span> <span class="nb">size</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">ans</span> <span class="p">=</span>
+</span></span><span class="line"><span class="cl">     <span class="mi">3</span>     <span class="mi">3</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<h3 id="lengtha"><strong><code>length(A)</code></strong>
+</h3><p>返回矩阵 <strong>最大维度的长度</strong>。对于矩阵，相当于 <code>max(size(A))</code></p>
+</li>
+<li>
+<h3 id="finda"><strong><code>find(A)</code></strong>
+</h3><p>返回矩阵中 <strong>所有非零元素的线性索引</strong>（按列的顺序）</p>
+</li>
+</ul>
+<h1 id="chapter-3-script-and-function--脚本与函数">Chapter 3 Script and Function  脚本与函数
+</h1><p>​                                                                                                                                     ——罗雪芮 2026  2 11</p>
+<img src="10.png">
+<h2 id="chapter3-matlab里面的控制流程">Chapter3 Matlab里面的控制流程
+</h2><h3 id="控制流程提示词">控制流程提示词
+</h3><div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>控制流</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>if, elseif, else</code></td>
+<td>条件为真时执行语句</td>
+</tr>
+<tr>
+<td><code>for</code></td>
+<td>按指定次数重复执行语句</td>
+</tr>
+<tr>
+<td><code>switch, case, otherwise</code></td>
+<td>执行若干组语句中的一组</td>
+</tr>
+<tr>
+<td><code>try, catch</code></td>
+<td>执行语句并捕获引发的错误</td>
+</tr>
+<tr>
+<td><code>while</code></td>
+<td>条件为真时重复执行语句</td>
+</tr>
+<tr>
+<td><code>break</code></td>
+<td>终止 <code>for</code> 或 <code>while</code> 循环的执行</td>
+</tr>
+<tr>
+<td><code>continue</code></td>
+<td>将控制权传递给 <code>for</code> 或 <code>while</code> 循环的下一次迭代</td>
+</tr>
+<tr>
+<td><code>end</code></td>
+<td>终止代码块，或指示最后一个数组索引</td>
+</tr>
+<tr>
+<td><code>pause</code></td>
+<td>暂时停止执行</td>
+</tr>
+<tr>
+<td><code>return</code></td>
+<td>将控制权返回到调用函数</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<p><strong><code>if</code>, <code>elseif</code>, <code>else</code></strong> —— 最基础的条件分支。根据逻辑条件（真/假）决定执行哪一段代码。</p>
+<ul>
+<li>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="k">if</span> <span class="n">condition1</span>
+</span></span><span class="line"><span class="cl">      <span class="n">statement1</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span> <span class="n">condition2</span>
+</span></span><span class="line"><span class="cl">      <span class="n">statement2</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">      <span class="n">statement3</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>
+<p><strong><code>for</code></strong> —— 已知循环次数的迭代结构，通常用于遍历数组或固定步长的重复操作。</p>
+</li>
+<li>
+<p><strong><code>switch</code>, <code>case</code>, <code>otherwise</code></strong> —— 多分支选择结构，比一连串 <code>elseif</code> 更清晰，特别适合根据某个表达式的具体值进行不同处理。</p>
+</li>
+<li>
+<p><strong><code>try</code>, <code>catch</code></strong> —— 异常处理机制。将可能出错的代码放在 <code>try</code> 块中，一旦出错，控制权立即转到 <code>catch</code> 块，避免程序崩溃。</p>
+</li>
+<li>
+<p><strong><code>while</code></strong> —— 条件式循环，每次迭代前检查条件，条件为假时退出。适合循环次数不确定的场景。</p>
+</li>
+<li>
+<p><strong><code>break</code></strong> —— 强行跳出当前循环（<code>for</code> 或 <code>while</code>），不再执行剩余迭代。</p>
+</li>
+<li>
+<p><strong><code>continue</code></strong> —— 跳过本次循环的剩余语句，直接进入下一次迭代判断。</p>
+</li>
+<li>
+<p><strong><code>end</code></strong> —— MATLAB 中必须的块结束标记，用于结束 <code>if</code>、<code>for</code>、<code>function</code> 等；在索引时也表示最后一个元素（如 <code>end</code> 在 <code>A(end)</code> 中）。</p>
+</li>
+<li>
+<p><strong><code>pause</code></strong> —— 暂停程序运行，可指定秒数，常用于动画演示或等待用户操作。</p>
+</li>
+<li>
+<p><strong><code>return</code></strong> —— 退出当前函数，返回到调用它的工作区。在主脚本中使用 <code>return</code> 会直接终止脚本。</p>
+</li>
+</ul>
+<h3 id="表判断的操作符">表判断的操作符
+</h3><div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;</code></td>
+<td>小于</td>
+</tr>
+<tr>
+<td><code>&lt;=</code></td>
+<td>小于等于</td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td>大于</td>
+</tr>
+<tr>
+<td><code>&gt;=</code></td>
+<td>大于等于</td>
+</tr>
+<tr>
+<td><code>==</code></td>
+<td>等于</td>
+</tr>
+<tr>
+<td><code>~=</code></td>
+<td>不等于</td>
+</tr>
+<tr>
+<td><code>&amp;&amp;</code></td>
+<td>与</td>
+</tr>
+<tr>
+<td>`</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="预分配">预分配
+</h2><p>对比一下两种代码:</p>
+<p>ps: tic toc分别在开始和结尾，表示计时开始和计时结束，用于比较两者在matlab里面花费时间的长短</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="n">tic</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">ii</span> <span class="p">=</span> <span class="mi">1</span><span class="p">:</span><span class="mi">2000</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">jj</span> <span class="p">=</span> <span class="mi">1</span><span class="p">:</span><span class="mi">2000</span>
+</span></span><span class="line"><span class="cl">        <span class="n">A</span><span class="p">(</span><span class="n">ii</span><span class="p">,</span><span class="n">jj</span><span class="p">)</span> <span class="p">=</span> <span class="n">ii</span> <span class="o">+</span> <span class="n">jj</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">end</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span><span class="line"><span class="cl"><span class="n">toc</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="n">tic</span>
+</span></span><span class="line"><span class="cl"><span class="n">A</span> <span class="p">=</span> <span class="nb">zeros</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">2000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">ii</span> <span class="p">=</span> <span class="mi">1</span><span class="p">:</span><span class="nb">size</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">jj</span> <span class="p">=</span> <span class="mi">1</span><span class="p">:</span><span class="nb">size</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">A</span><span class="p">(</span><span class="n">ii</span><span class="p">,</span><span class="n">jj</span><span class="p">)</span> <span class="p">=</span> <span class="n">ii</span> <span class="o">+</span> <span class="n">jj</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">end</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span><span class="line"><span class="cl"><span class="n">toc</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>第二个代码<strong>预先分配</strong>了矩阵内存（<code>A = zeros(2000, 2000);</code>），第一个代码<strong>没有预分配</strong>，这是使得第二个运行速度更快</p>
+<h3 id="预分配能大幅提速的原因">预分配能大幅提速的原因
+</h3><ol>
+<li>
+<p><strong>MATLAB 数组必须存储在连续的内存块中</strong>
+如果事先不知道数组大小，在循环中动态添加元素，MATLAB 会反复执行以下操作：</p>
+<ul>
+<li>发现当前数组空间不足；</li>
+<li><strong>重新申请一块更大的连续内存</strong>；</li>
+<li>将已有数据全部<strong>复制</strong>到新内存；</li>
+<li>释放旧内存；</li>
+<li>再写入新元素。</li>
+</ul>
+</li>
+<li>
+<p><strong>动态增长的代价</strong>
+左边代码开始时 <code>A</code> 根本不存在，第一次赋值 <code>A(1,1)=2</code> 时创建了一个 1×1 的矩阵
+随着 <code>ii</code>、<code>jj</code> 增大，MATLAB 需要不断扩展矩阵的尺寸，<strong>每次扩展都可能触发完整的数据复制</strong>
+即使现代 MATLAB 采用了一些优化（如增量扩展策略），这种反复分配/复制的开销依然远大于一次性分配。</p>
+</li>
+<li>
+<p><strong>预分配如何避免开销</strong>
+右边代码用 <code>zeros</code> 一次性申请好 2000×2000 的连续内存（约 32 MB 双精度数）。
+后续循环只是向已分配好的内存位置写入数值，<strong>没有重新分配和复制</strong>，只有纯粹的赋值操作。</p>
+</li>
+</ol>
+<h3 id="实测对比示意">实测对比（示意）
+</h3><div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>代码</th>
+<th>2000×2000 典型耗时</th>
+<th>主要开销</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>无预分配（左边）</td>
+<td>约 0.3~0.6 秒</td>
+<td>反复内存分配+复制</td>
+</tr>
+<tr>
+<td>有预分配（右边）</td>
+<td>约 0.02~0.05 秒</td>
+<td>仅赋值操作</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="小技巧">小技巧
+</h2><h3 id="clear-all-与-close-all"><code>clear all</code> 与 <code>close all</code>
+</h3><blockquote>
+<p>At the beginning of your script, use command <code>clear all</code> to remove previous variables<br>
+<code>close all</code> to close all figures</p>
+</blockquote>
+<p><strong>作用</strong>：</p>
+<ul>
+<li><code>clear all</code>：清除工作区（Workspace）中的所有变量、全局变量、编译过的函数、持久变量以及类定义。</li>
+<li><code>close all</code>：关闭所有打开的图形窗口（Figure）。</li>
+<li>写脚本时希望“从头开始”，避免之前运行残留的变量影响当前脚本的结果。</li>
+</ul>
+<p><strong>⚠️ 重要警告（现代 MATLAB 不建议使用 <code>clear all</code>）</strong>：</p>
+<ul>
+<li><code>clear all</code> 不仅清除变量，还会<strong>清除已编译的函数缓存</strong>（包括内置函数的即时编译结果），导致后续代码运行变慢。</li>
+<li>它会移除断点，干扰调试。</li>
+<li>它会清除类定义，如果后续代码使用面向对象编程，需要重新加载类。</li>
+</ul>
+<p><strong>✅ 推荐做法</strong>：</p>
+<ul>
+<li>只清除必要的变量：<code>clear variables</code> 或直接 <code>clear</code>（清除所有变量，但保留函数、类等）。</li>
+<li>更安全：<strong>将脚本改写成函数</strong>。函数的工作区是独立的，不会污染全局，也不需要手动清理。</li>
+<li>如果非要清理，用 <code>clearvars -except</code> 保留想保留的变量。</li>
+<li><code>close all</code> 按需使用，通常放在脚本开头没问题。</li>
+</ul>
+<h3 id="使用分号--抑制输出">使用分号 <code>;</code> 抑制输出
+</h3><blockquote>
+<p>Use semicolon ; at the end of commands to inhibit unwanted output</p>
+</blockquote>
+<p><strong>作用</strong>：<br>
+MATLAB 每条语句执行后，默认会在命令窗口显示结果。加上分号可阻止这种显示。</p>
+<p><strong>示例</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="n">x</span> <span class="p">=</span> <span class="mi">1</span><span class="p">:</span><span class="mi">100000</span><span class="p">;</span>       <span class="c">% 不显示任何内容</span>
+</span></span><span class="line"><span class="cl"><span class="n">y</span> <span class="p">=</span> <span class="mi">1</span><span class="p">:</span><span class="mi">100000</span>        <span class="c">% 会显示整个 1×100000 向量，非常耗时</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>注意</strong>：分号不影响计算结果，只是不打印。</p>
+<h3 id="使用省略号--换行">使用省略号 <code>...</code> 换行
+</h3><blockquote>
+<p>Use ellipsis &hellip; to make scripts more readable<br>
+示例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="n">A</span> <span class="p">=</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span><span class="p">;</span> <span class="c">...</span>
+</span></span><span class="line"><span class="cl"><span class="mi">6</span> <span class="mi">5</span> <span class="mi">4</span> <span class="mi">3</span> <span class="mi">2</span> <span class="mi">1</span><span class="p">];</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></blockquote>
+<p><strong>作用</strong>：
+将一条长语句分成多行，增强可读性。</p>
+<p><strong>使用规则</strong>：</p>
+<ul>
+<li><code>...</code> 必须放在<strong>行尾</strong>，表示下一行是当前行的继续。</li>
+<li>不能将 <code>...</code> 放在字符串内部来换行（例如 <code>'abc...def'</code> 会直接当作字符串内容）。</li>
+<li>常用于构建长矩阵、长函数调用、复杂表达式等。</li>
+</ul>
+<p><strong>示例</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="n">longExpression</span> <span class="p">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">6</span> <span class="o">+</span> <span class="mi">7</span> <span class="o">+</span> <span class="mi">8</span> <span class="o">+</span> <span class="mi">9</span> <span class="o">+</span> <span class="mi">10</span> <span class="o">+</span> <span class="c">...</span>
+</span></span><span class="line"><span class="cl">                 <span class="mi">11</span> <span class="o">+</span> <span class="mi">12</span> <span class="o">+</span> <span class="mi">13</span> <span class="o">+</span> <span class="mi">14</span> <span class="o">+</span> <span class="mi">15</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>注意</strong>：如果一行末尾已经是完整的语句，不需要 <code>...</code>；只有需要续行时才用。</p>
+<h3 id="按-ctrlc-终止脚本">按 <code>Ctrl+C</code> 终止脚本
+</h3><blockquote>
+<p>Press <code>Ctrl+C</code> to terminate the script before conclusion</p>
+</blockquote>
+<p><strong>作用</strong>：
+强制中断正在运行的 MATLAB 脚本或命令。</p>
+<p><strong>使用场景</strong>：</p>
+<ul>
+<li>脚本陷入死循环。</li>
+<li>运行时间远超预期，想提前停止。</li>
+<li>误执行了大型计算。</li>
+</ul>
+<p><strong>机制</strong>：</p>
+<p><code>Ctrl+C</code> 会向 MATLAB 发出中断信号，通常在当前执行完一个“可中断点”后停止。对于纯 M 代码循环，通常能很快响应；但如果遇到不可中断的内置函数（如大型稀疏矩阵分解），可能需要稍等。</p>
+<p><strong>提示</strong>：
+在长时间循环中，可主动调用 <code>drawnow</code>、<code>pause(0)</code> 或 <code>figure</code> 等函数，提高对 <code>Ctrl+C</code> 的响应速度。</p>
+<h2 id="函数">函数
+</h2><p><em><strong>定义:将一组命令封装成一个独立单元，给定输入、返回输出，并拥有独立工作区</strong></em></p>
+<h3 id="对比脚本">对比脚本
+</h3><div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>特征</th>
+<th>脚本（Script）</th>
+<th>函数（Function）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>工作区</td>
+<td>共享基础工作区（Base Workspace）</td>
+<td>独立工作区，内部变量不污染外部</td>
+</tr>
+<tr>
+<td>输入/输出</td>
+<td>无强制输入输出，操作全局数据</td>
+<td>明确输入参数和返回值</td>
+</tr>
+<tr>
+<td>速度</td>
+<td>每次运行重新解析</td>
+<td>首次调用后即时编译（JIT），后续快</td>
+</tr>
+<tr>
+<td>应用场景</td>
+<td>一次性分析、快速试验</td>
+<td>封装算法、模块化、重复调用</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="函数的基本语法">函数的基本语法
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="k">function</span><span class="w"> </span>[输出1, 输出2, ...] <span class="p">=</span><span class="w"> </span><span class="nf">函数名</span><span class="p">(</span>输入1, 输入2, ...<span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c">% 函数主体</span>
+</span></span><span class="line"><span class="cl">    <span class="c">% ...</span>
+</span></span><span class="line"><span class="cl">    输出<span class="mi">1</span> <span class="p">=</span> <span class="c">...;</span>
+</span></span><span class="line"><span class="cl">    输出<span class="mi">2</span> <span class="p">=</span> <span class="c">...;</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>   <span class="c">% 可选，但推荐</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="示例-1单输入单输出">示例 1：单输入单输出
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="k">function</span><span class="w"> </span>y <span class="p">=</span><span class="w"> </span><span class="nf">square</span><span class="p">(</span>x<span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">y</span> <span class="p">=</span> <span class="n">x</span>^<span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>调用：<code>a = square(5);</code> → <code>a = 25</code></p>
+<h4 id="示例-2多输入多输出">示例 2：多输入多输出
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="k">function</span><span class="w"> </span>[sum, diff] <span class="p">=</span><span class="w"> </span><span class="nf">add_subtract</span><span class="p">(</span>a, b<span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">sum</span> <span class="p">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">diff</span> <span class="p">=</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>调用：<code>[s, d] = add_subtract(10, 3);</code> → <code>s=13, d=7</code></p>
+<h4 id="示例-3无输入或无输出">示例 3：无输入或无输出
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="k">function</span><span class="w"> </span><span class="nf">print_hello</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nb">disp</span><span class="p">(</span><span class="s">&#39;Hello&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>调用：<code>print_hello()</code></p>
+<h3 id="函数文件与函数名">函数文件与函数名
+</h3><ul>
+<li>函数通常定义在<strong>以 <code>.m</code> 结尾的文件</strong>中，<strong>文件名必须与主函数名相同</strong>（例如 <code>square.m</code> 包含 <code>function square(...)</code>）。</li>
+<li>一个 <code>.m</code> 文件中可以包含多个函数：
+<ul>
+<li><strong>主函数</strong>：文件名与主函数名一致，外部可调用。</li>
+<li><strong>子函数</strong>：主函数之后定义，<strong>只能被同一文件中的其他函数调用</strong>。</li>
+<li><strong>嵌套函数</strong>：在函数内部定义，可访问外层函数的变量。</li>
+</ul>
+</li>
+</ul>
+<h3 id="多组变量">多组变量
+</h3><div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>函数/变量名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>inputname</code></td>
+<td>返回函数输入变量的名称</td>
+</tr>
+<tr>
+<td><code>mfilename</code></td>
+<td>返回当前正在执行的函数文件名</td>
+</tr>
+<tr>
+<td><code>nargin</code></td>
+<td>函数调用时实际传入的输入参数个数</td>
+</tr>
+<tr>
+<td><code>nargout</code></td>
+<td>函数调用时实际请求的输出参数个数</td>
+</tr>
+<tr>
+<td><code>varargin</code></td>
+<td>可变长度输入参数列表（元胞数组）</td>
+</tr>
+<tr>
+<td><code>varargout</code></td>
+<td>可变长度输出参数列表（元胞数组）</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong><code>inputname</code></strong>
+返回函数调用时，第几个输入变量在<strong>调用工作区中的变量名</strong>（以字符串形式）。常用于在错误提示中告知用户哪个变量有问题。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="k">function</span><span class="w"> </span><span class="nf">test</span><span class="p">(</span>x<span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">name</span> <span class="p">=</span> <span class="n">inputname</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fprintf</span><span class="p">(</span><span class="s">&#39;输入的变量名是：%s\n&#39;</span><span class="p">,</span> <span class="n">name</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这里test是函数名，(X)表示至少输入一个变量，而这个函数的功能就是下面几行，第二行有一个变量定义为input ，它的值是inputname(1)， 这里<code>inputname(x)</code>是MATLAB 内置函数，<strong>返回函数调用时第1个输入参数在调用者工作区中的变量名</strong>，这里x=1，表示取第一个输入参数。第三行会打印出这个name，也就是变量名</p>
+<p>调用 <code>a = 10; test(a)</code> 会输出“输入的变量名是：a”</p>
+<ul>
+<li><strong><code>mfilename</code></strong>
+返回<strong>当前正在执行的函数文件名</strong>（不包含扩展名 <code>.m</code>）。若在脚本中调用则返回空字符串。可用于日志记录或确定函数所在路径。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="k">function</span><span class="w"> </span><span class="nf">myfunc</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nb">disp</span><span class="p">([</span><span class="s">&#39;当前函数名：&#39;</span><span class="p">,</span> <span class="n">mfilename</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>调用 <code>myfunc()</code> 输出“当前函数名：myfunc”。</p>
+<ul>
+<li><strong><code>nargout</code></strong>
+函数内部使用，返回<strong>调用时实际请求的输出参数个数</strong>。可根据用户需求决定返回哪些结果。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="k">function</span><span class="w"> </span>[out1, out2] <span class="p">=</span><span class="w"> </span><span class="nf">stats</span><span class="p">(</span>x<span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">out1</span> <span class="p">=</span> <span class="n">mean</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">nargout</span> <span class="o">==</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl">        <span class="n">out2</span> <span class="p">=</span> <span class="n">std</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">end</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>调用 <code>m = stats([1,2,3])</code> 只返回均值；<code>[m, s] = stats([1,2,3])</code> 同时返回均值和标准差。</p>
+<ul>
+<li><strong><code>varargin</code></strong>
+<strong>可变长度输入参数列表</strong>，是一个元胞数组。用于处理输入参数数量不确定的情况。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="k">function</span><span class="w"> </span>s <span class="p">=</span><span class="w"> </span><span class="nf">sum_all</span><span class="p">(</span>varargin<span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">s</span> <span class="p">=</span> <span class="n">sum</span><span class="p">([</span><span class="n">varargin</span><span class="p">{:}]);</span>   <span class="c">% 将所有输入拼接成数组求和</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>调用 <code>sum_all(1,2,3,4,5)</code> 返回 15；<code>sum_all(10,20)</code> 返回 30。</p>
+<ul>
+<li><strong><code>varargout</code></strong>
+<strong>可变长度输出参数列表</strong>，也是元胞数组。用于返回数量不确定的输出结果。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="k">function</span><span class="w"> </span>varargout <span class="p">=</span><span class="w"> </span><span class="nf">multi_disp</span><span class="p">(</span>varargin<span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">for</span> <span class="n">k</span> <span class="p">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">nargout</span>
+</span></span><span class="line"><span class="cl">        <span class="n">varargout</span><span class="p">{</span><span class="n">k</span><span class="p">}</span> <span class="p">=</span> <span class="n">varargin</span><span class="p">{</span><span class="n">k</span><span class="p">}</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>  <span class="c">% 输出为输入的2倍</span>
+</span></span><span class="line"><span class="cl">    <span class="k">end</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>调用 <code>[a,b] = multi_disp(5,7)</code> 得到 <code>a=10, b=14</code>。</p>
+<ul>
+<li>nargin</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="k">function</span><span class="w"> </span>[volume]<span class="p">=</span><span class="nf">pillar</span><span class="p">(</span>Do,Di,height<span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">if</span> <span class="n">nargin</span><span class="o">==</span><span class="mi">2</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">   <span class="n">height</span><span class="p">=</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span><span class="line"><span class="cl"><span class="n">volume</span><span class="p">=</span><span class="nb">abs</span><span class="p">(</span><span class="n">Do</span><span class="o">.^</span><span class="mi">2</span><span class="o">-</span><span class="n">Di</span><span class="o">.^</span><span class="mi">2</span><span class="p">)</span><span class="o">.*</span><span class="n">height</span><span class="o">*</span><span class="nb">pi</span><span class="o">/</span><span class="mi">4</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>如果遇到输入有多个变量，会使用nargin去确认输入变量个数，如果向上面这样，本来要3个变量但只输入了两个，那么就让height等于1</p>
+<h3 id="点运算符的含义">点运算符的含义
+</h3><div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>含义</th>
+<th>示例</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>*</code></td>
+<td>矩阵乘法</td>
+<td><code>A * B</code></td>
+<td>要求内维匹配，结果按矩阵乘法</td>
+</tr>
+<tr>
+<td><code>.*</code></td>
+<td>对应元素相乘</td>
+<td><code>A .* B</code></td>
+<td>对应位置元素相乘，尺寸一致</td>
+</tr>
+<tr>
+<td><code>/</code></td>
+<td>矩阵右除</td>
+<td><code>A / B</code> ≈ <code>A * inv(B)</code></td>
+<td>求解线性方程组，通常不是逐元素</td>
+</tr>
+<tr>
+<td><code>./</code></td>
+<td>对应元素相除</td>
+<td><code>A ./ B</code></td>
+<td>对应位置元素相除，尺寸一致</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>核心</strong>：在大多数工程计算中，我们希望函数对输入的每一个元素<strong>独立</strong>地进行相同的运算，而不是进行矩阵代数运算。这时必须使用 <code>.*</code> 和 <code>./</code>。</p>
+<h4 id="如果不使用点运算符">如果不使用点运算符
+</h4><p>假设我们写了一个<strong>错误的版本</strong>，用矩阵除法 <code>/</code>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="k">function</span><span class="w"> </span>a <span class="p">=</span><span class="w"> </span><span class="nf">acc_wrong</span><span class="p">(</span>v2, v1, t2, t1<span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">a</span> <span class="p">=</span> <span class="p">(</span><span class="n">v2</span> <span class="o">-</span> <span class="n">v1</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">t2</span> <span class="o">-</span> <span class="n">t1</span><span class="p">);</span>   <span class="c">% ❌ 矩阵除法，不是逐元素除</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="n">v2</span> <span class="p">=</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">];</span>    <span class="c">% 两个质点的末速度</span>
+</span></span><span class="line"><span class="cl"><span class="n">v1</span> <span class="p">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">];</span>    <span class="c">% 初速度</span>
+</span></span><span class="line"><span class="cl"><span class="n">t2</span> <span class="p">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span>  <span class="mi">6</span><span class="p">];</span>     <span class="c">% 末时刻</span>
+</span></span><span class="line"><span class="cl"><span class="n">t1</span> <span class="p">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span>  <span class="mi">3</span><span class="p">];</span>     <span class="c">% 初时刻</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">acc_wrong</span><span class="p">(</span><span class="n">v2</span><span class="p">,</span> <span class="n">v1</span><span class="p">,</span> <span class="n">t2</span><span class="p">,</span> <span class="n">t1</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>MATLAB 会报错</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Error using  / 
+</span></span><span class="line"><span class="cl">Matrix dimensions must agree.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>因为 <code>(v2-v1)</code> 是 1×2 向量，<code>(t2-t1)</code> 也是 1×2 向量，矩阵除法要求第二个矩阵是方阵或满足特定维度规则，这里显然不满足，直接崩溃。</p>
+<p><strong>即使不崩溃，结果也完全不是你想要的</strong>。例如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">15</span><span class="p">]</span> <span class="o">/</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>   <span class="c">% 这不是 [10/1, 15/3]！</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>矩阵除法 <code>[10,15] / [1,3]</code> 实际上求解 <code>x * [1,3] = [10,15]</code>，得到一个标量 <code>x = 4.1667</code>，不是逐元素相除。</p>
+<hr>
+<h4 id="使用点运算符的正确版本">使用点运算符的正确版本
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="k">function</span><span class="w"> </span>a <span class="p">=</span><span class="w"> </span><span class="nf">acc_correct</span><span class="p">(</span>v2, v1, t2, t1<span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">a</span> <span class="p">=</span> <span class="p">(</span><span class="n">v2</span> <span class="o">-</span> <span class="n">v1</span><span class="p">)</span> <span class="o">./</span> <span class="p">(</span><span class="n">t2</span> <span class="o">-</span> <span class="n">t1</span><span class="p">);</span>   <span class="c">% ✅ 逐元素相除</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>现在传入同样的向量：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="n">v2</span> <span class="p">=</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="n">v1</span> <span class="p">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="n">t2</span> <span class="p">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span>  <span class="mi">6</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="n">t1</span> <span class="p">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span>  <span class="mi">3</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="p">=</span> <span class="n">acc_correct</span><span class="p">(</span><span class="n">v2</span><span class="p">,</span> <span class="n">v1</span><span class="p">,</span> <span class="n">t2</span><span class="p">,</span> <span class="n">t1</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>输出：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">a = [10, 5]   % (20-10)/(5-4)=10, (30-15)/(6-3)=15/3=5
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>完全符合预期</strong>：第一组数据得到 10，第二组得到 5</p>
+<h3 id="变量作用域--隔离与持久化">变量作用域 —— 隔离与持久化
+</h3><h4 id="-局部变量local">① 局部变量（Local）
+</h4><p>函数内定义的变量默认是<strong>局部</strong>的，仅在函数执行期间存在，不干扰基础工作区。</p>
+<h4 id="-全局变量global">② 全局变量（Global）
+</h4><p>用 <code>global</code> 声明，可在多个函数和基础工作区共享。<strong>谨慎使用</strong>，易导致代码耦合。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="k">function</span><span class="w"> </span><span class="nf">inc</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">global</span> <span class="n">COUNT</span>
+</span></span><span class="line"><span class="cl">    <span class="n">COUNT</span> <span class="p">=</span> <span class="n">COUNT</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>调用前需在所有相关函数中声明 <code>global COUNT</code>。</p>
+<h4 id="-持久变量persistent">③ 持久变量（Persistent）
+</h4><p>用 <code>persistent</code> 声明，<strong>函数多次调用间保留值</strong>，类似静态变量。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="k">function</span><span class="w"> </span>count <span class="p">=</span><span class="w"> </span><span class="nf">counter</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">persistent</span> <span class="n">c</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="nb">isempty</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">c</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">end</span>
+</span></span><span class="line"><span class="cl">    <span class="n">c</span> <span class="p">=</span> <span class="n">c</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">count</span> <span class="p">=</span> <span class="n">c</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>持久变量一般结构如上，首先是函数的基本结构，也就是第一行function＋输出＋=＋函数名(输入)，第二行声明持久变量的时候要用前缀persistent，又因为持久变量在<strong>第一次调用函数时是空的</strong>（<code>[]</code>），必须手动初始化，所以有isempty的判断，标准写法如下:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="k">persistent</span> <span class="n">var</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="nb">isempty</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">var</span> <span class="p">=</span> 初始值<span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>放到这里可以理解为，一开始由于声明的是一个持久变量，所以初始值是空(注意不是0)，这时候isempty就会发挥作用，给他附上初始值var,可以在下一行写出具体的var是多少</p>
+<p>之后每次调用我们声明的这个持久变量，都会保留上一次的值，比如现在就不是空了，是0，就会执行c=c+1这一行</p>
+<p>每次调用 <code>counter()</code> 返回递增序号，<code>c</code> 不会清零</p>
+<p>但是普通的全局变量就不一样，比如下面这个例子:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="k">function</span><span class="w"> </span><span class="nf">myFun</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">x</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="p">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">disp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>第一次运行 <code>myFun()</code>，显示 <strong>2</strong>
+第二次运行，还是 <strong>2</strong> —— 因为每次函数执行完，变量 <code>x</code> 就被<strong>销毁</strong>了，下一次重新从 <code>x = 1</code> 开始</p>
+<p><strong>这就是普通局部变量</strong>：每次调用函数，它都“从零开始”。</p>
+<h3 id="完整示例温度转换工具">完整示例：温度转换工具
+</h3><p><strong>文件 <code>temp_converter.m</code></strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="k">function</span><span class="w"> </span>[f, k] <span class="p">=</span><span class="w"> </span><span class="nf">temp_converter</span><span class="p">(</span>c<span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c">% 摄氏转华氏、开尔文</span>
+</span></span><span class="line"><span class="cl">    <span class="n">f</span> <span class="p">=</span> <span class="n">c</span> <span class="o">*</span> <span class="mi">9</span><span class="o">/</span><span class="mi">5</span> <span class="o">+</span> <span class="mi">32</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">k</span> <span class="p">=</span> <span class="n">c</span> <span class="o">+</span> <span class="mf">273.15</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c">% 子函数：仅本文件可调用</span>
+</span></span><span class="line"><span class="cl"><span class="k">    function</span><span class="w"> </span><span class="nf">print_result</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">fprintf</span><span class="p">(</span><span class="s">&#39;%.1f°C = %.1f°F = %.1fK\n&#39;</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">k</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">nargout</span> <span class="o">==</span> <span class="mi">0</span>      <span class="c">% 若无输出参数，直接打印</span>
+</span></span><span class="line"><span class="cl">        <span class="n">print_result</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="k">end</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>调用：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="n">temp_converter</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>      <span class="c">% 打印结果</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="n">F</span><span class="p">,</span> <span class="n">K</span><span class="p">]</span> <span class="p">=</span> <span class="n">temp_converter</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>   <span class="c">% F=32, K=273.15</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h3 id="总结">总结
+</h3><div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:center">概念</th>
+<th style="text-align:center">一句话要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">基本语法</td>
+<td style="text-align:center"><code>function [输出] = 函数名(输入)</code></td>
+</tr>
+<tr>
+<td style="text-align:center">工作区</td>
+<td style="text-align:center">独立，局部变量默认不共享</td>
+</tr>
+<tr>
+<td style="text-align:center">子函数</td>
+<td style="text-align:center">同一文件中，主函数后定义，仅文件内可见</td>
+</tr>
+<tr>
+<td style="text-align:center">嵌套函数</td>
+<td style="text-align:center">函数内定义，可访问外层变量</td>
+</tr>
+<tr>
+<td style="text-align:center">全局/持久变量</td>
+<td style="text-align:center">谨慎使用；持久变量保留调用间状态</td>
+</tr>
+<tr>
+<td style="text-align:center">函数句柄</td>
+<td style="text-align:center">指向函数的引用，可传递、调用</td>
+</tr>
+<tr>
+<td style="text-align:center">可变参数</td>
+<td style="text-align:center"><code>varargin</code> / <code>varargout</code> 处理不定量输入/输出</td>
+</tr>
+</tbody>
+</table></div>
+
 </section>
 
 
