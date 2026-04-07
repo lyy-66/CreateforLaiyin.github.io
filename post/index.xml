@@ -435,12 +435,10 @@ $$&lt;/p&gt;
 
 
  由方式一可以看出自身和自身的叉乘为0平行向量叉乘也是0
-
-   
-
- 
-
- - **不满足交换律!!!**：
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​&lt;/p&gt;
+&lt;p&gt;​&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; - **不满足交换律!!!**：
    $$
    \vec{A}×\vec{B}=-(\vec{B}×\vec{A})
    $$
