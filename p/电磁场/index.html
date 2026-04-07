@@ -1,0 +1,1893 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Sample article showcasing basic Markdown syntax and formatting for HTML elements.">
+<title>电磁场</title>
+
+<link rel='canonical' href='https://lyy-66.github.io/CreateforLaiyin.github.io/p/%E7%94%B5%E7%A3%81%E5%9C%BA/'>
+
+<link rel="stylesheet" href="/CreateforLaiyin.github.io/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="电磁场">
+<meta property='og:description' content="Sample article showcasing basic Markdown syntax and formatting for HTML elements.">
+<meta property='og:url' content='https://lyy-66.github.io/CreateforLaiyin.github.io/p/%E7%94%B5%E7%A3%81%E5%9C%BA/'>
+<meta property='og:site_name' content='莱茵好!'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='电磁场' /><meta property='article:published_time' content='2026-04-07T11:37:02&#43;08:00'/><meta property='article:modified_time' content='2026-04-07T11:37:02&#43;08:00'/><meta property='og:image' content='https://lyy-66.github.io/CreateforLaiyin.github.io/p/%E7%94%B5%E7%A3%81%E5%9C%BA/1.jpg' />
+<meta name="twitter:title" content="电磁场">
+<meta name="twitter:description" content="Sample article showcasing basic Markdown syntax and formatting for HTML elements."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://lyy-66.github.io/CreateforLaiyin.github.io/p/%E7%94%B5%E7%A3%81%E5%9C%BA/1.jpg' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+  
+
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+
+        <div id="global-music-player" style="position: fixed; bottom: 80px; left: 10px; z-index: 9999; background: var(--card-bg); padding: 3px 6px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); cursor: pointer;">
+            
+            <div id="minimize-btn" style="display: flex; align-items: center; justify-content: center; font-size: 14px; color: var(--text-color);">
+                🎵 音乐
+            </div>
+            
+            
+            <div id="player-controls" style="display: none; margin-top: 4px; transition: all 0.3s ease;">
+                <p style="color: var(--text-color); font-size: 12px; margin: 0 0 2px 0; text-align: center;" id="music-title">正在播放：see you soon</p>
+                
+                
+                <div style="display: flex; flex-direction: column; gap: 2px; margin-bottom: 4px; padding: 0 4px;">
+                    
+                    <input 
+                        type="range" 
+                        id="progress-bar" 
+                        min="0" 
+                        max="100" 
+                        step="0.1" 
+                        value="0"
+                        style="width: 100%; height: 4px; cursor: pointer; accent-color: var(--link-color); margin: 0;"
+                    >
+                    
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span id="current-time" style="color: var(--text-color); font-size: 9px;">00:00</span>
+                        <span id="total-time" style="color: var(--text-color); font-size: 9px;">00:00</span>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 6px; align-items: center; justify-content: center; margin-bottom: 2px;">
+                    <button onclick="prevMusic(); event.stopPropagation();" style="border: none; background: transparent; color: var(--text-color); cursor: pointer; font-size: 11px;">←上曲</button>
+                    
+                    <button onclick="togglePlay(); event.stopPropagation();" style="border: none; background: transparent; color: var(--text-color); cursor: pointer; font-size: 11px;" id="play-btn">▶️ 播放</button>
+                    <button onclick="nextMusic(); event.stopPropagation();" style="border: none; background: transparent; color: var(--text-color); cursor: pointer; font-size: 11px;">下曲→</button>
+                    
+                    <button onclick="toggleMusicList(); event.stopPropagation();" style="border: none; background: transparent; color: var(--text-color); cursor: pointer; font-size: 11px;">📜 列表</button>
+                </div>
+                <div style="display: flex; justify-content: center; align-items: center; gap: 4px;">
+                    <span style="color: var(--text-color); font-size: 10px;">音量🔊</span>
+                    <input type="range" id="volume-control" min="0" max="1" step="0.05" value="0.3" 
+                           style="width: 120px; height: 4px; cursor: pointer; accent-color: var(--link-color);">
+                </div>
+            </div>
+            <audio id="bg-music" preload="metadata" style="display: none;"></audio>
+        </div>
+
+        
+        <div id="music-list-modal" style="position: fixed; bottom: 140px; left: 10px; z-index: 9998; background: var(--card-bg); padding: 8px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.2); display: none; max-height: 200px; overflow-y: auto; min-width: 150px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; padding-bottom: 4px; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                <span style="color: var(--text-color); font-size: 12px; font-weight: bold;">🎵 播放列表</span>
+                <button onclick="toggleMusicList(); event.stopPropagation();" style="border: none; background: transparent; color: var(--text-color); cursor: pointer; font-size: 10px; padding: 0;">✕</button>
+            </div>
+            <div id="music-list-container" style="display: flex; flex-direction: column; gap: 3px;">
+                
+            </div>
+        </div>
+
+        
+        <script>
+            
+            const musicList = [
+                 { src: "/CreateforLaiyin.github.io/audio/song1.mp3", title: "song1" },
+                 { src: "/CreateforLaiyin.github.io/audio/song2.mp3", title: "song2" },
+                 { src: "/CreateforLaiyin.github.io/audio/song3.mp3", title: "song3" },
+            ];
+
+            
+            const audio = document.getElementById('bg-music');
+            const titleEl = document.getElementById('music-title');
+            const playBtn = document.getElementById('play-btn');
+            const volumeControl = document.getElementById('volume-control');
+            const playerContainer = document.getElementById('global-music-player');
+            const playerControls = document.getElementById('player-controls');
+            const minimizeBtn = document.getElementById('minimize-btn');
+            
+            const musicListModal = document.getElementById('music-list-modal');
+            const musicListContainer = document.getElementById('music-list-container');
+            
+            const progressBar = document.getElementById('progress-bar');
+            const currentTimeEl = document.getElementById('current-time');
+            const totalTimeEl = document.getElementById('total-time');
+            
+            
+            let currentTrack = 0;
+            let isExpanded = false;
+            let isListShow = false; 
+            audio.volume = 0.3;
+            let isDraggingProgress = false; 
+
+            
+            const STORAGE = {
+                TRACK: 'blog_music_current_track',
+                TIME: 'blog_music_play_time',
+                PLAYING: 'blog_music_is_playing',
+                VOLUME: 'blog_music_volume'
+            };
+
+            
+            function formatTime(seconds) {
+                if (isNaN(seconds)) return '00:00';
+                const mins = Math.floor(seconds / 60);
+                const secs = Math.floor(seconds % 60);
+                return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+            }
+
+            
+            function updateProgressBar() {
+                if (isDraggingProgress) return; 
+                if (audio.duration) {
+                    const progress = (audio.currentTime / audio.duration) * 100;
+                    progressBar.value = progress;
+                    currentTimeEl.textContent = formatTime(audio.currentTime);
+                }
+            }
+
+            
+            function setAudioProgress() {
+                if (!audio.duration) return;
+                const progress = parseFloat(progressBar.value);
+                const newTime = (progress / 100) * audio.duration;
+                audio.currentTime = newTime;
+                currentTimeEl.textContent = formatTime(newTime);
+                saveAllState(); 
+            }
+
+            
+            function initMusicList() {
+                musicListContainer.innerHTML = '';
+                musicList.forEach((item, index) => {
+                    const listItem = document.createElement('div');
+                    listItem.style = `
+                        padding: 4px 8px;
+                        border-radius: 4px;
+                        color: var(--text-color);
+                        font-size: 11px;
+                        cursor: pointer;
+                        transition: background 0.2s;
+                    `;
+                    
+                    if (index === currentTrack) {
+                        listItem.style.background = 'var(--link-color)';
+                        listItem.style.color = '#fff';
+                    }
+                    listItem.innerHTML = `${index + 1}. ${item.title}`;
+                    
+                    listItem.onclick = function() {
+                        selectMusic(index);
+                        toggleMusicList(); 
+                    };
+                    musicListContainer.appendChild(listItem);
+                });
+            }
+
+            
+            function toggleMusicList() {
+                isListShow = !isListShow;
+                musicListModal.style.display = isListShow ? 'block' : 'none';
+                if (isListShow) {
+                    initMusicList(); 
+                }
+            }
+
+            
+            function selectMusic(index) {
+                currentTrack = index;
+                audio.src = musicList[currentTrack].src;
+                audio.currentTime = 0; 
+                audio.play();
+                playBtn.innerHTML = '⏸️ 暂停';
+                titleEl.textContent = `正在播放：${musicList[currentTrack].title}`;
+                updateMinimizeBtn();
+                saveAllState();
+                initMusicList(); 
+                
+                progressBar.value = 0;
+                currentTimeEl.textContent = '00:00';
+            }
+
+            
+            function togglePlayer() {
+                isExpanded = !isExpanded;
+                playerControls.style.display = isExpanded ? 'block' : 'none';
+                
+                if (musicListModal.style.display === 'block') {
+                    toggleMusicList();
+                }
+                updateMinimizeBtn();
+            }
+
+            
+            function updateMinimizeBtn() {
+                const statusIcon = audio.paused ? '▶️' : '⏸️';
+                minimizeBtn.innerHTML = `${statusIcon} ${musicList[currentTrack].title}`;
+            }
+
+            
+            function saveAllState() {
+                localStorage.setItem(STORAGE.TRACK, currentTrack);
+                localStorage.setItem(STORAGE.TIME, audio.currentTime); 
+                localStorage.setItem(STORAGE.PLAYING, !audio.paused);
+                localStorage.setItem(STORAGE.VOLUME, audio.volume);
+            }
+
+            
+            function restoreAllState() {
+                
+                const savedTrack = localStorage.getItem(STORAGE.TRACK);
+                if (savedTrack !== null) {
+                    currentTrack = parseInt(savedTrack);
+                    
+                    currentTrack = Math.max(0, Math.min(currentTrack, musicList.length - 1));
+                }
+
+                
+                const savedTime = localStorage.getItem(STORAGE.TIME);
+                const playTime = savedTime !== null ? parseFloat(savedTime) : 0;
+
+                
+                const savedVolume = localStorage.getItem(STORAGE.VOLUME);
+                if (savedVolume !== null) {
+                    audio.volume = parseFloat(savedVolume);
+                    volumeControl.value = audio.volume;
+                }
+
+                
+                audio.src = musicList[currentTrack].src;
+                audio.currentTime = playTime; 
+                titleEl.textContent = `正在播放：${musicList[currentTrack].title}`;
+                updateMinimizeBtn();
+                initMusicList(); 
+
+                
+                const isPlaying = localStorage.getItem(STORAGE.PLAYING) === 'true';
+                if (isPlaying) {
+                    
+                    audio.play().then(() => {
+                        playBtn.innerHTML = '⏸️ 暂停';
+                        updateMinimizeBtn();
+                    }).catch(err => {
+                        console.log('自动播放需手动触发（浏览器安全策略）：', err);
+                        playBtn.innerHTML = '▶️ 播放';
+                    });
+                } else {
+                    playBtn.innerHTML = '▶️ 播放';
+                }
+            }
+
+            
+            function togglePlay() {
+                if (audio.paused) {
+                    audio.play();
+                    playBtn.innerHTML = '⏸️ 暂停';
+                } else {
+                    audio.pause();
+                    playBtn.innerHTML = '▶️ 播放';
+                }
+                updateMinimizeBtn();
+                saveAllState();
+            }
+
+            
+            function prevMusic() {
+                currentTrack = (currentTrack - 1 + musicList.length) % musicList.length;
+                audio.src = musicList[currentTrack].src;
+                audio.currentTime = 0; 
+                audio.play();
+                playBtn.innerHTML = '⏸️ 暂停';
+                titleEl.textContent = `正在播放：${musicList[currentTrack].title}`;
+                updateMinimizeBtn();
+                saveAllState();
+                initMusicList(); 
+                
+                progressBar.value = 0;
+                currentTimeEl.textContent = '00:00';
+            }
+
+            
+            function nextMusic() {
+                currentTrack = (currentTrack + 1) % musicList.length;
+                audio.src = musicList[currentTrack].src;
+                audio.currentTime = 0; 
+                audio.play();
+                playBtn.innerHTML = '⏸️ 暂停';
+                titleEl.textContent = `正在播放：${musicList[currentTrack].title}`;
+                updateMinimizeBtn();
+                saveAllState();
+                initMusicList(); 
+                
+                progressBar.value = 0;
+                currentTimeEl.textContent = '00:00';
+            }
+
+            
+            volumeControl.addEventListener('input', function() {
+                audio.volume = this.value;
+                saveAllState();
+            });
+
+            
+            audio.addEventListener('ended', nextMusic);
+
+            
+            let saveTimer = null;
+            audio.addEventListener('timeupdate', function() {
+                
+                updateProgressBar();
+                
+                clearTimeout(saveTimer);
+                saveTimer = setTimeout(saveAllState, 300);
+            });
+
+            
+            audio.addEventListener('loadedmetadata', function() {
+                totalTimeEl.textContent = formatTime(audio.duration);
+                updateProgressBar();
+            });
+
+            
+            
+            progressBar.addEventListener('mousedown', function() {
+                isDraggingProgress = true;
+            });
+            
+            document.addEventListener('mouseup', function() {
+                if (isDraggingProgress) {
+                    isDraggingProgress = false;
+                    setAudioProgress();
+                }
+            });
+            
+            progressBar.addEventListener('input', function() {
+                if (!isDraggingProgress) {
+                    setAudioProgress();
+                }
+            });
+            
+            progressBar.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+
+            
+            window.addEventListener('beforeunload', saveAllState);
+
+            
+            document.addEventListener('click', function(e) {
+                if (isListShow && 
+                    !musicListModal.contains(e.target) && 
+                    !playerContainer.contains(e.target)) {
+                    toggleMusicList();
+                }
+            });
+
+            
+            playerContainer.addEventListener('click', togglePlayer);
+            audio.addEventListener('play', saveAllState);
+            audio.addEventListener('pause', saveAllState);
+
+            
+            document.addEventListener('DOMContentLoaded', function() {
+                restoreAllState();
+            });
+        </script>
+
+        <div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/CreateforLaiyin.github.io/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/CreateforLaiyin.github.io/img/avatar_hu14854224358118890406.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/CreateforLaiyin.github.io">莱茵好!</a></h1>
+            <h2 class="site-description">欢迎来到我的网站</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/CaiJimmy/hugo-theme-stack'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/CreateforLaiyin.github.io/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/CreateforLaiyin.github.io/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/CreateforLaiyin.github.io/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/CreateforLaiyin.github.io/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/CreateforLaiyin.github.io/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#课上随笔">课上随笔</a></li>
+    <li><a href="#标量场和向量场">标量场和向量场</a>
+      <ol>
+        <li><a href="#标量场-scalar-field">标量场 Scalar field</a>
+          <ol>
+            <li><a href="#标量场和它的梯度-scalar-field-and-its-gradient">标量场和它的梯度 Scalar field and its gradient</a></li>
+          </ol>
+        </li>
+        <li><a href="#向量场-vector-field">向量场 Vector field</a>
+          <ol>
+            <li><a href="#矢量运算">矢量运算</a></li>
+            <li><a href="#特殊向量">特殊向量</a></li>
+            <li><a href="#flux-line-场线">Flux line 场线</a></li>
+            <li><a href="#flux-通量">Flux 通量</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#散度-divergence">散度 Divergence</a>
+      <ol>
+        <li><a href="#定义">定义:</a></li>
+        <li><a href="#物理意义">物理意义</a></li>
+        <li><a href="#直角坐标系下的表达式">直角坐标系下的表达式</a>
+          <ol>
+            <li><a href="#散度的直角坐标系表达式">散度的直角坐标系表达式:</a></li>
+            <li><a href="#推导过程见下备考仅需记住上面那个就行这个不用管">推导过程见下(备考仅需记住上面那个就行，这个不用管)</a></li>
+          </ol>
+        </li>
+        <li><a href="#几个散度的基础关系式">几个散度的基础关系式:</a></li>
+        <li><a href="#应用与意义">应用与意义</a></li>
+      </ol>
+    </li>
+    <li><a href="#散度和梯度的区别">散度和梯度的区别</a></li>
+    <li><a href="#向量场的环量与旋度">向量场的环量与旋度</a>
+      <ol>
+        <li><a href="#环量-circulation">环量 Circulation</a></li>
+        <li><a href="#旋度-curl">旋度 Curl</a>
+          <ol>
+            <li><a href="#环量密度的极限定义">环量密度的极限定义</a></li>
+            <li><a href="#旋度的定义">旋度的定义</a></li>
+            <li><a href="#物理意义-1">物理意义</a></li>
+            <li><a href="#与格林公式斯托克斯公式的关系">与格林公式、斯托克斯公式的关系</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#不同坐标系下梯度散度旋度公式总结">不同坐标系下梯度、散度、旋度公式总结</a>
+      <ol>
+        <li><a href="#直角坐标系-x-y-z">直角坐标系 ((x, y, z))</a></li>
+        <li><a href="#柱坐标系-rho-phi-z">柱坐标系 $\rho, \phi, z$</a></li>
+        <li><a href="#球坐标系-r-theta-phi">球坐标系 $r, \theta, \phi$</a></li>
+      </ol>
+    </li>
+    <li><a href="#场源分布">场源分布</a></li>
+    <li><a href="#重要公式的总结">重要公式的总结</a>
+      <ol>
+        <li><a href="#标量场的梯度--gradient">标量场的<strong>梯度  Gradient</strong>:</a></li>
+        <li><a href="#向量场的通量-flux">向量场的<strong>通量 Flux</strong>:</a></li>
+        <li><a href="#向量场中的散度-divergence">向量场中的<strong>散度 Divergence</strong>:</a></li>
+        <li><a href="#场线-flux-line">场线 Flux line:</a></li>
+        <li><a href="#梯度的基础运算">梯度的基础运算</a></li>
+        <li><a href="#散度的基础关系式">散度的基础关系式:</a></li>
+        <li><a href="#旋度">旋度</a></li>
+        <li><a href="#nabla">$\nabla$</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/CreateforLaiyin.github.io/p/%E7%94%B5%E7%A3%81%E5%9C%BA/">
+                <img src="/CreateforLaiyin.github.io/p/%E7%94%B5%E7%A3%81%E5%9C%BA/1_hu14216820668765850984.jpg"
+                        srcset="/CreateforLaiyin.github.io/p/%E7%94%B5%E7%A3%81%E5%9C%BA/1_hu14216820668765850984.jpg 800w, /CreateforLaiyin.github.io/p/%E7%94%B5%E7%A3%81%E5%9C%BA/1_hu1757041929708010560.jpg 1600w"
+                        width="800" 
+                        height="400" 
+                        loading="lazy"
+                        alt="Featured image of post 电磁场" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/CreateforLaiyin.github.io/p/%E7%94%B5%E7%A3%81%E5%9C%BA/">电磁场</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Sample article showcasing basic Markdown syntax and formatting for HTML elements.
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Apr 07, 2026</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="chapter-1-vector-analysis">Chapter 1 Vector analysis
+</h1><h2 id="课上随笔">课上随笔
+</h2><p>1.对矢量场求散度实际上是在求该处的源强度，这也是为什么对E求散度在不是电荷的位置结果为0</p>
+<p>2.散度可以描述open field，但是对于闭合场来说，散度总是0，无法用于描述，但是可以使用</p>
+<h2 id="标量场和向量场">标量场和向量场
+</h2><p><em><strong>定义:数学上来说，场是位置的函数</strong></em></p>
+<h3 id="标量场-scalar-field">标量场 Scalar field
+</h3><ul>
+<li>
+<p>标量:只有大小，如电压U、电荷量Q、电流I、面积S</p>
+</li>
+<li>
+<p>如果在某一时刻，空间中的每一点都对应一个标量值，那么这个标量函数就构成了一个标量场</p>
+</li>
+<li>
+<p>标量场可以用等值面（线）来可视化，比如等温线、等压线</p>
+</li>
+<li>
+<p>常见标量场有:温度场、压力场、密度场</p>
+</li>
+</ul>
+<h4 id="标量场和它的梯度-scalar-field-and-its-gradient">标量场和它的梯度 Scalar field and its gradient
+</h4><p>标量场是描述空间中每一点对应一个标量值的物理量或函数。例如温度分布、电势分布等。根据是否随时间变化，可分为两类：</p>
+<ul>
+<li><strong>恒定标量场</strong>(Time-independent constant scalar field)：只与位置有关，表示为 $f(r)$ ；</li>
+<li><strong>时变标量场</strong>(Time-dependent/Time-varying scalar field)：既与位置有关又与时间有关，表示为 $f(r,t)$​</li>
+</ul>
+<h5 id="等高线等值面-contourisosurface">等高线&amp;等值面 contour&amp;isosurface
+</h5><ul>
+<li>用于描述标量场空间分布</li>
+<li>对于一个标量场$f(r)$,等值面方程由$f(x,y,z)=C(常数)$定义，即所有函数值等于同一常数的点构成的曲面；在二维情况下，称为等值线</li>
+</ul>
+<hr>
+<h5 id="梯度-gradient">梯度 Gradient
+</h5><ul>
+<li>
+<p>对于一个<strong>标量场</strong>$f(x,y,z)$的某一个点P，朝着不同的方向移动，标量f变化的快慢(即方向导数)是不一样的，在所有方向中，存在一个特定方向，使得f值<strong>增加的最快</strong>，我们就把具有<strong>大小</strong>（就是这个最大的变化率的值）和<strong>方向</strong>（就是这个增加最快的方向）的这个矢量，定义为该标量f在P点的<strong>梯度</strong>，记作
+$$
+\nabla f
+$$</p>
+</li>
+<li>
+<p>计算方式为:</p>
+<ul>
+<li>梯度本质上说是一个向量，它的方向<strong>指向函数增加最快的方向</strong>，<strong>模长</strong>也就是大小，表示最大变化率有多大</li>
+</ul>
+</li>
+</ul>
+<p>$$
+\nabla f = \left( \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z} \right)
+$$</p>
+<ul>
+<li>
+<p>为什么是求偏导得到的：</p>
+<ol>
+<li>
+<p>数学上的方向导数 Directional derivative:</p>
+<ul>
+<li><strong>定义式(便于理解含义而非最常见的计算方法)</strong></li>
+</ul>
+<p>以三元函数$f(x,y,z)$为例:</p>
+<p>有一个点$P_0(x_0,y_0,z_0)$,将它带入方程会得到一个因变量坐标系里的一个点，记为$P'$</p>
+<p>而自变量$P_0$沿着不同的方向移动,比如$\vec{u}$(可以是单位向量，也可以不是然后化成单位向量，之所以要化成单位向量下面会说)</p>
+<p>自变量的变化会导致因变量即$f(x,y,z)$的变化</p>
+<p>则<strong>函数f上的点$P_0$沿着$\vec{u}$​方向的方向导数定义为:</strong>（注意三个要素，函数，函数上的点，点的移动方向）</p>
+<p>$$
+\lim_{t→0}\frac{f(x_0+\Delta x,y_0+\Delta y,z_0+\Delta z)-f(x_0,y_0,z_0)}{\sqrt{\Delta x^2+\Delta y^2+\Delta z^2}}
+$$
+其中$\Delta x、\Delta y、\Delta z$等是按照$\vec u$的方向改变的,即:
+$$
+\Delta x=\rho \cos \alpha;<br>
+\Delta y=\rho\cos \beta;<br>
+\Delta z=\rho\cos \gamma
+$$</p>
+</li>
+</ol>
+<ul>
+<li><strong>上面的可以称为定义式，我们一般计算不用这个，在可微的情况下我们一般这样计算方向导数:</strong>
+$$
+\nabla f·\vec{u}
+$$
+其中$\Delta f$是函数的<strong>梯度</strong>，带入点坐标则为<strong>函数f在点P的梯度</strong>，而$\vec{u}$则表示自变量变化的具体方向的<strong>单位向量</strong>(也就是题干当中常见的，求某点沿单位向量$\vec {u}$的方向导数的$\vec{u}$)</li>
+</ul>
+<blockquote>
+<p>其实意会一下，方向导数就是指的函数的某一自变量点，在定义域里找了一个方向，然后自变量沿着这个方向移动时，因变量的变化率</p>
+</blockquote>
+<ol start="2">
+<li>
+<p>在物理中的梯度(和方向导数的关系)</p>
+<p>其实从上文我们可以看出，在函数和点坐标确定后，沿着不同的方向，因变量，也就是函数值，变化率也不一样</p>
+<p>而<strong>梯度是函数和点确定时，方向导数最大时的自变量移动方向</strong></p>
+<p>之所以说是最大，可以看下方的证明:</p>
+<p>我们已知，在一个标量场$u=f(x,y,z)$中取一点，沿不同方向变化率是不一样的</p>
+<p>从$P_0$出发沿着一个给定方向(用单位向量$\vec{l}=(\cos{\alpha},\cos{\beta},\cos{\gamma})$​)移动微小距离$\Delta l$​</p>
+<p>函数值$u$也会变化，总变化值记为$\Delta l$</p>
+<p>根据多元函数的全微分公式，当移动的增量很小时，函数值的总变化量可以近似表示为各个方向变化量之和：
+$$
+\Delta u \approx \frac{\partial u}{\partial x} \Delta x + \frac{\partial u}{\partial y} \Delta y + \frac{\partial u}{\partial z} \Delta z
+$$
+那么变化率是:
+$$
+\frac{\partial u}{\partial l} \approx \frac{\partial u}{\partial x} \cos{\alpha}+ \frac{\partial u}{\partial y} \cos{\beta} + \frac{\partial u}{\partial z} \cos{\gamma}
+$$
+也即:<strong>任何方向的方向导数，都是三个偏导数的加权和</strong>，权重就是方向余弦</p>
+<p>将这个式子改写成:
+$$
+\frac{\partial u}{\partial l}=\vec{G}·\vec{l}
+$$
+其中:
+$$
+\vec{G}=(\frac{\partial u}{\partial x},\frac{\partial u}{\partial y},\frac{\partial u}{\partial z})
+$$</p>
+<p>$$
+\vec{l}=(\cos {\alpha},\cos{\beta},\cos{\gamma})
+$$</p>
+<p>根据矢量点积的性质:
+$$
+\frac{\partial u}{\partial l}=\vec{G}·\vec{l}=|\vec{G}||\vec{l}|\cos{\theta}=|\vec{G}|\cos{\theta}
+$$
+由上式可知:
+因为$\theta$表示$\vec{G}$和$\vec{l}$之间的夹角</p>
+<p>所以当$\vec{G}$和$\vec{l}$方向相同时，变化率最大，所以我们让$\vec{l}$取$(\frac{\partial u}{\partial x},\frac{\partial u}{\partial y},\frac{\partial u}{\partial z})$即:
+$$
+\vec{l}=(\frac{\partial u}{\partial x},\frac{\partial u}{\partial y},\frac{\partial u}{\partial z})
+$$
+按照这个矢量的方向，变化率最大</p>
+<p>所以用在梯度上时，我们也取这个矢量作为方向，因为这个方向的变化率最大</p>
+</li>
+</ol>
+</li>
+<li>
+<p>梯度的一些性质:</p>
+<ol>
+<li>
+<p>梯度向量$\nabla{f}$总是<strong>垂直</strong>于该点的等值面(或等值线)</p>
+<p>因为沿着等值面移动，函数值不变（变化率为 0），所以变化最快的方向必然垂直于等值面</p>
+</li>
+<li>
+<p>梯度的模是标量函数 f<em>f</em> 的最大变化率，即该点的<strong>最大方向导数</strong></p>
+</li>
+<li>
+<p>梯度的方向是该点方向导数最大的方向</p>
+</li>
+</ol>
+</li>
+<li>
+<p>例题:</p>
+<blockquote>
+<p>Determine the gradient of the scalar function$ψ=x^2yz$ and the  directional derivative at a specified direction. This direction is determined by  the unit vector $e_l$​​​ and determine the value of the directional derivative at point (2,  3, 1)</p>
+<p>$\vec{e_l}=\vec{e_x}\frac{3}{\sqrt{50}}+\vec{e_y}\frac{4}{\sqrt{50}}+\vec{e_z}\frac{5}{\sqrt{50}}$</p>
+</blockquote>
+<p>确定标量函数的梯度，以及指定方向上的方向导数。该方向由单位向量确定，并求在点 (2, 3, 1) 处方向导数的值</p>
+<ol>
+<li>
+<p>先求梯度 gradient通式:
+$$
+\frac{\partial \psi}{\partial x}=2xyz; \frac{\partial \psi}{\partial y}=x^2z; \frac{\partial \psi}{\partial z}=x^2y
+$$
+故:
+$$
+\nabla \psi=(2xyz,x^2z,x^2y)
+$$
+即:
+$$
+\nabla \psi=2xy·\vec{e_x}+x^2z·\vec{e_y}+x^2y·\vec{e_z}
+$$</p>
+</li>
+<li>
+<p>带入点坐标:</p>
+<p>又因为点坐标是(2，3，1)，所以可以求出偏导数具体值，进而得到梯度具体值:
+$$
+\nabla \psi=(12，4，12)
+$$</p>
+</li>
+<li>
+<p>求方向导数:</p>
+<p>由单位向量$\vec {e_l}$,，由题干当中说“determine the value of the directional derivative at point (2,  3, 1)”,即求在点(2，3，1)处的方向导数的值:
+$$
+\frac{\partial \psi}{\partial l}=\nabla \psi ·\vec{e_l}=\frac{36}{\sqrt{50}}+\frac{16}{\sqrt{50}}+\frac{60}{\sqrt{50}}=\frac{112}{\sqrt{50}}
+$$</p>
+</li>
+</ol>
+</li>
+<li>
+<p>梯度的基础运算:</p>
+<p><strong>其实我感觉就是求导的规则</strong>
+$$
+\nabla c=0(C是常数)\\nabla cf=c\nabla f
+\\nabla(f±g)=\nabla f±\nabla g
+\\nabla(fg)=g\nabla f+f\nabla g
+\\nabla(f/g)=\frac{g\nabla f-f\nabla g}{g^2}
+\\nabla f(u)=f&rsquo;(u)\nabla u
+$$</p>
+</li>
+</ul>
+<hr>
+<h5 id="位置矢量和相对位置矢量-position-vectorrelative-position-vector">位置矢量和相对位置矢量 Position vector&amp;Relative position vector
+</h5><ul>
+<li>
+<p>对于坐标轴内有点$P(x,y,z)$和点$P&rsquo;(x&rsquo;,y&rsquo;,z&rsquo;)$，可以定义<strong>位置矢量和相对位置矢量</strong>：
+$$
+位置矢量:\vec r=x\vec e_x+y\vec e_y+z\vec e_z
+$$</p>
+<p>$$
+相对位置矢量 :\vec R=\vec r-\vec r&rsquo;=(x-x&rsquo;)\vec e_x+(y-y&rsquo;)\vec e_y+(z-z&rsquo;)\vec e_z
+$$</p>
+<img src="3.png">
+</li>
+<li>
+<p>相对位置函数$f(r-r&rsquo;)$的梯度关系
+$$
+\nabla f=-\nabla&rsquo;f
+$$</p>
+<ul>
+<li>
+<p>符号含义:</p>
+<ol>
+<li>$\nabla$表示对未带撇的坐标 r 求梯度（即偏导）</li>
+<li>$\nabla&rsquo;$​表示对带撇的坐标 r′ 求梯度</li>
+</ol>
+</li>
+<li>
+<p>原因:
+$$
+\nabla f=\frac{\partial f}{\partial R}·\frac{\partial R}{\partial r}
+$$</p>
+<p>$$
+\nabla &lsquo;f=\frac{\partial f}{\partial R}·\frac{\partial R}{\partial r&rsquo;}
+$$</p>
+<p>而R对r和r’求导刚好差一个负号</p>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>
+<p>相对位置矢量$\vec R$及其模长$R=|r-r&rsquo;|$
+$$
+\nabla R=\frac{\vec R}{R}=\vec e_R
+$$
+这里表示对<strong>相对位置矢量的模长求梯度</strong></p>
+<p><strong>即，位置矢量模长的梯度是位置矢量的单位向量</strong>
+$$
+\nabla \frac{1}{R}=-\frac{\vec R}{R^3}=-\frac{\vec e_R}{R^2}
+$$
+这个式子是前面那个式子加上梯度基础运算法则(感觉和求导没区别)得出的</p>
+<p>两个结论的证明如下:</p>
+<p>已知：
+$$
+R=\sqrt{(x-x&rsquo;)^2+(y-y&rsquo;)^2+(z-z&rsquo;)^2}
+$$
+则对x求偏导:
+$$
+\frac{\partial R}{\partial x}=\frac{x-x&rsquo;}{R}
+$$
+这个地方就正常求导就行，然后把分母用R替代就这样了</p>
+<p>那么同理对y,z求偏导也是这样:
+$$
+\frac{\partial R}{\partial y}=\frac{y-y&rsquo;}{R}\
+\frac{\partial R}{\partial z}=\frac{z-z&rsquo;}{R}
+$$
+三个两合并之后即为:
+$$
+\nabla R=\frac{(x-x&rsquo;)+(y-y&rsquo;)+(z-z&rsquo;)}{R}
+$$
+同时我们知道:
+$$
+\vec R=\vec r-\vec r&rsquo;=(x-x&rsquo;)+(y-y&rsquo;)+(z-z&rsquo;)
+$$
+故:
+$$
+\nabla R=\frac{\vec R}{R}=\vec e_R
+$$
+根据:
+$$
+\nabla f(u)=f&rsquo;(u)\nabla u
+$$
+把$\frac{1}{R}$视作$u$是关于R的函数，可以借助上面的基础运算得到:
+$$
+\nabla \frac{1}{R}=-\frac{\vec R}{R^3}=-\frac{\vec e_R}{R^2}
+$$</p>
+<hr>
+</li>
+</ul>
+<h5 id="哈密顿算符-hamiltonian-operator">哈密顿算符 Hamiltonian operator
+</h5><p>$\nabla$是一个<strong>向量微算子</strong>，它既不是数也不是函数，是一个<strong>运算符号，代表一组求偏导操作</strong>
+$$
+\nabla=\vec{e_x}\frac{\partial}{\partial x}+\vec{e_y}\frac{\partial}{\partial y}+\vec{e_z}\frac{\partial}{\partial z}
+$$</p>
+<ul>
+<li>
+<p>单独存在时无意义，但在运算中视为矢量:</p>
+<ul>
+<li>
+<p>它必须作用于某个东西（比如一个函数或一个向量场）才能产生意义</p>
+</li>
+<li>
+<p>虽然它是由微分算符组成的“假”向量，但在运算时，我们必须把它当作一个<strong>真正的向量</strong>来对待。这意味着它可以进行<strong>点乘和叉乘</strong></p>
+</li>
+<li>
+<p>$\nabla$有很多作用对象:</p>
+<ol>
+<li><strong>梯度</strong>:当$\nabla$作用于一个<strong>标量函数f</strong></li>
+<li><strong>散度</strong>:当$\nabla$点乘一个<strong>向量场$\vec{F}$</strong>,衡量场在某点的发散或者汇聚</li>
+<li><strong>旋度</strong>:当$\nabla$叉乘一个<strong>向量场$\vec{F}$</strong>,衡量场在某点的旋转程度</li>
+</ol>
+</li>
+<li>
+<p>两个重要的恒等式:</p>
+<ol>
+<li>$\nabla·\nabla=\nabla^2$:这是<strong>拉普拉斯算符</strong>，即梯度的散度</li>
+<li>$\nabla×\nabla=0$:任何标量场的梯度再取旋度，结果恒为零向量。这反映了数学上“梯度场无旋”的性质</li>
+</ol>
+</li>
+</ul>
+<p>关于<strong>散度和旋度的知识见后</strong></p>
+</li>
+</ul>
+<hr>
+<h3 id="向量场-vector-field">向量场 Vector field
+</h3><ul>
+<li>如果在某一时刻，空间中的每一点都对应一个矢量，那么这个矢量函数就构成了一个矢量场</li>
+<li>常见矢量场包括:流速场、电场、磁场</li>
+<li>矢量场可以用场线（如电力线、磁感线）来表示，<strong>线的切线方向表示矢量方向，疏密表示大小</strong></li>
+</ul>
+<h4 id="矢量运算">矢量运算
+</h4><ol>
+<li>
+<p>加减法(Addition&amp;Subtraction)通常使用平行四边形法则Parallelogram rule,或者正交分解
+$$
+\vec{A} = \vec{e_x} A_x + \vec{e_y} A_y +\vec{ e_z} A_z \quad |\vec{A}| = A = \sqrt{A_x^2 + A_y^2 + A_z^2}
+$$</p>
+<p>$$
+\vec{B} = \vec{e_x} B_x +\vec{ e_y} B_y +\vec{ e_z} B_z
+$$</p>
+<p>$$
+\vec{A} \pm\vec{ B} = \vec{e_x} (A_x \pm B_x) +\vec{ e_y} (A_y \pm B_y) +\vec{ e_z} (A_z \pm B_z)
+$$</p>
+<p>$$
+|\vec{A} \pm\vec{ B}| = \sqrt{(A_x \pm B_x)^2 + (A_y \pm B_y)^2 + (A_z \pm B_z)^2}
+$$</p>
+</li>
+<li>
+<p>向量乘法 Products of vector</p>
+<ul>
+<li>
+<p>和常数点乘:
+$$
+f\vec{A} = \vec{e_x}f A_x + \vec{e}_y fA_y + \vec{e_z} fA_z
+$$</p>
+</li>
+<li>
+<p>和向量点乘 dot product:</p>
+<ul>
+<li>两种计算方法如下:</li>
+</ul>
+<p>$$
+\vec{A}·\vec{B}=ABcos\theta
+$$</p>
+<p>$$
+\vec{A}·\vec{B}=（\vec{e_x}A_x+\vec{e_y}A_y+\vec{e_z}A_z)·（\vec{e_x}B_x+\vec{e_y}B_y+\vec{e_z}B_z)
+$$</p>
+<ul>
+<li>
+<p>特殊的单位向量:
+$$
+\vec{e_x}·\vec{e_x}=\vec{e_y}·\vec{e_y}=\vec{e_z}·\vec{e_z}=1
+$$</p>
+<p>$$
+\vec{e_x}·\vec{e_y}=\vec{e_x}·\vec{e_z}=\vec{e_y}·\vec{e_z}=0
+$$</p>
+</li>
+<li>
+<p>交换律 Commutative law:
+$$
+\vec{A}·\vec{B}=\vec{B}·\vec{A}
+$$</p>
+</li>
+<li>
+<p>分配律 Distributive law:
+$$
+(\vec{A}+\vec{B})·C=\vec{A}·\vec{C}+\vec{B}·\vec{C}
+$$</p>
+</li>
+</ul>
+</li>
+<li>
+<p>和向量叉乘 cross product:</p>
+<ul>
+<li>有三种计算方式：</li>
+</ul>
+<ol>
+<li></li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<pre><code> $$
+ \vec{A}·\vec{B}=AB\sin\theta_{AB}\vec{e_n}
+ $$
+
+ 2. 
+
+ $$
+ \vec{A}×\vec{B}=（\vec{e_x}A_x+\vec{e_y}A_y+\vec{e_z}A_z)×（\vec{e_x}B_x+\vec{e_y}B_y+\vec{e_z}B_z)
+ $$
+
+ 3. 
+
+
+ $$
+ \vec{A}×\vec{B}=\begin{vmatrix}
+ e_x &amp; e_y &amp; e_z \\
+ A_x &amp; A_y &amp; A_z \\
+ B_x &amp; B_y &amp; B_z
+ \end{vmatrix}
+ $$
+
+
+ 由方式一可以看出自身和自身的叉乘为0平行向量叉乘也是0
+
+   
+
+ 
+
+ - **不满足交换律!!!**：
+   $$
+   \vec{A}×\vec{B}=-(\vec{B}×\vec{A})
+   $$
+
+ - 满足分配律:
+   $$
+   (\vec{A}+\vec{B})×C=\vec{A}×\vec{C}+\vec{B}×\vec{C}
+   $$
+</code></pre>
+<ul>
+<li>
+<p>叉乘和点乘混合:</p>
+<ol>
+<li>标量三重积</li>
+</ol>
+<p>$$
+\vec{A}·(\vec{B}×\vec{C})=\vec{B}·(\vec{C}×\vec{A})=\vec{C}·(\vec{A}×\vec{B})
+$$</p>
+<p>表示<strong>以 A,B,C 为棱的平行六面体的有向体积</strong></p>
+<p>计算法二:
+$$
+\vec{A}·(\vec{B}×\vec{C})=\begin{vmatrix}
+A_x &amp; A_y &amp; A_z \
+B_x &amp; B_y &amp; B_z\
+C_x &amp; C_y &amp; C_z
+\end{vmatrix}
+$$</p>
+<ol start="2">
+<li>向量三重积:BAC-CAB法则
+$$
+\vec{A}×(\vec{B}×\vec{C})=\vec{B}(\vec{A}·\vec{C})-\vec{C}(\vec{A}·\vec{B})
+$$</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h4 id="特殊向量">特殊向量
+</h4><ul>
+<li>
+<p>位置矢量 Position vector:</p>
+<p>对于点P(x,y,z),其位置矢量为:
+$$
+\vec{r}=x\vec{e_x}+y\vec{e_y}+z\vec{e_z}
+$$
+如果还有另外一点P‘(x’,y’,z’),则两者之间的相对位置矢量为:
+$$
+\vec{R}=\vec{r}-\vec{r&rsquo;}=(x-x&rsquo;)\vec{e_x}+(y-y&rsquo;)\vec{e_y}+(z-z&rsquo;)\vec{e_z}
+$$</p>
+<p>$$
+R=|\vec{r}-\vec{r&rsquo;}|=\sqrt{(x-x&rsquo;)^2+(y-y&rsquo;)^2+(z-z&rsquo;)^2}
+$$</p>
+</li>
+</ul>
+<h4 id="flux-line-场线">Flux line 场线
+</h4><ul>
+<li>
+<p>也称向量场的流线，是描述向量场分布的重要概念</p>
+</li>
+<li>
+<p>定义:</p>
+<p>对于给定的向量场 F(x,y,z)，<strong>流线</strong>是一条曲线，其上每一点的切线方向都与该点的向量场方向一致</p>
+</li>
+<li>
+<p>性质:</p>
+<ol>
+<li>
+<p>$$
+\vec F×d\vec l=0
+$$</p>
+<p>此处$d\vec l$​表示场线上的微小线元，叉乘为0表示<strong>场线上每一点的切线方向都与该点的向量场方向一致</strong></p>
+</li>
+<li>
+<p>$$
+\frac{dx}{F_x}=\frac{dy}{F_y}=\frac{dz}{F_z}
+$$</p>
+<p><strong>重要的关系式!!!</strong></p>
+<p>原因如下:</p>
+<p>假设场线为:$\vec r(t)=(x(t),y(t),z(t))$,那么曲线上某点的切向量就是:
+$$
+\frac{d\vec r}{dt}=(\frac{dx}{dt},\frac{dy}{dt},\frac{dz}{dt})
+$$
+又因为场线方向(场线上某点的切向量)和（该点所在的）向量场的方向平行，故:
+$$
+\frac{\frac{dx}{dt}}{F_x}=\frac{\frac{dy}{dt}}{F_y}=\frac{\frac{dz}{dt}}{F_z}
+$$
+化简得:
+$$
+\frac{dx}{F_x}=\frac{dy}{F_y}=\frac{dz}{F_z}
+$$
+举个例子:</p>
+<p>设有一个二维向量场$\vec F=(y,-x)$,那么场线满足:
+$$
+\frac{dx}{y}=\frac{dy}{-x}
+$$
+可以写成:
+$$
+-xdy=-xdx\ \frac{y^2}{2}=-\frac{x^2}{2}+C\ x^2+y^2=C
+$$
+<strong>这个方程其实就是流线方程</strong>，也就是说，场线在这道题的情况下是它表示一族以原点为中心的同心圆，C不同半径不同；</p>
+<p>对于向量场而言，这个式子表示向量场$\vec F=(y,-x)$每一条场线都是一个圆，且所有圆圆心都在原点</p>
+</li>
+</ol>
+</li>
+</ul>
+<h4 id="flux-通量">Flux 通量
+</h4><ul>
+<li>
+<p>定义:</p>
+<p>对于一个向量场$\vec F$，它穿过某个面$S$的场线在它法线的分量(因为我们不是计算有多少条场线穿过了这个面，而是取发现上的分量，也就是垂直穿过的量)，称为通量,定义<strong>通量微元</strong>为:
+$$
+d\Psi=F_ndS=F\cos\theta dS=\vec F·d\vec S
+$$</p>
+<ul>
+<li>$F_n$是$\vec F$在法线上的投影</li>
+</ul>
+<p>对整个曲面求积分，得到<strong>总通量</strong>:
+$$
+\Psi=\int _S\vec F·d\vec S
+$$</p>
+<ul>
+<li><strong>直角坐标下的表达:</strong>
+$$
+设向量场在直角坐标系中的分量为:\
+\vec F(x,y,z)=F_x(x,y,z)\vec e_x+F_y(x,y,z)\vec e_y+F_z(x,y,z)\vec e_z\
+而有向面元也可以写成:\
+d\vec S=dydz\vec e_x+dxdz\vec e_y+dxdy\vec e_z\
+那么点积展开为:\
+\Psi=\int_S\vec F·d\vec S=\int_SF_xdydz+\int_SF_ydxdz+\int_SF_zdxdy
+$$</li>
+</ul>
+<h5 id="解题技巧">解题技巧
+</h5><ul>
+<li>
+<p>$\Psi=\int _S\vec F·d\vec S$这个式子可以改写成$\Psi=\int _S\vec F·d\vec S=\int_s\vec F·\vec nds$,其中，这个$\vec n$就是面的<strong>单位法向量</strong></p>
+</li>
+<li>
+<p>面的法向量，可以通过平面方程求得，<strong>平面方程的梯度就是面的一个法向量</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="散度-divergence">散度 Divergence
+</h2><h3 id="定义">定义:
+</h3><ol>
+<li>
+<p>散度（divergence）是向量场的一个微分运算，它描述了<strong>向量场在某一点附近的“源”或“汇”的强度</strong></p>
+</li>
+<li>
+<p>设有一个向量场$\vec F$,设有一个向量场 $F$，考虑空间中一点 P，作一个包含 P 的微小闭合曲面 S，其所围的体积为$\Delta V$。则 $F$ 通过 S 的<strong>净通量</strong>为 $\oint_S \mathbf{F} \cdot d\mathbf{S}$。散度定义为当体积趋近于零时，单位体积的通量极限：
+$$
+\operatorname{div} \mathbf{F}(P) = \lim_{\Delta V \to 0} \frac{1}{\Delta V} \oint_{S} \mathbf{F} \cdot d\mathbf{S}.
+$$</p>
+<p>这个极限与所取曲面的形状无关（只要体积收缩到点 P），它反映了该点处向量场的“发散”程度。</p>
+</li>
+</ol>
+<h3 id="物理意义">物理意义
+</h3><ul>
+<li>如果散度为正，表示该点有“源”，向量场向外发散（例如正电荷产生的电场）。</li>
+<li>如果散度为负，表示该点有“汇”，向量场向内汇聚（例如热流进入冷源）。</li>
+<li>如果散度为零，表示该点无源无汇，场线连续（如磁场）。</li>
+</ul>
+<h3 id="直角坐标系下的表达式">直角坐标系下的表达式
+</h3><h4 id="散度的直角坐标系表达式">散度的直角坐标系表达式:
+</h4><p>$$
+div \vec F=\frac{\partial F_x}{\partial x}+\frac{\partial F_y}{\partial y}+\frac{\partial F_z}{\partial z}
+$$</p>
+<p>常用记号$\nabla ·\vec F$</p>
+<h4 id="推导过程见下备考仅需记住上面那个就行这个不用管">推导过程见下(备考仅需记住上面那个就行，这个不用管)
+</h4><p>为了得到具体计算公式，考虑一个以点 $(x,y,z)$ 为中心的小长方体，边长分别为 $\Delta x, \Delta y, \Delta z$，体积 $\Delta V = \Delta x \Delta y \Delta z$。计算通过六个面的通量。</p>
+<p>假设场分量为 $\mathbf{F} = (F_x, F_y, F_z)$，且各分量连续可微。先计算通过垂直于 x 轴的两个面的通量：</p>
+<img src="2.png">
+<h3 id="几个散度的基础关系式">几个散度的基础关系式:
+</h3><ul>
+<li>
+<p>对于相对坐标矢量函数$F(\vec r-\vec {r&rsquo;})$
+$$
+\nabla· F=-\nabla&rsquo;· F
+$$</p>
+</li>
+<li>
+<p>相对位置矢量$\vec R$的散度:
+$$
+\nabla ·\vec R=3
+$$
+在表达式 $\nabla \cdot (\mathbf{r} - \mathbf{r}&rsquo;)$ 中$\nabla$ 只对 <strong>场点坐标</strong> $\mathbf{r} = (x, y, z)$ 求偏导，而源点 $\mathbf{r}&rsquo;$ 是固定的常数矢量。所以：</p>
+<p>$$
+\nabla \cdot (\mathbf{r} - \mathbf{r}&rsquo;) = \nabla \cdot \mathbf{r} - \nabla \cdot \mathbf{r}&rsquo;
+$$</p>
+<ul>
+<li>第一项：$\nabla \cdot \mathbf{r} = \frac{\partial x}{\partial x} + \frac{\partial y}{\partial y} + \frac{\partial z}{\partial z} = 1 + 1 + 1 = 3$。</li>
+<li>第二项：由于 $\mathbf{r}&rsquo;$ 是常矢量（不依赖于 (x, y, z)），其散度为零，即 $\nabla \cdot \mathbf{r}&rsquo; = 0$。</li>
+</ul>
+<p>因此：
+$$
+\nabla \cdot (\mathbf{r} - \mathbf{r}&rsquo;) = 3 - 0 = 3.
+$$</p>
+</li>
+<li>
+<p><strong>标量场与矢量场乘积的散度</strong>:
+$$
+\nabla ·(f\vec F)=f\nabla·\vec F+\nabla f·\vec F
+$$</p>
+</li>
+<li>
+<p>$\frac{\vec R}{R^3}$的散度:
+$$
+\nabla·\frac{\vec R}{R^3}=0,R≠0
+$$</p>
+<ul>
+<li>这里$\vec R=\vec r-\vec{r&rsquo;}$,$R=|\vec R|$</li>
+</ul>
+</li>
+</ul>
+<h3 id="应用与意义">应用与意义
+</h3><ul>
+<li>
+<p>高斯散度定理：将散度的体积分与通过封闭曲面的通量联系起来：
+$$
+\iiint_V \nabla \cdot \mathbf{F} , dV = \oint_S \mathbf{F} \cdot d\mathbf{S}.
+$$</p>
+</li>
+<li>
+<p>在流体力学中，散度表示流体的膨胀率；在电磁学中，高斯定律就是用散度描述的。</p>
+</li>
+</ul>
+<h2 id="散度和梯度的区别">散度和梯度的区别
+</h2><ol>
+<li>梯度是<strong>标量场</strong>的性质，梯度本身是一个<strong>矢量</strong>；散度是<strong>矢量场</strong>的性质，散度本身是一个<strong>标量</strong></li>
+<li><strong>梯度</strong>:当$\nabla$作用于一个<strong>标量函数f</strong></li>
+<li><strong>散度</strong>:当$\nabla$<strong>点乘</strong>一个<strong>向量场$\vec{F}$​</strong>,衡量场在某点的发散或者汇聚</li>
+</ol>
+<h2 id="向量场的环量与旋度">向量场的环量与旋度
+</h2><h3 id="环量-circulation">环量 Circulation
+</h3><ul>
+<li>
+<p>环量的产生是从变力做功中引入的:
+$$
+\Delta A_i \approx F_i \Delta l_i \cos \theta_i = F_i \cdot \Delta l_i
+$$</p>
+<p>$$
+A = \lim_{\substack{N \to \infty \ \Delta l \to 0}} \left( \sum_{i=1}^N F_i \cdot \Delta l_i \right) = \int_l F \cdot dl
+$$</p>
+<ul>
+<li>
+<p><strong>涡旋场 vortex field</strong>:</p>
+<p>如果<strong>矢量场的环量不为0</strong>，那么则称这个场是涡旋场</p>
+<p>它的场源称为<strong>涡源 vortex source</strong></p>
+</li>
+</ul>
+</li>
+<li>
+<p>在向量场分析中，<strong>环量</strong>（circulation）是一个描述向量场沿闭合路径旋转趋势的标量量。它定义为向量场 $F$ 沿闭合曲线 $l$ 的线积分：
+$$
+C = \oint_l \mathbf{F} \cdot d\mathbf{l}
+$$</p>
+<ul>
+<li>
+<p>这个积分度量了向量场沿着路径的“总旋转效应”。如果环量不为零，说明向量场在路径所围区域内有某种旋转性的源。</p>
+</li>
+<li>
+<p>一个典型的例子是<strong>涡旋场</strong>（vortex field），例如磁场围绕电流导线，或流体中的涡流。在这种场中，沿环绕中心的闭合路径的环量不为零，即使路径不包围任何常规的散度源（如电荷或质量源）。这种场源的特性被称为<strong>涡源</strong>（vortex source），它产生的是旋度而非散度</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="旋度-curl">旋度 Curl
+</h3><h4 id="环量密度的极限定义">环量密度的极限定义
+</h4><p>在平面向量场中，环量 $\oint_l \mathbf{F} \cdot d\mathbf{l}$ 沿一条闭曲线 $l$ 计算。若取一个很小的有向面元 $\Delta S$，其边界为 $l$，面元法向 $\mathbf{e}_n$ 与边界方向符合右手定则（即四指沿边界方向，拇指指向法向），那么当 $\Delta S \to 0$ 收缩到点 $P$ 时，单位面积上的环量极限称为 <strong>环量密度</strong>：</p>
+<p>$$
+\frac{dC}{dS} = \lim_{\Delta S \to 0} \frac{\oint_l \mathbf{F} \cdot d\mathbf{l}}{\Delta S}.
+$$</p>
+<p>这个极限依赖于面元的方向，因为不同方向的环量密度一般不同。</p>
+<h4 id="旋度的定义">旋度的定义
+</h4><p><strong>旋度</strong> $\nabla \times \mathbf{F}$ 是一个矢量，它的大小等于点 $P$ 处所有方向中 <strong>环量密度的最大值</strong>，方向取环量密度取最大值时对应面元的法向（右手定则）。</p>
+<p>在三维直角坐标系中，旋度可写为：</p>
+<p>$$
+\nabla \times \mathbf{F} =
+\begin{vmatrix}
+\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \
+\frac{\partial}{\partial x} &amp; \frac{\partial}{\partial y} &amp; \frac{\partial}{\partial z} \
+F_x &amp; F_y &amp; F_z
+\end{vmatrix}
+= \left( \frac{\partial F_z}{\partial y} - \frac{\partial F_y}{\partial z},;
+\frac{\partial F_x}{\partial z} - \frac{\partial F_z}{\partial x},;
+\frac{\partial F_y}{\partial x} - \frac{\partial F_x}{\partial y} \right).
+$$</p>
+<p>其每个分量恰好对应相应坐标平面上的环量密度。例如，$(\nabla \times \mathbf{F})_z = \frac{\partial F_y}{\partial x} - \frac{\partial F_x}{\partial y}$ 就是绕 $z$ 轴方向的环量密度（即 $xy$ 平面内的环量密度）。</p>
+<p>$$
+(\operatorname{curl} \mathbf{F})_y = \frac{\partial F_x}{\partial z} - \frac{\partial F_z}{\partial x}, \quad (\operatorname{curl} \mathbf{F})_z = \frac{\partial F_y}{\partial x} - \frac{\partial F_x}{\partial y}
+$$</p>
+<h4 id="物理意义-1">物理意义
+</h4><ul>
+<li>
+<p><strong>流体力学</strong>：旋度的一半是流体的涡量（vorticity），表示流体微团的旋转角速度。</p>
+</li>
+<li>
+<p><strong>电磁学</strong>：麦克斯韦方程组中，$\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}$ 说明变化的磁场会产生有旋电场；$\nabla \times \mathbf{B} = \mu_0 \mathbf{J} + \mu_0 \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t}$ 说明电流和变化电场产生磁场。</p>
+</li>
+<li>
+<p><strong>矢量的旋度</strong>仍然是<strong>矢量</strong></p>
+</li>
+<li>
+<p>某点的旋度是该点单位面积环量最大值</p>
+</li>
+<li>
+<p>如果场中任意一点$\nabla ×\vec F=0$那么这个场就定义为无旋场或者保守场</p>
+</li>
+</ul>
+<h4 id="与格林公式斯托克斯公式的关系">与格林公式、斯托克斯公式的关系
+</h4><ul>
+<li>平面情形：格林公式将闭曲线上的环量与区域内旋度的二重积分联系起来。</li>
+<li>三维情形：斯托克斯定理将曲边界上的环量等于曲面上的旋度通量：</li>
+</ul>
+<p>$$
+\oint_{\partial S} \mathbf{F} \cdot d\mathbf{l} = \iint_S (\nabla \times \mathbf{F}) \cdot d\mathbf{S}.
+$$</p>
+<img src="5.png">
+<img src="4.png">
+<p><em><strong>环量可以用来探测一个场是否有涡源</strong></em>:</p>
+<p>因为根据斯托克斯公式的哈密顿算符表示方法:
+$$
+\oint_{\partial S} \mathbf{F} \cdot d\mathbf{l} = \iint_S (\nabla \times \mathbf{F}) \cdot d\mathbf{S}.
+$$
+可以看出，左侧环量为0，则右侧旋度为0，无涡源，反之则有</p>
+<h2 id="不同坐标系下梯度散度旋度公式总结">不同坐标系下梯度、散度、旋度公式总结
+</h2><hr>
+<h3 id="直角坐标系-x-y-z">直角坐标系 ((x, y, z))
+</h3><p><strong>梯度：</strong>
+$$
+\nabla f = \frac{\partial f}{\partial x},\hat{\mathbf{x}} + \frac{\partial f}{\partial y},\hat{\mathbf{y}} + \frac{\partial f}{\partial z},\hat{\mathbf{z}}
+$$</p>
+<p><strong>散度：</strong>
+$$
+\nabla \cdot \mathbf{F} = \frac{\partial F_x}{\partial x} + \frac{\partial F_y}{\partial y} + \frac{\partial F_z}{\partial z}
+$$</p>
+<p><strong>旋度：</strong>
+$$
+\nabla \times \mathbf{F} = \left( \frac{\partial F_z}{\partial y} - \frac{\partial F_y}{\partial z} \right)\hat{\mathbf{x}} + \left( \frac{\partial F_x}{\partial z} - \frac{\partial F_z}{\partial x} \right)\hat{\mathbf{y}} + \left( \frac{\partial F_y}{\partial x} - \frac{\partial F_x}{\partial y} \right)\hat{\mathbf{z}}
+$$</p>
+<p><strong>标量拉普拉斯：</strong>
+$$
+\nabla^2 f = \frac{\partial^2 f}{\partial x^2} + \frac{\partial^2 f}{\partial y^2} + \frac{\partial^2 f}{\partial z^2}
+$$</p>
+<hr>
+<h3 id="柱坐标系-rho-phi-z">柱坐标系 $\rho, \phi, z$
+</h3><p>基向量：$\hat{\boldsymbol{\rho}}$, $\hat{\boldsymbol{\phi}}$, $\hat{\mathbf{z}}$</p>
+<p><strong>梯度：</strong>
+$$
+\nabla f = \frac{\partial f}{\partial \rho},\hat{\boldsymbol{\rho}} + \frac{1}{\rho}\frac{\partial f}{\partial \phi},\hat{\boldsymbol{\phi}} + \frac{\partial f}{\partial z},\hat{\mathbf{z}}
+$$</p>
+<p><strong>散度：</strong>
+$$
+\nabla \cdot \mathbf{F} = \frac{1}{\rho}\frac{\partial}{\partial \rho}(\rho F_\rho) + \frac{1}{\rho}\frac{\partial F_\phi}{\partial \phi} + \frac{\partial F_z}{\partial z}
+$$</p>
+<p><strong>旋度：</strong>
+$$
+\nabla \times \mathbf{F} = \left( \frac{1}{\rho}\frac{\partial F_z}{\partial \phi} - \frac{\partial F_\phi}{\partial z} \right)\hat{\boldsymbol{\rho}} + \left( \frac{\partial F_\rho}{\partial z} - \frac{\partial F_z}{\partial \rho} \right)\hat{\boldsymbol{\phi}} + \frac{1}{\rho}\left( \frac{\partial}{\partial \rho}(\rho F_\phi) - \frac{\partial F_\rho}{\partial \phi} \right)\hat{\mathbf{z}}
+$$</p>
+<p><strong>标量拉普拉斯：</strong>
+$$
+\nabla^2 f = \frac{1}{\rho}\frac{\partial}{\partial \rho}\left( \rho \frac{\partial f}{\partial \rho} \right) + \frac{1}{\rho^2}\frac{\partial^2 f}{\partial \phi^2} + \frac{\partial^2 f}{\partial z^2}
+$$</p>
+<hr>
+<h3 id="球坐标系-r-theta-phi">球坐标系 $r, \theta, \phi$
+</h3><p>基向量：$\hat{\mathbf{r}}, \hat{\boldsymbol{\theta}}, \hat{\boldsymbol{\phi}}$</p>
+<p><strong>梯度：</strong>
+$$
+\nabla f = \frac{\partial f}{\partial r},\hat{\mathbf{r}} + \frac{1}{r}\frac{\partial f}{\partial \theta},\hat{\boldsymbol{\theta}} + \frac{1}{r\sin\theta}\frac{\partial f}{\partial \phi},\hat{\boldsymbol{\phi}}
+$$</p>
+<p><strong>散度：</strong>
+$$
+\nabla \cdot \mathbf{F} = \frac{1}{r^2}\frac{\partial}{\partial r}(r^2 F_r) + \frac{1}{r\sin\theta}\frac{\partial}{\partial \theta}(F_\theta \sin\theta) + \frac{1}{r\sin\theta}\frac{\partial F_\phi}{\partial \phi}
+$$</p>
+<p><strong>旋度：</strong>
+$$
+\nabla \times \mathbf{F} = \frac{1}{r\sin\theta}\left[ \frac{\partial}{\partial \theta}(F_\phi \sin\theta) - \frac{\partial F_\theta}{\partial \phi} \right]\hat{\mathbf{r}} + \frac{1}{r}\left[ \frac{1}{\sin\theta}\frac{\partial F_r}{\partial \phi} - \frac{\partial}{\partial r}(r F_\phi) \right]\hat{\boldsymbol{\theta}} + \frac{1}{r}\left[ \frac{\partial}{\partial r}(r F_\theta) - \frac{\partial F_r}{\partial \theta} \right]\hat{\boldsymbol{\phi}}
+$$</p>
+<p><strong>标量拉普拉斯：</strong>
+$$
+\nabla^2 f = \frac{1}{r^2}\frac{\partial}{\partial r}\left( r^2 \frac{\partial f}{\partial r} \right) + \frac{1}{r^2\sin\theta}\frac{\partial}{\partial \theta}\left( \sin\theta \frac{\partial f}{\partial \theta} \right) + \frac{1}{r^2\sin^2\theta}\frac{\partial^2 f}{\partial \phi^2}
+$$</p>
+<h2 id="场源分布">场源分布
+</h2><p>这些术语在矢量分析和电磁学中描述矢量场的性质，对应的英文表达如下：</p>
+<ul>
+<li>
+<p><strong>无源无旋</strong>：<em>solenoidal and irrotational</em> 或 <em>divergence‑free and curl‑free</em>
+例如：无源区域中的静电场（$\nabla \cdot \mathbf{E}=0,\ \nabla \times \mathbf{E}=0$）。</p>
+</li>
+<li>
+<p><strong>有源无旋</strong>：<em>irrotational with sources</em> 或 <em>non‑solenoidal and curl‑free</em>
+例如：有电荷分布的静电场（$\nabla \cdot \mathbf{E} \neq 0,\ \nabla \times \mathbf{E}=0$）。</p>
+</li>
+<li>
+<p><strong>无源有旋</strong>：<em>solenoidal with vorticity</em> 或 <em>divergence‑free and rotational</em>
+例如：静磁场（$\nabla \cdot \mathbf{B}=0,\ \nabla \times \mathbf{B} \neq 0$）。</p>
+</li>
+<li>
+<p><strong>有源有旋</strong>：<em>with both divergence and curl</em> 或 <em>non‑solenoidal and rotational</em>
+例如：一般的时变电磁场或某些流体速度场。</p>
+</li>
+</ul>
+<p>在正式文献中，也常用“conservative”表示无旋，“solenoidal”表示无源。</p>
+<h2 id="重要公式的总结">重要公式的总结
+</h2><h3 id="标量场的梯度--gradient">标量场的<strong>梯度  Gradient</strong>:
+</h3><p>$$
+\nabla f = \left( \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z} \right)
+$$</p>
+<ul>
+<li>
+<p>中间没有·直接和标量函数连接</p>
+</li>
+<li>
+<p>方向导数的求法:
+$$
+\nabla f·\vec{u}(\vec u是单位向量，即沿哪个方向变化)
+$$</p>
+</li>
+</ul>
+<h3 id="向量场的通量-flux">向量场的<strong>通量 Flux</strong>:
+</h3><p>$$
+\Psi=\int _S\vec F·d\vec S\
+直角坐标系下:
+\Psi=\int_S\vec F·d\vec S=\int_SF_xdydz+\int_SF_ydxdz+\int_SF_zdxdy
+$$</p>
+<h3 id="向量场中的散度-divergence">向量场中的<strong>散度 Divergence</strong>:
+</h3><p>它描述了<strong>向量场在某一点附近的“源”或“汇”的强度</strong>
+$$
+定义式:\operatorname{div} \mathbf{F}(P) = \lim_{\Delta V \to 0} \frac{1}{\Delta V} \oint_{S} \mathbf{F} \cdot d\mathbf{S}.\
+直角坐标系下:div \vec F=\frac{\partial F_x}{\partial x}+\frac{\partial F_y}{\partial y}+\frac{\partial F_z}{\partial z}
+$$
+常用符号:$\nabla ·\vec F$</p>
+<h3 id="场线-flux-line">场线 Flux line:
+</h3><p>对于给定的向量场 F(x,y,z)，假设场线为:$\vec r(t)=(x(t),y(t),z(t))$,那么满足:
+$$
+\frac{dx}{F_x}=\frac{dy}{F_y}=\frac{dz}{F_z}
+$$</p>
+<h3 id="梯度的基础运算">梯度的基础运算
+</h3><p>$$
+\nabla c=0(C是常数)\\nabla cf=c\nabla f
+\\nabla(f±g)=\nabla f±\nabla g
+\\nabla(fg)=g\nabla f+f\nabla g
+\\nabla(f/g)=\frac{g\nabla f-f\nabla g}{g^2}
+\\nabla f(u)=f&rsquo;(u)\nabla u
+$$</p>
+<p>位置矢量模长的梯度是位置矢量的单位向量
+$$
+\nabla R=\vec e_R=\frac{\vec R}{R}
+$$
+根据梯度的基础运算:
+$$
+\nabla \frac{1}{R}=-\frac{\vec R}{R^3}=-\frac{\vec e_R}{R^2}
+$$
+相对位置函数$f(r-r&rsquo;)$的梯度关系
+$$
+\nabla f=-\nabla&rsquo;f
+$$</p>
+<h3 id="散度的基础关系式">散度的基础关系式:
+</h3><ul>
+<li>
+<p>对于相对坐标矢量函数$F(\vec r-\vec {r&rsquo;})$
+$$
+\nabla· F=-\nabla&rsquo;· F
+$$</p>
+</li>
+<li>
+<p>相对位置矢量$\vec R$的散度:
+$$
+\nabla ·\vec R=3
+$$</p>
+</li>
+<li>
+<p><strong>标量场与矢量场乘积的散度</strong>:
+$$
+\nabla ·(f\vec F)=f\nabla·\vec F+\nabla f·\vec F
+$$</p>
+</li>
+<li>
+<p>$\frac{\vec R}{R^3}$的散度:
+$$
+\nabla·\frac{\vec R}{R^3}=0,R≠0
+$$</p>
+<ul>
+<li>这里$\vec R=\vec r-\vec{r&rsquo;}$,$R=|\vec R|$</li>
+</ul>
+</li>
+</ul>
+<h3 id="旋度">旋度
+</h3><p>$$
+\nabla \times \mathbf{F} =
+\begin{vmatrix}
+\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \
+\frac{\partial}{\partial x} &amp; \frac{\partial}{\partial y} &amp; \frac{\partial}{\partial z} \
+F_x &amp; F_y &amp; F_z
+\end{vmatrix}
+= \left( \frac{\partial F_z}{\partial y} - \frac{\partial F_y}{\partial z},;
+\frac{\partial F_x}{\partial z} - \frac{\partial F_z}{\partial x},;
+\frac{\partial F_y}{\partial x} - \frac{\partial F_x}{\partial y} \right).
+$$</p>
+<p>$$
+\oint_{\partial S} \mathbf{F} \cdot d\mathbf{l} = \iint_S (\nabla \times \mathbf{F}) \cdot d\mathbf{S}.
+$$</p>
+<h3 id="nabla">$\nabla$
+</h3><ol>
+<li>
+<p><strong>梯度的旋度为零</strong>：
+$$
+\nabla ×(\nabla \phi)=0
+$$</p>
+</li>
+<li>
+<p><strong>旋度的散度为零</strong>:
+$$
+\nabla ·(\nabla × \vec A)=0
+$$</p>
+</li>
+<li>
+<p>拉普拉斯算子:
+$$
+\nabla ·(\nabla \phi)=\nabla^2\phi
+$$
+这个一般情况下不为0</p>
+</li>
+</ol>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/CreateforLaiyin.github.io/tags/%E7%94%B5%E7%A3%81%E5%9C%BA/">电磁场</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    
+<footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2026 Lyy
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/CreateforLaiyin.github.io/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
