@@ -75,13 +75,13 @@ $$&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;以三元函数$f(x,y,z)$为例:&lt;/p&gt;
 &lt;p&gt;有一个点$P_0(x_0,y_0,z_0)$,将它带入方程会得到一个因变量坐标系里的一个点，记为$P&#39;$&lt;/p&gt;
-&lt;p&gt;而自变量$P_0$沿着不同的方向移动,比如$\vec{u}$(可以是单位向量，也可以不是然后化成单位向量，之所以要化成单位向量下面会说)&lt;/p&gt;
-&lt;p&gt;自变量的变化会导致因变量即$f(x,y,z)$的变化&lt;/p&gt;
-&lt;p&gt;则&lt;strong&gt;函数f上的点$P_0$沿着$\vec{u}$​方向的方向导数定义为:&lt;/strong&gt;（注意三个要素，函数，函数上的点，点的移动方向）&lt;/p&gt;
-&lt;p&gt;$$
+&lt;p&gt;而自变量$P_0$沿着不同的方向移动,比如$\vec{u}$​(可以是单位向量，也可以不是然后化成单位向量，之所以要化成单位向量下面会说)
+$$
 \lim_{t→0}\frac{f(x_0+\Delta x,y_0+\Delta y,z_0+\Delta z)-f(x_0,y_0,z_0)}{\sqrt{\Delta x^2+\Delta y^2+\Delta z^2}}
 $$
-其中$\Delta x、\Delta y、\Delta z$等是按照$\vec u$的方向改变的,即:
+自变量的变化会导致因变量即$f(x,y,z)$的变化&lt;/p&gt;
+&lt;p&gt;则&lt;strong&gt;函数f上的点$P_0$沿着$\vec{u}$​​方向的方向导数定义为:&lt;/strong&gt;（注意三个要素，函数，函数上的点，点的移动方向）&lt;/p&gt;
+&lt;p&gt;其中$\Delta x、\Delta y、\Delta z$等是按照$\vec u$的方向改变的,即:
 $$
 \Delta x=\rho \cos \alpha;&lt;br&gt;
 \Delta y=\rho\cos \beta;&lt;br&gt;
@@ -423,31 +423,30 @@ $$&lt;/p&gt;
  $$
 
  3. 
-
-
- $$
- \vec{A}×\vec{B}=\begin{vmatrix}
- e_x &amp;amp; e_y &amp;amp; e_z \\
- A_x &amp;amp; A_y &amp;amp; A_z \\
- B_x &amp;amp; B_y &amp;amp; B_z
- \end{vmatrix}
- $$
-
-
- 由方式一可以看出自身和自身的叉乘为0平行向量叉乘也是0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;$$
+\vec{A}×\vec{B}=\begin{vmatrix}
+e_x &amp;amp; e_y &amp;amp; e_z \
+A_x &amp;amp; A_y &amp;amp; A_z \
+B_x &amp;amp; B_y &amp;amp; B_z
+\end{vmatrix}
+$$&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; 由方式一可以看出自身和自身的叉乘为0平行向量叉乘也是0
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;​&lt;/p&gt;
 &lt;p&gt;​&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt; - **不满足交换律!!!**：
-   $$
-   \vec{A}×\vec{B}=-(\vec{B}×\vec{A})
-   $$
-
- - 满足分配律:
-   $$
-   (\vec{A}+\vec{B})×C=\vec{A}×\vec{C}+\vec{B}×\vec{C}
-   $$
-&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;不满足交换律!!!&lt;/strong&gt;：
+$$
+\vec{A}×\vec{B}=-(\vec{B}×\vec{A})
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;满足分配律:
+$$
+(\vec{A}+\vec{B})×C=\vec{A}×\vec{C}+\vec{B}×\vec{C}
+$$&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;叉乘和点乘混合:&lt;/p&gt;
@@ -472,6 +471,8 @@ $$
 \vec{A}×(\vec{B}×\vec{C})=\vec{B}(\vec{A}·\vec{C})-\vec{C}(\vec{A}·\vec{B})
 $$&lt;/li&gt;
 &lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
@@ -960,6 +961,2871 @@ $$
 \nabla ·(\nabla \phi)=\nabla^2\phi
 $$
 这个一般情况下不为0&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;chapter-2-electrostatic-field&#34;&gt;Chapter 2 Electrostatic Field
+&lt;/h1&gt;&lt;h2 id=&#34;库仑定律与电场力&#34;&gt;库仑定律与电场力
+&lt;/h2&gt;&lt;p&gt;Coulomb’s law and electric force&lt;/p&gt;
+&lt;h3 id=&#34;库仑定律&#34;&gt;库仑定律
+&lt;/h3&gt;&lt;p&gt;$$
+F=\frac{q_1q_2}{4\pi\epsilon_0}·\frac{\vec e}{R^2}
+$$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$\epsilon_0≈8.854×10^{-12}$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;由于库仑定律符合&lt;strong&gt;叠加原理&lt;/strong&gt;,所以也可以写成以下几个形式:&lt;/p&gt;
+&lt;h4 id=&#34;电场中分散有很多点电荷&#34;&gt;电场中分散有很多点电荷:
+&lt;/h4&gt;&lt;p&gt;$$
+\begin{aligned}
+F &amp;amp;= F_{01} + F_{02} + \cdots + F_{0n} \
+&amp;amp;= \frac{q_0 q_1 R_{01}}{4\pi \varepsilon_0 R_{01}^3} + \frac{q_0 q_2 R_{02}}{4\pi \varepsilon_0 R_{02}^3} + \cdots + \frac{q_0 q_n R_{0n}}{4\pi \varepsilon_0 R_{0n}^3} \
+&amp;amp;= \frac{q_0}{4\pi \varepsilon_0} \sum_{i=1}^n \frac{q_i R_{0i}}{R_{0i}^3}
+\end{aligned}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;当微元取得无限小时求和变成积分&#34;&gt;当微元取得无限小时，求和变成积分:
+&lt;/h4&gt;&lt;p&gt;$$
+\mathbf{F} = \frac{q_0}{4\pi\varepsilon_0} \int_V \frac{\mathbf{R}}{R^3} , dq
+$$&lt;/p&gt;
+&lt;h4 id=&#34;引入电荷密度后&#34;&gt;引入电荷密度后:
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;体密度:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;$$
+\mathbf{F} = \frac{q_0}{4\pi\varepsilon_0} \int_V \frac{\rho_V}{R^3} , \mathbf{R} , dV
+\
+\rho_V = \frac{dq}{dV}
+$$&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;面密度:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;$$
+\mathbf{F} = \frac{q_0}{4\pi\varepsilon_0} \int_S \frac{\rho_s}{R^3} , \mathbf{R} , dS
+$$&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;线密度:
+$$
+dI = \sqrt{(dx)^2 + (dy)^2 + (dz)^2} = |d\mathbf{r}|
+$$&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;$$
+\mathbf{F} = \frac{q_0}{4\pi\varepsilon_0} \int_I \frac{\rho_l}{R^3} , \mathbf{R} , dr
+$$&lt;/p&gt;
+&lt;h3 id=&#34;电场力&#34;&gt;电场力:
+&lt;/h3&gt;&lt;p&gt;$$
+\mathbf{E} = \frac{\mathbf{F}}{q}
+$$&lt;/p&gt;
+&lt;p&gt;$$
+\mathbf{E}(x, y, z) = \lim_{q_t \to 0} \frac{\mathbf{F}(x, y, z)}{q_t} \quad \text{V/m (N/C)}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;点电荷产生的电场强度electric-field-intensity&#34;&gt;点电荷产生的电场强度(Electric Field intensity):
+&lt;/h4&gt;&lt;p&gt;$$
+\mathbf{E}(\mathbf{r}) = \frac{\mathbf{F}}{q_t} = \frac{q}{4\pi\varepsilon_0 |\mathbf{r} - \mathbf{r}&amp;rsquo;|^2} \cdot \frac{\mathbf{r} - \mathbf{r}&amp;rsquo;}{|\mathbf{r} - \mathbf{r}&amp;rsquo;|} = \frac{q(\mathbf{r} - \mathbf{r}&amp;rsquo;)}{4\pi\varepsilon_0 |\mathbf{r} - \mathbf{r}&amp;rsquo;|^3} = \frac{q}{4\pi\varepsilon_0 R^2} \mathbf{e}_R \quad \text{V/m}
+$$&lt;/p&gt;
+&lt;p&gt;$$
+d\mathbf{E}(\mathbf{r}) = \frac{1}{4\pi\varepsilon_0} \frac{\mathbf{r} - \mathbf{r}&amp;rsquo;}{|\mathbf{r} - \mathbf{r}&amp;rsquo;|^3} , dq(\mathbf{r}&amp;rsquo;)
+$$&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;体电荷:
+$$
+\mathbf{E}(\mathbf{r}) = \frac{1}{4\pi\varepsilon_0} \int_{V&amp;rsquo;} \frac{\mathbf{r} - \mathbf{r}&amp;rsquo;}{|\mathbf{r} - \mathbf{r}&amp;rsquo;|^3} , \rho(\mathbf{r}&amp;rsquo;) , dV&#39;
+$$
+或等价的:
+$$
+\mathbf{E}(\mathbf{r}) = \frac{1}{4\pi\varepsilon_0} \int_{V&amp;rsquo;} \frac{\rho(\mathbf{r}&amp;rsquo;)}{R^2} , \mathbf{e}_R , dV&#39;
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;面电荷:
+$$
+\mathbf{E}(\mathbf{r}) = \frac{1}{4\pi\varepsilon_0} \int_{S&amp;rsquo;} \frac{\sigma(\mathbf{r}&amp;rsquo;)}{R^2} , \mathbf{e}_R , dS&#39;
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;线电荷:
+$$
+\mathbf{E}(\mathbf{r}) = \frac{1}{4\pi\varepsilon_0} \int_{L&amp;rsquo;} \frac{\tau(\mathbf{r}&amp;rsquo;)}{R^2} , \mathbf{e}_R , dl&#39;
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;静电场的散度与旋度&#34;&gt;静电场的散度与旋度
+&lt;/h2&gt;&lt;p&gt;Div and curl of electrostatic field&lt;/p&gt;
+&lt;h3 id=&#34;静电场的散度静电场高斯定理的微分形式&#34;&gt;静电场的散度(静电场高斯定理的微分形式）
+&lt;/h3&gt;&lt;h4 id=&#34;高斯定理&#34;&gt;高斯定理
+&lt;/h4&gt;&lt;p&gt;从&lt;strong&gt;电场强度与电荷分布的关系式&lt;/strong&gt;出发，通过&lt;strong&gt;散度运算&lt;/strong&gt;得到静电场的高斯定律微分形式 :
+$$
+\nabla \cdot \mathbf{E} = \rho / \varepsilon_0&lt;br&gt;
+$$&lt;/p&gt;
+&lt;h4 id=&#34;两种形式相互推导&#34;&gt;两种形式相互推导
+&lt;/h4&gt;&lt;p&gt;微分形式:
+$$
+\nabla \cdot \mathbf{E} = \rho / \varepsilon_0&lt;br&gt;
+$$
+积分形式:&lt;br&gt;
+$$
+\oint_{S} \mathbf{E} \cdot d\mathbf{A} = \frac{Q_{\text{enc}}}{\varepsilon_0} = \frac{1}{\varepsilon_0} \int_{V} \rho , dV.
+$$
+利用&lt;strong&gt;散度定理&lt;/strong&gt;：
+$$
+\int_{V} (\nabla \cdot \mathbf{E}) , dV = \frac{1}{\varepsilon_0} \int_{V} \rho , dV.
+$$
+上式对任意体积 (V) 成立，因此被积函数必须相等：
+$$
+\nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_0}.
+$$&lt;/p&gt;
+&lt;h4 id=&#34;原理推导&#34;&gt;原理推导
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;电场表达式&lt;/p&gt;
+&lt;p&gt;已知体电荷分布$\rho(\mathbf{r}&amp;rsquo;)$在空间产生的电场为：
+$$
+\mathbf{E}(\mathbf{r}) = \frac{1}{4\pi\varepsilon_0} \int_V \rho(\mathbf{r}&amp;rsquo;) \frac{\mathbf{r} - \mathbf{r}&amp;rsquo;}{|\mathbf{r} - \mathbf{r}&amp;rsquo;|^3} , dV&#39;
+$$
+为了简化散度运算，注意到梯度恒等式：
+$$
+\nabla \frac{1}{|\mathbf{r} - \mathbf{r}&amp;rsquo;|} = -\frac{\mathbf{r} - \mathbf{r}&amp;rsquo;}{|\mathbf{r} - \mathbf{r}&amp;rsquo;|^3}
+$$
+因此电场可以改写为：
+$$
+\mathbf{E}(\mathbf{r}) = -\frac{1}{4\pi\varepsilon_0} \int_V \rho(\mathbf{r}&amp;rsquo;) , \nabla \frac{1}{|\mathbf{r} - \mathbf{r}&amp;rsquo;|} , dV&#39;
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对电场取散度&lt;/p&gt;
+&lt;p&gt;由于散度运算是对场点$\mathbf{r}$进行的，而积分变量是源点$\mathbf{r}&amp;rsquo;$，所以可以将$\nabla$ 移入积分号内：
+$$
+\nabla \cdot \mathbf{E}(\mathbf{r}) = -\frac{1}{4\pi\varepsilon_0} \int_V \rho(\mathbf{r}&amp;rsquo;) , \nabla \cdot \nabla \frac{1}{|\mathbf{r} - \mathbf{r}&amp;rsquo;|} , dV&#39;
+$$
+其中$\nabla \cdot \nabla = \nabla^2$ 是拉普拉斯算子&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;拉普拉斯算子的性质&lt;/p&gt;
+&lt;p&gt;数学上有一个重要的恒等式：
+$$
+\nabla^2 \frac{1}{|\mathbf{r} - \mathbf{r}&amp;rsquo;|} = -4\pi \delta(\mathbf{r} - \mathbf{r}&amp;rsquo;)
+$$
+这里$\delta$是三维狄拉克δ函数，它在源点等于场点时“取样”，其它处为零。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;代入并利用δ函数的取样性质&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;代入上式:
+$$
+\nabla \cdot \mathbf{E}(\mathbf{r}) = -\frac{1}{4\pi\varepsilon_0} \int_V \rho(\mathbf{r}&amp;rsquo;) \left[-4\pi \delta(\mathbf{r} - \mathbf{r}&amp;rsquo;)\right] dV&#39;
+= \frac{1}{\varepsilon_0} \int_V \rho(\mathbf{r}&amp;rsquo;) \delta(\mathbf{r} - \mathbf{r}&amp;rsquo;) , dV&#39;
+$$
+根据δ函数的性质：
+$$
+\int_V \rho(\mathbf{r}&amp;rsquo;) \delta(\mathbf{r} - \mathbf{r}&amp;rsquo;) , dV&amp;rsquo; = \rho(\mathbf{r})
+$$
+最终得到:
+$$
+\nabla \cdot \mathbf{E}(\mathbf{r}) = \frac{\rho(\mathbf{r})}{\varepsilon_0}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这就是&lt;strong&gt;静电场高斯定律的微分形式&lt;/strong&gt;，表明&lt;strong&gt;电场强度的散度等于该点的电荷体密度除以介电常数&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;静电场的旋度&#34;&gt;静电场的旋度
+&lt;/h3&gt;&lt;h4 id=&#34;点电荷电场旋度的推导&#34;&gt;&lt;strong&gt;点电荷电场旋度的推导&lt;/strong&gt;
+&lt;/h4&gt;&lt;p&gt;一个位于 $\mathbf{r}&amp;rsquo;$ 的点电荷 $q$，在场点 $\mathbf{r}$ 产生的电场为：&lt;/p&gt;
+&lt;p&gt;$$
+\mathbf{E}(\mathbf{r}) = \frac{q}{4\pi\varepsilon_0} \frac{\mathbf{r} - \mathbf{r}&amp;rsquo;}{|\mathbf{r} - \mathbf{r}&amp;rsquo;|^3}
+$$&lt;/p&gt;
+&lt;p&gt;记 $\mathbf{R} = \mathbf{r} - \mathbf{r}&amp;rsquo;$，$R = |\mathbf{R}|$，则 $\mathbf{E} \propto \frac{\mathbf{R}}{R^3}$。&lt;/p&gt;
+&lt;p&gt;对电场取旋度，常数因子提到外面：&lt;/p&gt;
+&lt;p&gt;$$
+\nabla \times \mathbf{E}(\mathbf{r}) = \frac{q}{4\pi\varepsilon_0} \nabla \times \left( \frac{\mathbf{R}}{R^3} \right)
+$$&lt;/p&gt;
+&lt;p&gt;利用向量恒等式：对于标量函数 $C(\mathbf{r})$ 和矢量函数 $\mathbf{F}(\mathbf{r})$，有&lt;/p&gt;
+&lt;p&gt;$$
+\nabla \times (C \mathbf{F}) = C (\nabla \times \mathbf{F}) + (\nabla C) \times \mathbf{F}
+$$&lt;/p&gt;
+&lt;p&gt;这里令 $C = \frac{1}{R^3}$，$\mathbf{F} = \mathbf{R}$，则&lt;/p&gt;
+&lt;p&gt;$$
+\nabla \times \left( \frac{\mathbf{R}}{R^3} \right) = \frac{1}{R^3} \nabla \times \mathbf{R} + \left( \nabla \frac{1}{R^3} \right) \times \mathbf{R}
+$$&lt;/p&gt;
+&lt;p&gt;分别计算：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$\nabla \times \mathbf{R} = \nabla \times (\mathbf{r} - \mathbf{r}&amp;rsquo;) = 0$，因为 $\mathbf{r}&amp;rsquo;$ 是常矢量，$\nabla \times \mathbf{r} = 0$。&lt;/li&gt;
+&lt;li&gt;$\nabla \frac{1}{R^3} = -\frac{3}{R^5} \mathbf{R}$（梯度公式），于是&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$$
+\left( \nabla \frac{1}{R^3} \right) \times \mathbf{R} = \left( -\frac{3}{R^5} \mathbf{R} \right) \times \mathbf{R} = 0
+$$&lt;/p&gt;
+&lt;p&gt;两项均为零，因此&lt;/p&gt;
+&lt;p&gt;$$
+\nabla \times \mathbf{E}(\mathbf{r}) = 0
+$$&lt;/p&gt;
+&lt;p&gt;这表明&lt;strong&gt;静电场是无旋场&lt;/strong&gt;，这是静电场的一个重要性质，也是引入电势（标量势）的基础。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;静电场是无旋场&#34;&gt;&lt;strong&gt;静电场是无旋场&lt;/strong&gt;
+&lt;/h4&gt;&lt;p&gt;$\nabla \times \mathbf{E} = 0$。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;解释&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;从点电荷到一般情况&lt;/strong&gt;
+之前我们证明了单个点电荷产生的电场旋度为零：
+$$
+\nabla \times \mathbf{E}_{\text{单点}} = 0
+$$&lt;/p&gt;
+&lt;p&gt;这个结论是直接通过矢量恒等式和叉乘运算得到的，在 $R \neq 0$ 时严格成立（源点处虽未定义，但作为分布处理时不影响整体）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;叠加原理的推广&lt;/strong&gt;
+对于多个点电荷，总电场是各点电荷电场的矢量和：
+$$
+\mathbf{E} = \mathbf{E}_1 + \mathbf{E}_2 + \cdots
+$$&lt;/p&gt;
+&lt;p&gt;由于旋度是线性算子，可以分别作用后相加：&lt;/p&gt;
+&lt;p&gt;$$
+\nabla \times \mathbf{E} = \nabla \times \mathbf{E}_1 + \nabla \times \mathbf{E}_2 + \cdots = 0
+$$&lt;/p&gt;
+&lt;p&gt;对于连续分布的电荷（体、面、线），电场是积分形式：&lt;/p&gt;
+&lt;p&gt;$$
+\mathbf{E}(\mathbf{r}) = \frac{1}{4\pi\varepsilon_0} \int \frac{\mathbf{R}}{R^3} , dq(\mathbf{r}&amp;rsquo;)
+$$&lt;/p&gt;
+&lt;p&gt;旋度可以移到积分号内（对场点 $\mathbf{r}$ 求导，与源点积分变量无关），于是：&lt;/p&gt;
+&lt;p&gt;$$
+\nabla \times \mathbf{E}(\mathbf{r}) = \frac{1}{4\pi\varepsilon_0} \int \nabla \times \left( \frac{\mathbf{R}}{R^3} \right) dq(\mathbf{r}&amp;rsquo;) = 0
+$$&lt;/p&gt;
+&lt;p&gt;因为被积函数的旋度在 $R \neq 0$ 时处处为零，积分结果仍为零。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;物理意义&lt;/strong&gt;
+$\nabla \times \mathbf{E} = 0$ 意味着静电场是&lt;strong&gt;无旋场&lt;/strong&gt;（保守场），电场力做功与路径无关，因此可以引入电势（标量势）$\varphi$ 满足 $\mathbf{E} = -\nabla \varphi$。这是静电学的基本性质之一。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;相关公式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;静电场旋度为零：&lt;/p&gt;
+&lt;p&gt;$$
+\nabla \times \mathbf{E}(\mathbf{r}) = 0
+$$&lt;/p&gt;
+&lt;p&gt;点电荷组电场：&lt;/p&gt;
+&lt;p&gt;$$
+\mathbf{E}(\mathbf{r}) = \sum_i \frac{q_i}{4\pi\varepsilon_0} \frac{\mathbf{r} - \mathbf{r}_i}{|\mathbf{r} - \mathbf{r}_i|^3}
+$$&lt;/p&gt;
+&lt;p&gt;旋度叠加：&lt;/p&gt;
+&lt;p&gt;$$
+\nabla \times \mathbf{E} = \sum_i \nabla \times \left( \frac{q_i}{4\pi\varepsilon_0} \frac{\mathbf{r} - \mathbf{r}_i}{|\mathbf{r} - \mathbf{r}_i|^3} \right) = 0
+$$&lt;/p&gt;
+&lt;p&gt;连续分布电场：&lt;/p&gt;
+&lt;p&gt;$$
+\mathbf{E}(\mathbf{r}) = \frac{1}{4\pi\varepsilon_0} \int_{V&amp;rsquo;} \rho(\mathbf{r}&amp;rsquo;) \frac{\mathbf{r} - \mathbf{r}&amp;rsquo;}{|\mathbf{r} - \mathbf{r}&amp;rsquo;|^3} , dV&#39;
+$$&lt;/p&gt;
+&lt;p&gt;旋度运算：&lt;/p&gt;
+&lt;p&gt;$$
+\nabla \times \mathbf{E}(\mathbf{r}) = \frac{1}{4\pi\varepsilon_0} \int_{V&amp;rsquo;} \rho(\mathbf{r}&amp;rsquo;) \left[ \nabla \times \frac{\mathbf{r} - \mathbf{r}&amp;rsquo;}{|\mathbf{r} - \mathbf{r}&amp;rsquo;|^3} \right] dV&amp;rsquo; = 0
+$$&lt;/p&gt;
+&lt;p&gt;因此，无论电荷是离散点还是连续分布，&lt;strong&gt;静电荷产生的电场旋度处处为零&lt;/strong&gt;（除源点外，但源点处作为分布处理时不影响整体结论）。&lt;/p&gt;
+&lt;h3 id=&#34;环量定理与斯托克斯定理&#34;&gt;环量定理与斯托克斯定理
+&lt;/h3&gt;&lt;p&gt;静电场的环量定理表述为：&lt;strong&gt;静电场沿任意闭合回路的环量（线积分）为零&lt;/strong&gt;，即
+$$
+\oint_l \mathbf{E} \cdot d\mathbf{l} = 0
+$$
+这一结论可以由电场的无旋性（$\nabla \times \mathbf{E} = 0$）通过斯托克斯定理得到。斯托克斯定理将矢量场沿闭合曲线的环量与该矢量场的旋度在曲线所围曲面上的通量联系起来：
+$$
+\oint_l \mathbf{E} \cdot d\mathbf{l} = \int_S (\nabla \times \mathbf{E}) \cdot d\mathbf{S}
+$$
+当$\nabla \times \mathbf{E} = 0$时，右边积分为零，因此左边也为零&lt;/p&gt;
+&lt;h3 id=&#34;电势&#34;&gt;电势
+&lt;/h3&gt;&lt;h4 id=&#34;电场强度和电势的关系&#34;&gt;电场强度和电势的关系
+&lt;/h4&gt;&lt;p&gt;环量为零意味着电场力沿闭合回路做功为零。由此可以推出，在静电场中，将试探电荷从一点移到另一点时，电场力所做的功与路径无关，只取决于起点和终点的位置。这样的场称为&lt;strong&gt;保守场&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;保守场的性质使得我们可以引入一个标量函数——电势 $\varphi$，满足:
+$$
+\mathbf{E} = -\nabla \varphi
+$$
+这是因为:
+$$
+\nabla ×(\nabla \phi)＝0恒成立
+$$
+(梯度的旋度恒为0)&lt;/p&gt;
+&lt;p&gt;而$\nabla \vec E=0$&lt;/p&gt;
+&lt;p&gt;所以把$\vec E$看作是一个标量的梯度，这个标量就是&lt;strong&gt;电势$\phi$&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;而:
+$$
+\mathbf{E}(\mathbf{r}) = -\frac{1}{4\pi\varepsilon_0} \int_V \rho(\mathbf{r}&amp;rsquo;) , \nabla \frac{1}{|\mathbf{r} - \mathbf{r}&amp;rsquo;|} , dV&amp;rsquo; = -\nabla \left[ \frac{1}{4\pi\varepsilon_0} \int_V \frac{\rho(\mathbf{r}&amp;rsquo;)}{|\mathbf{r} - \mathbf{r}&amp;rsquo;|} , dV&amp;rsquo; \right]
+$$&lt;/p&gt;
+&lt;p&gt;所以电势:&lt;/p&gt;
+&lt;p&gt;$$
+\varphi(\mathbf{r}) = \frac{1}{4\pi\varepsilon_0} \int_V \frac{\rho(\mathbf{r}&amp;rsquo;)}{|\mathbf{r} - \mathbf{r}&amp;rsquo;|} , dV&#39;
+$$&lt;/p&gt;
+&lt;p&gt;$$
+\mathbf{E}(\mathbf{r}) = -\nabla [\varphi(\mathbf{r}) + C] = -\nabla \varphi(\mathbf{r})
+$$&lt;/p&gt;
+&lt;h4 id=&#34;不同情况下的电势&#34;&gt;不同情况下的电势
+&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;点电荷&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;$$
+\varphi(\mathbf{r}) = \frac{q}{4\pi\varepsilon_0 |\mathbf{r} - \mathbf{r}&amp;rsquo;|} + C
+$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;点电荷组&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;$$
+\varphi(\mathbf{r}) = \frac{1}{4\pi\varepsilon_0} \sum_{i=1}^N \frac{q_i}{|\mathbf{r} - \mathbf{r}_i|} + C
+$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;连续分布电荷&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;$$
+\varphi(\mathbf{r}) = \frac{1}{4\pi\varepsilon_0} \int_{\Gamma&amp;rsquo;} \frac{dq}{|\mathbf{r} - \mathbf{r}&amp;rsquo;|} + C
+$$&lt;/p&gt;
+&lt;p&gt;其中 $dq$ 可取 $\rho , dV$（体电荷）、$\sigma , dS$（面电荷）或 $\tau , dl$​（线电荷）。&lt;/p&gt;
+&lt;h4 id=&#34;参考点的选取&#34;&gt;参考点的选取
+&lt;/h4&gt;&lt;p&gt;电势 $\varphi$ 本身是一个相对量，只有两点之间的电势差才有绝对意义。在物理问题中，我们通常需要选定一个参考点，将参考点的电势设为零，然后定义其他点的电势为该点与参考点之间的电势差：&lt;/p&gt;
+&lt;p&gt;$$
+\varphi(\mathbf{r}) = \int_{\mathbf{r}}^{\text{ref}} \mathbf{E} \cdot d\mathbf{l} \quad \text{或} \quad \varphi(\mathbf{r}) - \varphi(\text{ref}) = \int_{\text{ref}}^{\mathbf{r}} \mathbf{E} \cdot d\mathbf{l}
+$$&lt;/p&gt;
+&lt;p&gt;由于静电场是保守场，积分与路径无关，所以只要参考点选定，各点的电势值就唯一确定。&lt;/p&gt;
+&lt;h5 id=&#34;选择规则&#34;&gt;选择规则
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;一个物理问题中只能选一个参考点&lt;/strong&gt;
+参考点一旦选定，全空间所有点的电势都相对于该点定义。如果混用不同的参考点，电势值就会失去可比性。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;任意两点间的电势差与参考点无关&lt;/strong&gt;
+无论参考点选在哪里，两点 $A$ 和 $B$ 之间的电势差 $U_{AB} = \varphi_A - \varphi_B$ 是确定的，等于将单位正电荷从 $A$ 移到 $B$ 时电场力所做的功。这是电势差物理意义的体现。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;参考点应具有合理的物理意义&lt;/strong&gt;
+实际选择时，通常根据电荷分布的有限性来定：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;电荷分布在有限区域&lt;/strong&gt;：取无穷远处为零电势点（$\varphi(\infty)=0$）。这样在远离电荷的地方电势趋近于零，数学上简单且物理直观。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;电荷分布在无限区域&lt;/strong&gt;（如无限长带电直线、无限大带电平面）：此时无穷远处的电势不再趋于零，甚至可能发散，因此参考点必须选在有限距离处（例如取某点 $r_0$ 处 $\varphi=0$）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;举例说明&#34;&gt;举例说明
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;点电荷&lt;/strong&gt;：分布在有限区域，通常取 $\varphi(\infty)=0$，得 $\varphi(r) = \frac{q}{4\pi\varepsilon_0 r}$。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;无限长均匀带电直线&lt;/strong&gt;：电荷延伸到无穷远，若仍取无穷远处为零电势，会导致积分发散。一般取某参考点 $r_0$ 处电势为零，得到 $\varphi(r) = \frac{\lambda}{2\pi\varepsilon_0} \ln\frac{r_0}{r}$。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;电势差&#34;&gt;电势差
+&lt;/h4&gt;&lt;p&gt;$$
+\int_P^M \mathbf{E} \cdot d\mathbf{r} = -\int_P^M \nabla \varphi \cdot d\mathbf{r} = -\int_P^M d\varphi = \varphi(P) - \varphi(M)
+$$&lt;/p&gt;
+&lt;p&gt;推导原理:&lt;/p&gt;
+&lt;p&gt;因为 &lt;strong&gt;梯度与位移微元的点积等于电势函数的全微分&lt;/strong&gt;：
+$$
+\nabla \varphi \cdot d\mathbf{r} = d\varphi
+$$
+这是全微分的定义：对于标量函数 $\varphi(x,y,z)$，有
+$$
+d\varphi = \frac{\partial \varphi}{\partial x}dx + \frac{\partial \varphi}{\partial y}dy + \frac{\partial \varphi}{\partial z}dz = \nabla \varphi \cdot d\mathbf{r}.
+$$
+因此
+$$
+-\int_P^M \nabla \varphi \cdot d\mathbf{r} = -\int_P^M d\varphi.
+$$&lt;/p&gt;
+&lt;img src=&#34;6.png&#34;&gt;
+&lt;h3 id=&#34;泊松方程&#34;&gt;泊松方程
+&lt;/h3&gt;&lt;p&gt;由于：
+$$
+\nabla ·\vec E=\frac{\rho}{\varepsilon_0}
+$$&lt;/p&gt;
+&lt;p&gt;$$
+\nabla ×\vec E=0
+$$&lt;/p&gt;
+&lt;p&gt;且:
+$$
+\mathbf{E} = -\nabla \varphi
+$$
+所以得到:
+$$
+-\nabla ·(\nabla \phi)=\frac{\rho}{\varepsilon_0}
+$$
+左边$\nabla ·(\nabla \phi)$正是标量函数$\phi$的拉普拉斯算子，记作$\nabla ^2\phi$或者$\Delta \phi$,于是得到:
+$$
+\nabla ^2\phi=-\frac{\rho}{\varepsilon_0}
+$$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;注意，这里的$Delta$不是微小变量的意思，而是代指&lt;strong&gt;拉普拉斯算子&lt;/strong&gt;，比如:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$$
+\nabla^2 \frac{1}{|\mathbf{r} - \mathbf{r}&amp;rsquo;|} = -4\pi \delta(\mathbf{r} - \mathbf{r}&amp;rsquo;)
+$$&lt;/p&gt;
+&lt;p&gt;注意这个公式只在拉普拉斯算子作用于场点坐标$\mathbf{r}$或者源点坐标$\mathbf{r}&amp;rsquo;$时成立&lt;/p&gt;
+&lt;h3 id=&#34;电场线和等势面&#34;&gt;电场线和等势面
+&lt;/h3&gt;&lt;h4 id=&#34;电场线&#34;&gt;电场线
+&lt;/h4&gt;&lt;p&gt;也叫电力线，是描述电场分布的一种几何工具。曲线上每一点的切线方向都与该点的电场强度方向一致。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;数学描述:&lt;/p&gt;
+&lt;p&gt;设$d\vec l=(dx,dy,dz)$为电力线上的一小段弧元，方向沿切线。由于电场线和电场平行，所以叉乘为0,电力线微分方程（叉积形式）：
+$$
+\mathbf{E} \times d\mathbf{l} = 0
+$$&lt;/p&gt;
+&lt;p&gt;直角坐标系下：&lt;/p&gt;
+&lt;p&gt;$$
+\frac{E_x}{dx} = \frac{E_y}{dy} = \frac{E_z}{dz}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;物理意义:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;电力线从正电荷出发，终止于负电荷（或延伸到无穷远）。&lt;/li&gt;
+&lt;li&gt;电力线的疏密反映电场强度的大小：密度越大，场强越强。&lt;/li&gt;
+&lt;li&gt;在静电场中，电力线不闭合（因为无旋），且互不相交（除非场强为零的点）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;等势面&#34;&gt;等势面
+&lt;/h4&gt;&lt;p&gt;电势相等的点构成的面（在三维中）称为等势面，在二维中为等势线。数学上，等势面由
+$$
+\varphi(x, y, z) = C
+$$&lt;/p&gt;
+&lt;p&gt;给出，C为常数&lt;/p&gt;
+&lt;p&gt;电场与电势关系：
+$$
+\mathbf{E} = -\nabla \varphi
+$$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;性质:
+&lt;ul&gt;
+&lt;li&gt;等势面与电力线处处垂直。这是因为电场方向是电势降低最快的方向，与等势面的梯度方向一致，而梯度垂直于等势面。&lt;/li&gt;
+&lt;li&gt;等势面上移动电荷时，电场力不做功（因为电势差为零）。&lt;/li&gt;
+&lt;li&gt;等势面密集的地方电场强度大（对应电势变化快）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&#34;7.png&#34;&gt;
+&lt;h2 id=&#34;电偶极子-electric-dipole&#34;&gt;电偶极子 Electric Dipole
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;定义&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;电偶极子&lt;/strong&gt;：由一对等量异号电荷 $+q$ 和 $-q$ 组成，相距很小距离 $d$（远小于场点到电荷的距离）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;偶极矩&lt;/strong&gt;：方向从负电荷指向正电荷，大小 $p = qd$。&lt;/p&gt;
+&lt;img src=&#34;8.png&#34;&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;1-电偶极子的电势球坐标系&#34;&gt;1. 电偶极子的电势（球坐标系）
+&lt;/h3&gt;&lt;h4 id=&#34;精确表达式&#34;&gt;精确表达式
+&lt;/h4&gt;&lt;p&gt;对于由 $+q$ 和 $-q$ 构成、相距 $d$ 的电偶极子，空间任意点的电势为两个点电荷电势的代数和：&lt;/p&gt;
+&lt;p&gt;$$
+\varphi_p = \frac{q}{4\pi\varepsilon_0} \left( \frac{1}{r_1} - \frac{1}{r_2} \right)
+$$&lt;/p&gt;
+&lt;p&gt;其中 $r_1$、$r_2$ 分别为场点到 $+q$ 和 $-q$ 的距离。&lt;/p&gt;
+&lt;h4 id=&#34;远场近似r-gg-d&#34;&gt;远场近似（$r \gg d$）
+&lt;/h4&gt;&lt;p&gt;在球坐标系中，取偶极子中心为原点，偶极矩方向沿极轴（$\theta = 0$），则有：&lt;/p&gt;
+&lt;p&gt;$$
+r_1 \approx r - \frac{d}{2}\cos\theta,\qquad r_2 \approx r + \frac{d}{2}\cos\theta
+$$&lt;/p&gt;
+&lt;p&gt;于是：&lt;/p&gt;
+&lt;p&gt;$$
+\frac{1}{r_1} - \frac{1}{r_2} \approx \frac{r_2 - r_1}{r_1 r_2} \approx \frac{d\cos\theta}{r^2}
+$$&lt;/p&gt;
+&lt;p&gt;代入电势表达式得：&lt;/p&gt;
+&lt;p&gt;$$
+\varphi_p = \frac{qd\cos\theta}{4\pi\varepsilon_0 r^2}
+$$&lt;/p&gt;
+&lt;p&gt;引入偶极矩矢量 $\mathbf{p} = q\mathbf{d}$（方向从 $-q$ 指向 $+q$），并注意到 $\mathbf{p}\cdot\mathbf{e}_r = p\cos\theta$，可得简洁形式：&lt;/p&gt;
+&lt;p&gt;$$
+\boxed{\varphi_p = \frac{\mathbf{p}\cdot\mathbf{e}_r}{4\pi\varepsilon_0 r^2}}
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;2-电偶极子的电场强度矢量形式&#34;&gt;2. 电偶极子的电场强度（矢量形式）
+&lt;/h3&gt;&lt;h4 id=&#34;由电势求电场&#34;&gt;由电势求电场
+&lt;/h4&gt;&lt;p&gt;电场强度等于电势的负梯度：&lt;/p&gt;
+&lt;p&gt;$$
+\mathbf{E} = -\nabla \varphi
+$$&lt;/p&gt;
+&lt;p&gt;将电势表达式 $\varphi = \dfrac{1}{4\pi\varepsilon_0} \dfrac{\mathbf{p}\cdot\mathbf{r}}{r^3}$ 代入，利用矢量恒等式求梯度，得到：&lt;/p&gt;
+&lt;p&gt;$$
+\boxed{\mathbf{E} = \frac{1}{4\pi\varepsilon_0 r^3} \left[ \frac{3(\mathbf{p}\cdot\mathbf{r})}{r^2} \mathbf{r} - \mathbf{p} \right]}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;物理意义-2&#34;&gt;物理意义
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;第一项沿 $\mathbf{r}$ 方向，大小与 $1/r^3$ 成正比；&lt;/li&gt;
+&lt;li&gt;第二项与偶极矩方向相反；&lt;/li&gt;
+&lt;li&gt;电场随距离衰减比点电荷（$1/r^2$）更快，整体呈 $1/r^3$ 衰减。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;3-球坐标系下的电场分量&#34;&gt;3. 球坐标系下的电场分量
+&lt;/h3&gt;&lt;p&gt;在球坐标系中，由于偶极子具有轴对称性（$\partial/\partial\varphi = 0$），电势只与 $r$ 和 $\theta$ 有关：&lt;/p&gt;
+&lt;p&gt;$$
+\varphi_p = \frac{p\cos\theta}{4\pi\varepsilon_0 r^2}
+$$&lt;/p&gt;
+&lt;p&gt;电场分量为：&lt;/p&gt;
+&lt;p&gt;$$
+E_r = -\frac{\partial \varphi}{\partial r} = \frac{2p\cos\theta}{4\pi\varepsilon_0 r^3}
+$$&lt;/p&gt;
+&lt;p&gt;$$
+E_\theta = -\frac{1}{r}\frac{\partial \varphi}{\partial \theta} = \frac{p\sin\theta}{4\pi\varepsilon_0 r^3}
+$$&lt;/p&gt;
+&lt;p&gt;$$
+E_\varphi = 0
+$$&lt;/p&gt;
+&lt;p&gt;因此电场强度矢量可写为：&lt;/p&gt;
+&lt;p&gt;$$
+\boxed{\mathbf{E} = \frac{p}{4\pi\varepsilon_0 r^3} \left( 2\cos\theta ,\mathbf{e}&lt;em&gt;r + \sin\theta ,\mathbf{e}&lt;/em&gt;\theta \right)}
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;总结&#34;&gt;总结
+&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;物理量&lt;/th&gt;
+&lt;th&gt;表达式（远场近似）&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;电势 $\varphi$&lt;/td&gt;
+&lt;td&gt;$\dfrac{\mathbf{p}\cdot\mathbf{e}_r}{4\pi\varepsilon_0 r^2}$&lt;/td&gt;
+&lt;td&gt;球坐标系下 $\varphi = \dfrac{p\cos\theta}{4\pi\varepsilon_0 r^2}$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;电场 $\mathbf{E}$&lt;/td&gt;
+&lt;td&gt;$\dfrac{1}{4\pi\varepsilon_0 r^3} \left[ \dfrac{3(\mathbf{p}\cdot\mathbf{r})}{r^2} \mathbf{r} - \mathbf{p} \right]$&lt;/td&gt;
+&lt;td&gt;矢量形式&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;球坐标分量&lt;/td&gt;
+&lt;td&gt;$E_r = \dfrac{2p\cos\theta}{4\pi\varepsilon_0 r^3},\quad E_\theta = \dfrac{p\sin\theta}{4\pi\varepsilon_0 r^3}$&lt;/td&gt;
+&lt;td&gt;$E_\varphi = 0$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;这些公式是电偶极子辐射、极化介质等后续内容的重要基础，适用于 $r \gg d$​ 的远场区域。&lt;/p&gt;
+&lt;h3 id=&#34;电偶极子在外电场中的受力与力矩&#34;&gt;&lt;strong&gt;电偶极子在外电场中的受力与力矩&lt;/strong&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;1. 偶极矩定义&lt;/strong&gt;
+$$
+\mathbf{p} = q \mathbf{l}
+$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. 正、负电荷所受电场力&lt;/strong&gt;
+$$
+\mathbf{F}&lt;em&gt;+(P) = q,\mathbf{E}&lt;/em&gt;{\text{ex}}(P), \qquad
+\mathbf{F}&lt;em&gt;-(Q) = -q,\mathbf{E}&lt;/em&gt;{\text{ex}}(Q)
+$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. 对偶极子中心的力矩（分别计算）&lt;/strong&gt;
+$$
+\mathbf{T}&lt;em&gt;+(P) = \frac{1}{2},\mathbf{p} \times \mathbf{E}&lt;/em&gt;{\text{ex}}(P), \qquad
+\mathbf{T}&lt;em&gt;-(Q) = \frac{1}{2},\mathbf{p} \times \mathbf{E}&lt;/em&gt;{\text{ex}}(Q)
+$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4. 均匀外电场（$\mathbf{E}_{\text{ex}}$​ 为常矢量）&lt;/strong&gt;&lt;/p&gt;
+&lt;img src=&#34;9.png&#34;&gt;
+&lt;p&gt;$$
+\mathbf{F}_{\text{total}} = 0
+$$&lt;/p&gt;
+&lt;p&gt;$$
+\mathbf{T}&lt;em&gt;{\text{total}} = \mathbf{T}&lt;/em&gt;+ + \mathbf{T}&lt;em&gt;- = \mathbf{p} \times \mathbf{E}&lt;/em&gt;{\text{ex}}
+$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;5. 非均匀外电场中的合力（小偶极子近似）&lt;/strong&gt;
+$$
+\mathbf{F}&lt;em&gt;{\text{total}} = (\mathbf{p} \cdot \nabla) \mathbf{E}&lt;/em&gt;{\text{ex}}
+$$
+总力矩仍近似为 $\mathbf{T}&lt;em&gt;{\text{total}} \approx \mathbf{p} \times \mathbf{E}&lt;/em&gt;{\text{ex}}(\mathbf{r}_c)$，其中 $\mathbf{r}_c$ 为偶极子中心。&lt;/p&gt;
+&lt;h2 id=&#34;柱坐标&#34;&gt;柱坐标
+&lt;/h2&gt;&lt;p&gt;柱坐标系（Cylindrical Coordinates）是处理&lt;strong&gt;轴对称问题&lt;/strong&gt;的利器，在静电学中尤其常用——沿 (z) 轴放置的无限长直线电荷、同轴电缆、圆柱形导体等，用柱坐标可以大幅简化计算。&lt;/p&gt;
+&lt;img src=&#34;10.png&#34;&gt;
+&lt;h3 id=&#34;柱坐标的定义&#34;&gt;柱坐标的定义
+&lt;/h3&gt;&lt;p&gt;柱坐标系用三个坐标 $(r, \phi, z)$ 描述空间一点 $P$：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$r$：到 $z$ 轴的&lt;strong&gt;垂直距离&lt;/strong&gt;（径向距离），$r \ge 0$。&lt;/li&gt;
+&lt;li&gt;$\phi$：方位角，从 $x$ 轴正向逆时针旋转到 $OP$ 在 $xy$ 平面投影的角度，$0 \le \phi &amp;lt; 2\pi$（或 $-\pi &amp;lt; \phi \le \pi$）。&lt;/li&gt;
+&lt;li&gt;$z$：与直角坐标系的 $z$ 相同。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;与直角坐标 $(x, y, z)$ 的关系：&lt;/p&gt;
+&lt;p&gt;$$
+\begin{cases}
+x = r \cos\phi, \
+y = r \sin\phi, \
+z = z.
+\end{cases}
+\quad\Rightarrow\quad
+\begin{cases}
+r = \sqrt{x^2 + y^2}, \
+\phi = \arctan(y/x) \ (\text{需考虑象限}), \
+z = z.
+\end{cases}
+$$&lt;/p&gt;
+&lt;h3 id=&#34;基向量与线元&#34;&gt;基向量与线元
+&lt;/h3&gt;&lt;p&gt;柱坐标有三个相互正交的单位基向量：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$\hat{\mathbf{r}}$：径向向外，垂直于 $z$ 轴。&lt;/li&gt;
+&lt;li&gt;$\hat{\boldsymbol{\phi}}$：方位角增加的方向，与 $\hat{\mathbf{r}}$ 垂直，也在 $xy$ 平面内。&lt;/li&gt;
+&lt;li&gt;$\hat{\mathbf{z}}$：沿 $z$ 轴方向。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;它们满足右手系：$\hat{\mathbf{r}} \times \hat{\boldsymbol{\phi}} = \hat{\mathbf{z}}$。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;重要&lt;/strong&gt;：$\hat{\mathbf{r}}$ 和 $\hat{\boldsymbol{\phi}}$ 的方向依赖于位置（随 $\phi$ 变化），而 $\hat{\mathbf{z}}$ 是常矢量。&lt;/p&gt;
+&lt;p&gt;空间一点的&lt;strong&gt;位移微元&lt;/strong&gt;（线元）为：&lt;/p&gt;
+&lt;p&gt;$$
+d\mathbf{l} = dr,\hat{\mathbf{r}} + r,d\phi,\hat{\boldsymbol{\phi}} + dz,\hat{\mathbf{z}}
+$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;面积元&lt;/strong&gt;（三种常见曲面）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$r = \text{常数}$ 的柱面：$dS = r,d\phi,dz$&lt;/li&gt;
+&lt;li&gt;$\phi = \text{常数}$ 的平面：$dS = dr,dz$&lt;/li&gt;
+&lt;li&gt;$z = \text{常数}$ 的平面：$dS = r,dr,d\phi$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;体积元&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;$$
+dV = r,dr,d\phi,dz
+$$&lt;/p&gt;
+&lt;h3 id=&#34;梯度散度旋度拉普拉斯&#34;&gt;梯度、散度、旋度、拉普拉斯
+&lt;/h3&gt;&lt;p&gt;在柱坐标下，这些微分算子的表达式如下（$f$ 为标量函数，$\mathbf{A} = A_r \hat{\mathbf{r}} + A_\phi \hat{\boldsymbol{\phi}} + A_z \hat{\mathbf{z}}$）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;梯度&lt;/strong&gt;：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$$
+\nabla f = \frac{\partial f}{\partial r},\hat{\mathbf{r}} + \frac{1}{r}\frac{\partial f}{\partial \phi},\hat{\boldsymbol{\phi}} + \frac{\partial f}{\partial z},\hat{\mathbf{z}}
+$$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;散度&lt;/strong&gt;：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$$
+\nabla \cdot \mathbf{A} = \frac{1}{r}\frac{\partial}{\partial r}(r A_r) + \frac{1}{r}\frac{\partial A_\phi}{\partial \phi} + \frac{\partial A_z}{\partial z}
+$$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;旋度&lt;/strong&gt;：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$$
+\nabla \times \mathbf{A} = \left( \frac{1}{r}\frac{\partial A_z}{\partial \phi} - \frac{\partial A_\phi}{\partial z} \right)\hat{\mathbf{r}} + \left( \frac{\partial A_r}{\partial z} - \frac{\partial A_z}{\partial r} \right)\hat{\boldsymbol{\phi}} + \frac{1}{r}\left( \frac{\partial}{\partial r}(r A_\phi) - \frac{\partial A_r}{\partial \phi} \right)\hat{\mathbf{z}}
+$$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;标量拉普拉斯&lt;/strong&gt;：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$$
+\nabla^2 f = \frac{1}{r}\frac{\partial}{\partial r}\left( r \frac{\partial f}{\partial r} \right) + \frac{1}{r^2}\frac{\partial^2 f}{\partial \phi^2} + \frac{\partial^2 f}{\partial z^2}
+$$&lt;/p&gt;
+&lt;h3 id=&#34;在轴对称电场中的应用&#34;&gt;在轴对称电场中的应用
+&lt;/h3&gt;&lt;p&gt;当电荷分布绕 $z$ 轴旋转对称时（如无限长直线电荷、均匀带电圆环、圆柱面等），电场 $\mathbf{E}$ 与 $\phi$ 无关（$\partial/\partial \phi = 0$），且 $\hat{\boldsymbol{\phi}}$ 方向的分量也为零（因为对称性不允许切向电场）。此时电场只有 $E_r(r,z)$ 和 $E_z(r,z)$ 两个分量，并且可以由电势 $\varphi(r,z)$ 通过梯度得到：&lt;/p&gt;
+&lt;p&gt;$$
+\mathbf{E} = -\nabla \varphi = -\frac{\partial \varphi}{\partial r},\hat{\mathbf{r}} - \frac{\partial \varphi}{\partial z},\hat{\mathbf{z}}
+$$&lt;/p&gt;
+&lt;p&gt;例如，无限长均匀带电直线（线密度 $\tau$）的电场：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;由高斯定理易得 $E_r = \frac{\tau}{2\pi\varepsilon_0 r}$，$E_z = 0$。&lt;/li&gt;
+&lt;li&gt;电势（取 $r_0$ 处为零）为 $\varphi(r) = -\frac{\tau}{2\pi\varepsilon_0}\ln\frac{r}{r_0}$。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在柱坐标下，拉普拉斯方程在轴对称（$\partial/\partial\phi = 0$）时简化为：&lt;/p&gt;
+&lt;p&gt;$$
+\frac{1}{r}\frac{\partial}{\partial r}\left( r \frac{\partial \varphi}{\partial r} \right) + \frac{\partial^2 \varphi}{\partial z^2} = 0
+$$&lt;/p&gt;
+&lt;p&gt;这是求解柱形边界静电问题的基础方程&lt;/p&gt;
+&lt;h2 id=&#34;静电场中的导体与电介质&#34;&gt;静电场中的导体与电介质
+&lt;/h2&gt;&lt;p&gt;Conductors and dielectrics in electrostatic fields&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;导体在静电场中&#34;&gt;导体在静电场中
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;导体内部&lt;strong&gt;净电荷为0&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在静电平衡时，导体内部的自由电子不再发生宏观移动，但如果有净电荷，就会产生电场推动电子移动&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;导体内部&lt;strong&gt;电场强度为0&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;原因同上，如果内部有电场，自由电子会发生移动。实际上，静电平衡的定义就是导体内部电场强度为0&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;导体是&lt;strong&gt;等势体&lt;/strong&gt;，表面是&lt;strong&gt;等势面&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;因为导体内部电场强度为0，所以任意两点电势差为0，整个导体是等势体，表面也是等势面&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;导体表面&lt;strong&gt;电场强度垂直于表面&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;由于上一条说明导体是等势体，表面是等势面，所以电场线(电场强度)垂直于等势面&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;根据高斯定理:
+$$
+\vec E=\frac{\sigma}{\epsilon_0}
+$$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;其中$\sigma$是&lt;strong&gt;表面电荷密度&lt;/strong&gt;，方向垂直于表面向外&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;电介质dielectrics极化的基本概念-polarization&#34;&gt;电介质(dielectrics)极化的基本概念 Polarization
+&lt;/h3&gt;&lt;p&gt;电介质（绝缘体）内部没有自由电荷，但存在原子、分子或离子。当施加外电场 $\mathbf{E}$ 时，电介质中的正负电荷中心会发生相对位移，或者本来具有固有电偶极矩的分子会沿电场方向取向，从而在宏观上表现出电偶极矩——这种现象称为&lt;strong&gt;极化&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;极化的结果是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;电介质内部和表面出现&lt;strong&gt;极化电荷 polarized charges&lt;/strong&gt;（也称束缚电荷）；&lt;/li&gt;
+&lt;li&gt;极化电荷本身也会激发电场，叠加在外电场上，改变总电场分布；&lt;/li&gt;
+&lt;li&gt;从场的角度看，极化电荷与自由电荷一样，都是电场的源。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;各种介电常数&#34;&gt;各种介电常数
+&lt;/h3&gt;&lt;h4 id=&#34;真空介电常数-真空电容率--vacuum-permittivity--permittivity-of-free-space&#34;&gt;真空介电常数/ 真空电容率  vacuum permittivity / permittivity of free space
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;符号:$\varepsilon_0$&lt;/li&gt;
+&lt;li&gt;数值:$8.854 \times 10^{-12} , \text{F/m}$&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;含义&lt;/strong&gt;：表征真空容纳电场的能力，是电磁学基本常数。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;相对介电常数--相对电容率--relative-permittivity--dielectric-constant&#34;&gt;相对介电常数 / 相对电容率  relative permittivity / dielectric constant
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;符号:$\varepsilon_r$有时也用$k$或$\kappa$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;关系
+$$
+\varepsilon_r = \frac{\varepsilon}{\varepsilon_0}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;含义&lt;/strong&gt;：介质相对于真空的极化能力，也是介质降低电场强度的倍数&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;介电常数--绝对介电常数--电容率--permittivity&#34;&gt;介电常数 / 绝对介电常数 / 电容率  permittivity
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;符号:$\varepsilon$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;关系:
+$$
+\varepsilon = \varepsilon_r \varepsilon_0
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;含义&lt;/strong&gt;：介质本身对电场的响应能力，出现在高斯定律$\mathbf{D} = \varepsilon \mathbf{E}$中&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;极化强度矢量-mathbfp-polarization-vector&#34;&gt;极化强度矢量 $\mathbf{P}$ Polarization Vector
+&lt;/h3&gt;&lt;p&gt;为了定量描述电介质的极化程度，引入&lt;strong&gt;极化强度&lt;/strong&gt; $\mathbf{P}$，定义为：&lt;/p&gt;
+&lt;p&gt;$$
+\mathbf{P} = \lim_{\Delta V \to 0} \frac{\sum_{i=1}^{N} \mathbf{p}_i}{\Delta V}
+$$&lt;/p&gt;
+&lt;p&gt;其中 $\Delta V$ 是一个宏观小、微观大的体积元，$\mathbf{p}_i$ 是该体积内第 $i$ 个分子的&lt;strong&gt;电偶极矩&lt;/strong&gt;，$N$ 为体积内的分子数。$\mathbf{P}$ 的单位是 $\mathrm{C/m^2}$，与面电荷密度量纲相同。&lt;/p&gt;
+&lt;p&gt;物理意义：$\mathbf{P}$ 表示单位体积内的电偶极矩总和，反映了介质极化的强弱和方向。在外电场不太强时，对于各向同性介质，有 $\mathbf{P} = \varepsilon_0 \chi_e \mathbf{E}$，其中 $\chi_e$ 是电极化率。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;极化机制的详细说明&#34;&gt;极化机制的详细说明
+&lt;/h3&gt;&lt;p&gt;电介质极化可分为四种主要机制，它们的微观起源不同，响应速度也各异。&lt;/p&gt;
+&lt;h4 id=&#34;电子位移极化&#34;&gt;电子位移极化
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;机理&lt;/strong&gt;：外电场作用下，原子中的电子云相对于原子核发生微小位移，产生感应偶极矩。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：几乎存在于所有电介质中；响应极快（约 $10^{-15},\mathrm{s}$），与光频电磁场匹配；极化强度与电场呈线性关系（弹性位移）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;温度依赖性&lt;/strong&gt;：几乎与温度无关。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;离子位移极化&#34;&gt;离子位移极化
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;机理&lt;/strong&gt;：在离子晶体（如 $\mathrm{NaCl}$）中，正、负离子在外电场作用下发生相对位移，形成感应偶极矩。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：只存在于离子型介质中；响应速度比电子极化慢（约 $10^{-13},\mathrm{s}$，对应红外频率）；也呈线性关系。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;温度影响&lt;/strong&gt;：由于离子间结合力随温度变化较小，极化率随温度变化不大。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;取向极化偶极子转向极化&#34;&gt;取向极化（偶极子转向极化）
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;机理&lt;/strong&gt;：对于具有固有电偶极矩的极性分子（如 $\mathrm{H_2O}$），无外场时偶极矩方向杂乱无章，宏观上不显示极性；外电场使偶极矩转向电场方向，产生宏观极化。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：只在极性电介质中出现；响应较慢（约 $10^{-10},\mathrm{s}$，对应微波频段）；温度升高时热运动阻碍取向，极化强度减小（服从居里-外斯定律）；极化强度与电场关系在弱场下为线性，强场下可能出现饱和。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;公式&lt;/strong&gt;：在经典统计下，取向极化强度可表示为 $\mathbf{P} = \frac{N p^2}{3 k T} \mathbf{E}$（弱场近似）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;界面极化空间电荷极化&#34;&gt;界面极化（空间电荷极化）
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;机理&lt;/strong&gt;：在非均匀介质（如多相材料、掺杂介质）中，自由电荷（离子、电子）在电场作用下迁移，并在不同介质的界面处积累，形成宏观偶极矩。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：主要存在于复合材料、陶瓷、聚合物等；响应非常慢（从 $10^{-2},\mathrm{s}$ 到数小时，甚至低频或直流）；与材料的缺陷、杂质、界面密切相关；通常只在低频下显著，高频下消失。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;工程意义&lt;/strong&gt;：在高压绝缘、电容器等领域需要考虑。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;极化电荷束缚电荷&#34;&gt;极化电荷（束缚电荷）
+&lt;/h3&gt;&lt;p&gt;这一部分的推导有些繁琐，证明过程就不写了(实际上是因为Lyy真的不想敲这一大坨，所以跳过了)&lt;/p&gt;
+&lt;p&gt;我们的主要目的是&lt;strong&gt;求出极化电介质对某一点的电场强度以及电势&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;最后的结论是:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;电介质极化后产生的电场和电势，可以直接由这两个束缚电荷量来计算&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;体束缚电荷密度&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;面束缚电荷密度&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;极化的直接结果是介质内部和表面出现极化电荷。这些电荷不能自由移动，但能激发电场。&lt;/p&gt;
+&lt;h4 id=&#34;体束缚电荷密度-rho_p&#34;&gt;体束缚电荷密度 $\rho_p$
+&lt;/h4&gt;&lt;p&gt;$$
+\rho_p = -\nabla \cdot \mathbf{P}
+$$&lt;/p&gt;
+&lt;p&gt;当 $\mathbf{P}$ 不均匀时，介质内部会出现净束缚电荷。&lt;/p&gt;
+&lt;h4 id=&#34;面束缚电荷密度-sigma_p&#34;&gt;面束缚电荷密度 $\sigma_p$
+&lt;/h4&gt;&lt;p&gt;在介质与真空或另一种介质的界面上，若 $\mathbf{P}$ 的法向分量不连续，则出现面束缚电荷：&lt;/p&gt;
+&lt;p&gt;$$
+\sigma_p = \mathbf{P} \cdot \mathbf{n}
+$$&lt;/p&gt;
+&lt;p&gt;其中 $\mathbf{n}$ 为介质表面的外法向单位矢量（从介质指向外部）。特别地，对于均匀极化介质，内部 $\nabla \cdot \mathbf{P}=0$​，仅表面有束缚电荷。&lt;/p&gt;
+&lt;h4 id=&#34;它们在真空中产生的电势为&#34;&gt;&lt;strong&gt;它们在真空中产生的电势为：&lt;/strong&gt;
+&lt;/h4&gt;&lt;p&gt;$$
+\phi_{\text{polarization}}(\mathbf{r}) = \frac{1}{4\pi\varepsilon_0} \int_{V&amp;rsquo;} \frac{\rho_b(\mathbf{r}&amp;rsquo;)}{R} dV&amp;rsquo; + \frac{1}{4\pi\varepsilon_0} \oint_{S&amp;rsquo;} \frac{\sigma_b(\mathbf{r}&amp;rsquo;)}{R} dS&#39;
+$$&lt;/p&gt;
+&lt;p&gt;电场强度则为该电势的负梯度&lt;/p&gt;
+&lt;h4 id=&#34;补充说明&#34;&gt;补充说明
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;总电场&lt;/strong&gt; = 自由电荷产生的电场 + 束缚电荷产生的电场。
+束缚电荷就是由极化引起的“等效”电荷分布，它们与自由电荷一样遵守库仑定律。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;所以，一旦求出 $\rho_b$ 和 $\sigma_b$，就可以完全代替极化强度 $\mathbf{P}$ 来计算极化贡献的电场和电势，而无需再直接处理 $\mathbf{P}$ 的复杂分布。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;但注意：$\rho_b$和 $\sigma_b$ 本身又依赖于 $\mathbf{P}$，而 $\mathbf{P}$ 通常又与总电场有关（通过介质的极化率）。因此在实际问题中，需要结合自由电荷分布和介质方程（例如 $\mathbf{P} = \varepsilon_0 \chi_e \mathbf{E}$联立求解。)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;静电场中的电介质方程组&#34;&gt;静电场中的电介质方程组
+&lt;/h3&gt;&lt;p&gt;考虑极化电荷后，电场的总源包括自由电荷 $\rho_f$ 和束缚电荷 $\rho_p$(这里只考虑体束缚电荷密度，面的在边界条件中体现)：&lt;/p&gt;
+&lt;p&gt;$$
+\nabla \cdot \mathbf{E} = \frac{\rho_f + \rho_p}{\varepsilon_0}
+$$&lt;/p&gt;
+&lt;p&gt;将 $\rho_p = -\nabla \cdot \mathbf{P}$ 代入，得：&lt;/p&gt;
+&lt;p&gt;$$
+\nabla \cdot (\varepsilon_0 \mathbf{E} + \mathbf{P}) = \rho_f
+$$&lt;/p&gt;
+&lt;p&gt;定义电位移矢量 $\mathbf{D} = \varepsilon_0 \mathbf{E} + \mathbf{P}$，则高斯定理简化为：&lt;/p&gt;
+&lt;p&gt;$$
+\nabla \cdot \mathbf{D} = \rho_f
+$$&lt;/p&gt;
+&lt;p&gt;对于线性各向同性介质，$\mathbf{P} = \varepsilon_0 \chi_e \mathbf{E}$，于是 $\mathbf{D} = \varepsilon_0 (1+\chi_e) \mathbf{E} = \varepsilon \mathbf{E}$，其中 $\varepsilon = \varepsilon_0 \varepsilon_r$ 为介电常数，$\varepsilon_r = 1+\chi_e$ 为相对介电常数。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;总结-1&#34;&gt;总结
+&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;极化机制&lt;/th&gt;
+&lt;th&gt;微观过程&lt;/th&gt;
+&lt;th&gt;响应时间&lt;/th&gt;
+&lt;th&gt;频率范围&lt;/th&gt;
+&lt;th&gt;温度依赖性&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;电子位移极化&lt;/td&gt;
+&lt;td&gt;电子云偏移&lt;/td&gt;
+&lt;td&gt;$10^{-15},\mathrm{s}$&lt;/td&gt;
+&lt;td&gt;光频&lt;/td&gt;
+&lt;td&gt;弱&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;离子位移极化&lt;/td&gt;
+&lt;td&gt;离子相对位移&lt;/td&gt;
+&lt;td&gt;$10^{-13},\mathrm{s}$&lt;/td&gt;
+&lt;td&gt;红外&lt;/td&gt;
+&lt;td&gt;弱&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;取向极化&lt;/td&gt;
+&lt;td&gt;固有偶极子转向&lt;/td&gt;
+&lt;td&gt;$10^{-10},\mathrm{s}$&lt;/td&gt;
+&lt;td&gt;微波&lt;/td&gt;
+&lt;td&gt;强（反比于 $T$）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;界面极化&lt;/td&gt;
+&lt;td&gt;电荷在界面积累&lt;/td&gt;
+&lt;td&gt;慢（$10^{-2},\mathrm{s}$ 以上）&lt;/td&gt;
+&lt;td&gt;低频/直流&lt;/td&gt;
+&lt;td&gt;复杂&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;极化强度 $\mathbf{P}$ 是连接微观极化与宏观电磁场的关键物理量，通过它可以将极化电荷纳入麦克斯韦方程组，从而统一处理自由电荷和束缚电荷产生的电场&lt;/p&gt;
+&lt;h2 id=&#34;静电场基本定理微分方程与边值问题&#34;&gt;静电场基本定理、微分方程与边值问题
+&lt;/h2&gt;&lt;p&gt;Electrostatic field theorem, Differential equations and boundary value problems&lt;/p&gt;
+&lt;h3 id=&#34;静电场基本定理&#34;&gt;静电场基本定理
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;静电场的两个基本特性&lt;/strong&gt;：&lt;strong&gt;无旋性&lt;/strong&gt;（电场线不闭合，不做环流）和&lt;strong&gt;有源性&lt;/strong&gt;（电荷是电场的源）&lt;/p&gt;
+&lt;h4 id=&#34;微分形式描述每一点的特性&#34;&gt;微分形式（描述每一点的特性）
+&lt;/h4&gt;&lt;p&gt;$$
+\begin{cases}
+\nabla \times \mathbf{E} = 0 \quad &amp;amp; \text{（静电场无旋）}\
+\nabla \cdot \mathbf{D} = \rho \quad &amp;amp; \text{（电位移矢量的散度等于自由电荷体密度）}
+\end{cases}
+$$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;$\nabla \times \mathbf{E} = 0$&lt;/strong&gt;：静电场是&lt;strong&gt;保守场&lt;/strong&gt;，电场力做功与路径无关，可以引入电势 $\varphi$使得 $\mathbf{E} = -\nabla \varphi$。&lt;/li&gt;
+&lt;li&gt;**$\nabla \cdot \mathbf{D} = \rho$：**电位移矢量 $\mathbf{D}$ 的源是自由电荷 $\rho$。注意这里 $\mathbf{D}$ 不是真空电场 $\varepsilon_0\mathbf{E}$，而是包含了介质极化效应的总响应。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;积分形式描述宏观整体特性&#34;&gt;积分形式（描述宏观整体特性）
+&lt;/h4&gt;&lt;p&gt;$$
+\begin{cases}
+\oint_l \mathbf{E} \cdot d\mathbf{l} = 0 \quad &amp;amp; \text{（电场环流为零）}\
+\oint_S \mathbf{D} \cdot d\mathbf{S} = q \quad &amp;amp; \text{（通过闭合面的电位移通量等于面内自由电荷总量）}
+\end{cases}
+$$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第一个方程：沿任意闭合路径，静电场做功为零 → 电势的单值性成立。&lt;/li&gt;
+&lt;li&gt;第二个方程：&lt;strong&gt;高斯定律的介质版本&lt;/strong&gt;，自由电荷 $q$ 是 $\mathbf{D}$的通量源。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;mathbfd-与-mathbfe&#34;&gt;$\mathbf{D}$ 与 $\mathbf{E}$
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;一般形式&lt;/strong&gt;：
+$$
+\mathbf{D} = \varepsilon_0 \mathbf{E} + \mathbf{P}
+$$&lt;/p&gt;
+&lt;p&gt;其中$\mathbf{P}$ 是极化强度（介质被极化产生的偶极矩密度）。$\varepsilon_0\mathbf{E}$ 是真空贡献，$\mathbf{P}$ 是介质响应。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;线性各向同性介质&lt;/strong&gt;：$\mathbf{D} = \varepsilon \mathbf{E}$，$\varepsilon = \varepsilon_0 \varepsilon_r$，$\varepsilon_r$​ 为相对介电常数。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;边值问题-boundary-value-problem&#34;&gt;边值问题 Boundary Value Problem
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;边值问题&lt;/strong&gt; = 微分方程（泊松或拉普拉斯） + 边界条件 + 自然边界条件（无穷远）。&lt;/p&gt;
+&lt;h4 id=&#34;微分方程汇总&#34;&gt;微分方程汇总
+&lt;/h4&gt;&lt;p&gt;静电场边值问题的核心是求解电势 $\varphi$ 满足的偏微分方程：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;泊松方程&lt;/strong&gt;：$\nabla^2 \varphi = -\rho / \varepsilon$（有自由电荷的区域）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;拉普拉斯方程&lt;/strong&gt;：$\nabla^2 \varphi = 0$（无自由电荷的区域）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;方程适用于线性、各向同性、均匀介质。&lt;/p&gt;
+&lt;h4 id=&#34;边界条件汇总&#34;&gt;边界条件汇总
+&lt;/h4&gt;&lt;p&gt;求解微分方程时，需要在介质分界面或区域边界上附加条件，原因如下:&lt;/p&gt;
+&lt;p&gt;泊松方程（$\nabla^2 \varphi = -\rho/\varepsilon$）和拉普拉斯方程（$\nabla^2 \varphi = 0$）都是偏微分方程。它们的通解包含待定常数或函数。边界条件用于确定这些待定量，从而得到唯一的电势分布&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;分界面条件&lt;/strong&gt;（两种介质交界处）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;电势连续：$\varphi_1 = \varphi_2$&lt;/li&gt;
+&lt;li&gt;电位移法向分量跃变：$\varepsilon_1 \frac{\partial \varphi_1}{\partial n} - \varepsilon_2 \frac{\partial \varphi_2}{\partial n} = \sigma$
+其中 $\sigma$ 是界面上的自由面电荷密度。若 $\sigma=0$，则 $\varepsilon_1 \frac{\partial \varphi_1}{\partial n} = \varepsilon_2 \frac{\partial \varphi_2}{\partial n}$。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;物理量&lt;/th&gt;
+&lt;th&gt;分量&lt;/th&gt;
+&lt;th&gt;边界条件（关系式）&lt;/th&gt;
+&lt;th&gt;连续与否&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;电势 $\varphi$&lt;/td&gt;
+&lt;td&gt;标量&lt;/td&gt;
+&lt;td&gt;$\varphi_1 = \varphi_2$&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;连续&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;电势的法向导数 $\frac{\partial \varphi}{\partial n}$&lt;/td&gt;
+&lt;td&gt;法向&lt;/td&gt;
+&lt;td&gt;$\varepsilon_1 \frac{\partial \varphi_1}{\partial n} - \varepsilon_2 \frac{\partial \varphi_2}{\partial n} = \sigma$&lt;br&gt;（注意 $\frac{\partial \varphi}{\partial n} = -E_n$）&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;一般不连续&lt;/strong&gt;&lt;br&gt;仅当 $\sigma=0$ 且 $\varepsilon_1=\varepsilon_2$ 时连续&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;电场强度 $\mathbf{E}$&lt;/td&gt;
+&lt;td&gt;切向 $E_t$&lt;/td&gt;
+&lt;td&gt;$E_{1t} = E_{2t}$&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;连续&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;法向 $E_n$&lt;/td&gt;
+&lt;td&gt;$\varepsilon_2 E_{2n} - \varepsilon_1 E_{1n} = \sigma$&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;一般不连续&lt;/strong&gt;&lt;br&gt;仅当 $\sigma=0$ 且 $\varepsilon_1=\varepsilon_2$ 时连续&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;电位移 $\mathbf{D}$&lt;/td&gt;
+&lt;td&gt;切向 $D_t$&lt;/td&gt;
+&lt;td&gt;$\frac{D_{1t}}{\varepsilon_1} = \frac{D_{2t}}{\varepsilon_2}$（由 $E_t$ 连续导出）&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;一般不连续&lt;/strong&gt;&lt;br&gt;仅当 $\varepsilon_1=\varepsilon_2$ 时连续&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;法向 $D_n$&lt;/td&gt;
+&lt;td&gt;$D_{2n} - D_{1n} = \sigma$&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;当 $\sigma=0$ 时连续&lt;/strong&gt;，否则不连续&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;自然边界条件&#34;&gt;自然边界条件
+&lt;/h4&gt;&lt;p&gt;通常指无穷远处的条件。对于有限大小的带电体系，电势在无穷远处趋于零，但更精确的要求是：
+$$
+\lim_{r\to\infty} r\varphi = \text{有限值}
+$$
+这保证了电势的行为像点电荷势（$1/r$）或偶极子势（$1/r^2$）等，不会发散&lt;/p&gt;
+&lt;h4 id=&#34;电位移矢量-mathbfd在两种介质分界面上的法向分量边界条件&#34;&gt;**电位移矢量 $\mathbf{D}$**在两种介质分界面上的法向分量边界条件
+&lt;/h4&gt;&lt;p&gt;在两种不同介质（例如空气和玻璃）的分界面上，取一个非常扁的圆柱形高斯面（俗称“药盒”），它的上下底面分别位于界面两侧，且与界面平行。柱高 $\Delta l \to 0$，所以侧面的通量可以忽略。&lt;/p&gt;
+&lt;h5 id=&#34;推导过程&#34;&gt;推导过程
+&lt;/h5&gt;&lt;p&gt;高斯定律的积分形式为：
+$$
+\oint_S \mathbf{D} \cdot d\mathbf{S} = q_{\text{free}}
+$$
+其中 $q_{\text{free}}$ 是高斯面内包围的&lt;strong&gt;自由电荷&lt;/strong&gt;（不是极化电荷）。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;设界面法向单位矢量 $\mathbf{e}_n$ 从介质1指向介质2。&lt;/li&gt;
+&lt;li&gt;上底面的外法向与 $\mathbf{e}&lt;em&gt;n$ 相同，通量为 $D&lt;/em&gt;{2n} \Delta S$。&lt;/li&gt;
+&lt;li&gt;下底面的外法向与 $\mathbf{e}&lt;em&gt;n$ 相反，通量为 $D&lt;/em&gt;{1n} (-\Delta S) = -D_{1n} \Delta S$。&lt;/li&gt;
+&lt;li&gt;侧面高度趋于0，通量为0。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;因此高斯面的总通量为：
+$$
+\oint \mathbf{D} \cdot d\mathbf{S} = -D_{1n} \Delta S + D_{2n} \Delta S
+$$&lt;/p&gt;
+&lt;p&gt;高斯面内可能存在的自由电荷只可能分布在界面上（因为体积趋于0），若界面上的&lt;strong&gt;自由面电荷密度&lt;/strong&gt;为 $\sigma$，则：
+$$
+q_{\text{free}} = \sigma \Delta S
+$$
+代入高斯定律：
+$$
+(-D_{1n} + D_{2n}) \Delta S = \sigma \Delta S
+$$
+约去 $\Delta S$，得：
+$$
+D_{2n} - D_{1n} = \sigma
+$$
+用矢量形式写为：
+$$
+\mathbf{e}_n \cdot (\mathbf{D}_2 - \mathbf{D}_1) = \sigma
+$$&lt;/p&gt;
+&lt;h5 id=&#34;结论解读&#34;&gt;结论解读
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;当 $\sigma \neq 0$（界面存在自由电荷）时，$\mathbf{D}$ 的法向分量不连续&lt;/strong&gt;，跳跃值等于自由面电荷密度。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;当 $\sigma = 0$（无自由面电荷，最常见情况）时，$\mathbf{D}$ 的法向分量连续&lt;/strong&gt;：$D_{1n} = D_{2n}$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$\sigma$ 是&lt;strong&gt;自由电荷&lt;/strong&gt;密度，不包括极化电荷。极化电荷对 $\mathbf{D}$的法向连续性没有直接影响，它们的影响已经包含在 $\mathbf{D}$ 的定义中$\mathbf{D} = \varepsilon_0 \mathbf{E} + \mathbf{P}$​&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;静电场中电介质分界面上电场强度的切向分量连续&#34;&gt;静电场中电介质分界面上&lt;strong&gt;电场强度的切向分量连续&lt;/strong&gt;
+&lt;/h4&gt;&lt;p&gt;在两种不同介质（比如空气和玻璃、水和油）的分界面两侧，电场强度 $ \mathbf{E} $ 一般会发生变化。但它的&lt;strong&gt;切向分量&lt;/strong&gt;（平行于界面的分量）有一个确定的边界条件：
+$$
+E_{1t} = E_{2t}
+$$
+&lt;strong&gt;即:电场强度E切向分量在穿过界面时是连续的&lt;/strong&gt;&lt;/p&gt;
+&lt;h5 id=&#34;推导&#34;&gt;推导
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;取界面上的一个&lt;strong&gt;很小的矩形回路&lt;/strong&gt;，两条长边$\Delta l_1$分别位于介质1和介质2中，且紧贴界面；两条短边$\Delta l_2$垂直穿过界面，并令$\Delta l_2 \to 0$（这样短边上的积分贡献可以忽略）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在静电场中，电场强度沿任意闭合回路的线积分为零
+$$
+\oint \mathbf{E} \cdot d\mathbf{l} = 0
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对这个小矩形回路积分：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在介质1中，沿长边方向积分得到 $ E_{1t} ,\Delta l_1 $（注意方向）&lt;/li&gt;
+&lt;li&gt;在介质2中，沿长边反方向积分得到 $- E_{2t} ,\Delta l_1 $&lt;/li&gt;
+&lt;li&gt;短边贡献 $\to 0$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;于是:
+$$
+E_{1t} \Delta l_1 - E_{2t} \Delta l_1 = 0 \quad\Rightarrow\quad E_{1t} = E_{2t}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;矢量形式&#34;&gt;矢量形式
+&lt;/h5&gt;&lt;p&gt;用界面的&lt;strong&gt;单位法向量&lt;/strong&gt; $\mathbf{e}_n $（从介质1指向介质2）来表示这个连续条件:
+$$
+\mathbf{e}_n \times (\mathbf{E}_2 - \mathbf{E}_1) = \mathbf{0}
+$$
+它的意思是：$\mathbf{E}_2 - \mathbf{E}_1$ 没有切向分量，即切向分量相同。因为两个矢量叉乘 $\mathbf{e}_n$ 为零，&lt;strong&gt;说明这两个矢量在切向上是相等的&lt;/strong&gt;&lt;/p&gt;
+&lt;h5 id=&#34;适用条件与意义&#34;&gt;适用条件与意义
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;该结论对&lt;strong&gt;静电场&lt;/strong&gt;严格成立，因为静电场是保守场（环路积分为零）。&lt;/li&gt;
+&lt;li&gt;在时变电磁场中，如果考虑感应电动势，该条件依然成立（更一般的推导来自法拉第定律，只要磁场变化有限且回路趋近于零，切向电场仍连续）。&lt;/li&gt;
+&lt;li&gt;这个边界条件与&lt;strong&gt;法向电位移矢量连续&lt;/strong&gt;（无自由电荷时）一起，构成了求解不同介质中电场分布的基本衔接条件。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;电场线的“弯折”只会发生在法向分量上，切向分量必须平滑地跨过界面。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;也就是说，电场强度在界面切线方向上是相等的，但是在法线上是不相等的&lt;/p&gt;
+&lt;h4 id=&#34;电介质分界面上电势的边界条件&#34;&gt;电介质分界面上电势的边界条件
+&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;电势在介质分界面上连续&lt;/strong&gt;
+$$
+\psi_1-\psi_2=\int_1^2\mathbf{E}·d\mathbf{l}
+$$
+当两点无限靠近交界面时，即使$\mathbf{E}$在界面处有一个&lt;strong&gt;有限大小的跳跃&lt;/strong&gt;(比如此处从$\mathbf{E_1}$跳到了$\mathbf{E_2}$），在积分路径的长度趋于0的情况下，积分结果也趋于0，所以:
+$$
+\psi_1=\psi_2
+$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;电势的法向导数一般不连续&lt;/strong&gt;:
+$$
+因为:D_{2n}-D_{1n}=\sigma\
+带入电势表达式:-\epsilon_2\frac{\partial \psi_2}{\partial \psi_n}+\epsilon_1\frac{\partial \psi_1}{\partial_n}=\sigma\
+即:\epsilon_1\frac{\partial \psi_1}{\partial_n}-\epsilon_2\frac{\partial \psi_2}{\partial \psi_n}=\sigma\
+$$
+从这个式子可以推出，在界面&lt;strong&gt;自由电荷为0且$\epsilon$不相等&lt;/strong&gt;的情况下，电势的法向导数不连续&lt;/p&gt;
+&lt;h4 id=&#34;泊松方程拉普拉斯方程&#34;&gt;泊松方程、拉普拉斯方程
+&lt;/h4&gt;&lt;p&gt;总结如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;泊松方程&lt;/strong&gt;：$\nabla^2 \varphi = -\dfrac{\rho}{\varepsilon}$
+适用于静电场中存在自由电荷分布的情况。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;拉普拉斯方程&lt;/strong&gt;：$\nabla^2 \varphi = 0$
+是泊松方程在无自由电荷区域（$\rho = 0$）的特例。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;拉普拉斯算子&lt;/strong&gt;：$\nabla^2 = \dfrac{\partial^2}{\partial x^2} + \dfrac{\partial^2}{\partial y^2} + \dfrac{\partial^2}{\partial z^2}$（直角坐标系）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;适用条件&lt;/strong&gt;：两个方程仅适用于&lt;strong&gt;各向同性、线性、均匀介质&lt;/strong&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$\varphi$ 表示空间每一点的电势值，即 $\varphi = \varphi(x,y,z)$ 或 $\varphi(r,\theta,\phi)$。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$\rho$ 也是空间每一点的自由电荷密度。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;方程描述的是&lt;strong&gt;每一点处&lt;/strong&gt;电势的二阶空间导数（拉普拉斯算子）与该点电荷密度之间的瞬时关系。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所以，泊松方程是一个&lt;strong&gt;偏微分方程&lt;/strong&gt;，它的解 $\varphi$​ 在整个定义域内给出电势的空间分布，而不是仅仅一个点的值。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;典型例子&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;均匀带电球体内部的电势。&lt;/li&gt;
+&lt;li&gt;平行板电容器两极板之间（如果有电荷分布，例如注入的电荷云）。&lt;/li&gt;
+&lt;li&gt;半导体器件中耗尽区的电势分布。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;推导过程-1&#34;&gt;推导过程
+&lt;/h5&gt;&lt;p&gt;静电场基本方程：
+$$
+\nabla \times \mathbf{E} = 0
+$$&lt;/p&gt;
+&lt;p&gt;$$
+\nabla \cdot \mathbf{D} = \rho
+$$&lt;/p&gt;
+&lt;p&gt;由 $\nabla \times \mathbf{E} = 0$ 可引入电势 $\varphi$&lt;/p&gt;
+&lt;p&gt;向量微积分中的一个基本定理：&lt;strong&gt;如果一个向量场的旋度处处为零，那么它可以表示为某个标量函数的梯度&lt;/strong&gt;（在单连通区域内）：
+$$
+\mathbf{E} = -\nabla \varphi
+$$
+对于线性、各向同性、均匀介质：&lt;/p&gt;
+&lt;p&gt;$$
+\mathbf{D} = \varepsilon \mathbf{E} = -\varepsilon \nabla \varphi
+$$&lt;/p&gt;
+&lt;p&gt;代入 $\nabla \cdot \mathbf{D} = \rho$：&lt;/p&gt;
+&lt;p&gt;$$
+\nabla \cdot (-\varepsilon \nabla \varphi) = \rho
+$$&lt;/p&gt;
+&lt;p&gt;$$
+-\varepsilon \nabla^2 \varphi = \rho
+$$&lt;/p&gt;
+&lt;p&gt;因此：&lt;/p&gt;
+&lt;p&gt;$$
+\nabla^2 \varphi = -\frac{\rho}{\varepsilon}
+$$&lt;/p&gt;
+&lt;p&gt;这就是&lt;strong&gt;泊松方程&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;若在无自由电荷区域 $\rho = 0$，则：
+$$
+\nabla^2 \varphi = 0
+$$&lt;/p&gt;
+&lt;p&gt;这就是&lt;strong&gt;拉普拉斯方程&lt;/strong&gt;。&lt;/p&gt;
+&lt;h4 id=&#34;三类边值问题&#34;&gt;三类边值问题
+&lt;/h4&gt;&lt;p&gt;根据边界上给出的信息类型，分为三类：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;类型&lt;/th&gt;
+&lt;th&gt;边界上给出的条件&lt;/th&gt;
+&lt;th&gt;物理含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;第一类&lt;/strong&gt;（狄利克雷条件）&lt;/td&gt;
+&lt;td&gt;$\varphi&lt;/td&gt;
+&lt;td&gt;_s = f_1(s)$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;第二类&lt;/strong&gt;（诺伊曼条件）&lt;/td&gt;
+&lt;td&gt;$\frac{\partial \varphi}{\partial n}&lt;/td&gt;
+&lt;td&gt;_s = f_2(s)$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;第三类&lt;/strong&gt;（混合/罗宾条件）&lt;/td&gt;
+&lt;td&gt;$(\varphi + \beta \frac{\partial \varphi}{\partial n})&lt;/td&gt;
+&lt;td&gt;_s = f_3(s)$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;其中：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$\varphi$ 是电势&lt;/li&gt;
+&lt;li&gt;$\frac{\partial \varphi}{\partial n}$ 表示沿边界外法线方向的方向导数&lt;/li&gt;
+&lt;li&gt;$\beta$ 是一个已知常数&lt;/li&gt;
+&lt;li&gt;$f_1(s)$、$f_2(s)$、$f_3(s)$​ 是边界上给定的已知函数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;狄利克雷条件&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;边界上给出的是电势的具体数值&lt;/strong&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数学表达：$\varphi|_s = f_1(s)$&lt;/li&gt;
+&lt;li&gt;物理例子：一个金属导体球，用导线连接到电池，使其电势保持 $10\ \mathrm{V}$。那么球面上所有点的电势 $\varphi = 10\ \mathrm{V}$ 已知。&lt;/li&gt;
+&lt;li&gt;另一例子：一个长方形容器，左壁电势 $0\ \mathrm{V}$，右壁电势 $5\ \mathrm{V}$，其他壁电势 $0\ \mathrm{V}$。&lt;/li&gt;
+&lt;li&gt;意义：知道边界上的电势（由电源或导体固定），再结合内部电荷分布，内部电势分布就被唯一确定。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;诺伊曼条件&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;边界上给出的是电势的法向导数&lt;/strong&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数学表达：$\frac{\partial \varphi}{\partial n}\bigg|_s = f_2(s)$&lt;/li&gt;
+&lt;li&gt;物理含义：法向导数 $\frac{\partial \varphi}{\partial n}$ 与电场强度的法向分量有关系：$E_n = -\frac{\partial \varphi}{\partial n}$。所以知道 $\frac{\partial \varphi}{\partial n}$ 等价于知道边界上的电场法向分量。&lt;/li&gt;
+&lt;li&gt;进一步联系：由 $D_n = \varepsilon E_n$，以及边界上的自由面电荷密度 $\sigma = D_{2n} - D_{1n}$，如果边界一侧是真空或导体（内部场为零），则 $\sigma = \varepsilon \frac{\partial \varphi}{\partial n}$（注意符号取决于法向方向）。因此第二类条件通常对应已知的面电荷分布。&lt;/li&gt;
+&lt;li&gt;例子：一个带电导体平板，面电荷密度 $\sigma$ 已知，则板表面外侧的电势法向导数为 $\frac{\partial \varphi}{\partial n} = -\frac{\sigma}{\varepsilon}$（设外法线指向板外）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;混合条件\罗宾条件&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;边界上给出的是电势与法向导数的线性组合&lt;/strong&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数学表达：$\left(\varphi + \beta \frac{\partial \varphi}{\partial n}\right)\bigg|_s = f_3(s)$&lt;/li&gt;
+&lt;li&gt;物理含义：这类条件出现在一些特殊问题中，例如：
+&lt;ul&gt;
+&lt;li&gt;热传导中的对流换热边界条件（温度与热流密度的组合）。&lt;/li&gt;
+&lt;li&gt;静电学中，如果边界不是理想导体，而是有表面电阻或接触电势时，可能出现这种混合条件。&lt;/li&gt;
+&lt;li&gt;某些电磁场问题中，边界同时约束了电势和它的导数。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;当 $\beta = 0$ 时退化为第一类条件；当 $\beta \to \infty$ 且 $f_3/\beta$ 有限时退化为第二类条件。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;电介质分界面上电场线的折射定律&#34;&gt;&lt;strong&gt;电介质分界面上电场线的折射定律&lt;/strong&gt;
+&lt;/h4&gt;&lt;p&gt;当两种介质的界面上没有自由电荷（σ = 0）时，电场强度和电位移矢量满足两个连续条件：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;电位移的法向分量连续&lt;/strong&gt;
+$D_{1n} = D_{2n}$
+因为 $D = \varepsilon E$，且法向分量可写成 $E \cos\theta$（$\theta$ 是电场线与法线的夹角），所以：
+$\varepsilon_1 E_1 \cos\alpha_1 = \varepsilon_2 E_2 \cos\alpha_2$
+这里 $\alpha$ 是电场线与法线的夹角（图中通常用 $\alpha$ 表示）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;电场强度的切向分量连续&lt;/strong&gt;
+$E_{1t} = E_{2t}$
+切向分量可写成 $E \sin\theta$，因此：
+$E_1 \sin\alpha_1 = E_2 \sin\alpha_2$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;将上面两个等式相除（第二式除以第一式），可以得到：&lt;/p&gt;
+&lt;p&gt;$$
+\frac{\sin\alpha_1}{\cos\alpha_1} \cdot \frac{\cos\alpha_2}{\sin\alpha_2} = \frac{\varepsilon_2}{\varepsilon_1}
+$$&lt;/p&gt;
+&lt;p&gt;即
+$$
+\frac{\tan\alpha_1}{\tan\alpha_2} = \frac{\varepsilon_1}{\varepsilon_2}
+$$&lt;/p&gt;
+&lt;p&gt;这就是&lt;strong&gt;电场线的折射定律&lt;/strong&gt;。它表明：当电场线从一个介质进入另一个介质时，其方向会发生偏折，偏折的程度由两种介质的介电常数之比决定。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;光线的折射定律（斯涅耳定律）为：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$$
+\frac{\sin\theta_1}{\sin\theta_2} = \frac{n_2}{n_1}
+$$&lt;/p&gt;
+&lt;p&gt;其中 $n$ 是折射率。而电场线的折射定律涉及的是&lt;strong&gt;正切值之比&lt;/strong&gt;，且比值是 $\varepsilon_1/\varepsilon_2$​。这是因为电场线在界面处同时满足法向和切向条件，而光线满足的是相位匹配条件，两者数学形式不同&lt;/p&gt;
+&lt;h3 id=&#34;唯一性定理-uniqueness-theorem-of-electrostatic-field-solution&#34;&gt;唯一性定理 Uniqueness Theorem of Electrostatic Field Solution
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;定义:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在静电场中，给定一个区域内的自由电荷分布（即已知 $\rho$），并且给定整个边界上的边界条件（第一类、第二类或第三类中的一种），那么泊松方程 $\nabla^2 \varphi = -\rho/\varepsilon$ 或拉普拉斯方程 $\nabla^2 \varphi = 0$ 的解 $\varphi$ 是&lt;strong&gt;唯一&lt;/strong&gt;的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;唯一性定理告诉我们：&lt;strong&gt;只要这个解满足了方程和边界条件，它就一定是唯一的那个真解&lt;/strong&gt;，不需要再去寻找其他解.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;注意事项:
+&lt;ul&gt;
+&lt;li&gt;唯一性定理成立的前提是介质为线性、各向同性、均匀（或者至少分段均匀，且边界条件给在全部边界上）。&lt;/li&gt;
+&lt;li&gt;如果区域延伸到无穷远，需要加上自然边界条件（如 $\varphi \to 0$ 或 $\lim_{r\to\infty} r\varphi$ 有限），否则解可能不唯一（例如加上一个常数仍满足拉普拉斯方程，但若无穷远电势固定，常数就被确定了）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;证明:略(lyy写不动了，实际上唯一性定理的最大作用在于告诉我们不用考虑其他解，因为这个解是唯一的情况)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;静电场的间接解法&#34;&gt;静电场的间接解法
+&lt;/h2&gt;&lt;p&gt;Indirect solution of electrostatic field&lt;/p&gt;
+&lt;h3 id=&#34;镜像法-method-of-images&#34;&gt;镜像法 Method of Images
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;用&lt;strong&gt;虚拟的像电荷&lt;/strong&gt;来代替介质分界面上复杂分布的真实电荷，从而简化计算。&lt;/li&gt;
+&lt;li&gt;这个虚拟电荷通常放在界面的&lt;strong&gt;镜像位置&lt;/strong&gt;（就像平面镜成像一样），所以叫“镜像法”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;情况一：接地金属球（电势固定为 0）&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;项目&lt;/th&gt;
+&lt;th&gt;内容&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;边界条件&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;$\varphi&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;总感应电荷&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;$Q_{\text{ind}} = -\frac{R}{d}q \neq 0$（从大地流入电荷）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;镜像电荷数量&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;1 个&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;镜像电荷位置&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;球内距球心 $b = R^2/d$ 处（真实电荷 $q$ 的同侧）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;镜像电荷大小&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;$q&amp;rsquo; = -\frac{R}{d}q$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;电势表达式&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;$\varphi = \frac{1}{4\pi\varepsilon_0}\left( \frac{q}{r} - \frac{R/d \cdot q}{r_1} \right)$&lt;br&gt;（$r$：到真实电荷；$r_1$：到镜像电荷）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;物理图像&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;球面感应电荷全为与 $q$ 异号的电荷，由大地提供或带走&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;img src=&#34;11.png&#34;&gt;
+&lt;p&gt;原理是，讲原来的接地替代成球壳内有一个点电荷，然后这个点电荷满足边界条件，即:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;球壳的电势为0&lt;/p&gt;
+&lt;p&gt;其中这一个是通过图上2)这部分求出来的，运用了余弦公式(如果我没记错叫这个的话)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果你忘了也没关系😀&lt;/p&gt;
+&lt;p&gt;之要记得有这样一个点&lt;strong&gt;在球心和球外电荷连线上&lt;/strong&gt;就行，然后用最简单的两个点(所连直线和球体相交的两个点)列方程就行&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;情况二：不接地、总电荷为零的金属球（孤立中性球）&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;项目&lt;/th&gt;
+&lt;th&gt;内容&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;边界条件&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;$\varphi&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;总感应电荷&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;$Q_{\text{ind}} = 0$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;镜像电荷数量&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;2 个&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;镜像电荷 1 位置&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;球内距球心 $b = R^2/d$ 处&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;镜像电荷 1 大小&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;$q_1&amp;rsquo; = -\frac{R}{d}q$（负责使球面等势）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;镜像电荷 2 位置&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;球心&lt;/strong&gt; $r=0$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;镜像电荷 2 大小&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;$q_2&amp;rsquo; = +\frac{R}{d}q$（负责补偿总电荷为零）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;电势表达式&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;$\varphi = \frac{1}{4\pi\varepsilon_0}\left( \frac{q}{r} - \frac{R/d \cdot q}{r_1} + \frac{R/d \cdot q}{r_2} \right)$&lt;br&gt;（$r_2$：到球心的距离）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;物理图像&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;近 $q$ 侧感应异号电荷，远侧感应同号电荷，球内等效为“位置镜像 + 球心点电荷”&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;接地&lt;/strong&gt; → 一个负镜像电荷在球内，球面电势强制为 $0$。
+&lt;strong&gt;不接地且总电荷为零&lt;/strong&gt; → 在接地解的基础上，&lt;strong&gt;球心补一个等量正电荷&lt;/strong&gt;，使总电荷为零，球面电势抬高为常数。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;电容与部分电容&#34;&gt;电容与部分电容
+&lt;/h2&gt;&lt;p&gt;Capacitance and part capacitance&lt;/p&gt;
+&lt;h3 id=&#34;电容&#34;&gt;电容
+&lt;/h3&gt;&lt;p&gt;电容是储存能量的部件&lt;/p&gt;
+&lt;p&gt;电容:
+$$
+C=\frac{Q}{U}
+$$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;单位:
+$$
+\text{F} = 10^6\ \mu\text{F} = 10^{12}\ \text{pF}
+$$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;能量:
+$$
+W_{\Sigma} = \int_{0}^{\infty} \left( \frac{U_0^2}{R^2} e^{-\frac{2t}{RC}} \right) R , dt
+= \frac{U_0^2}{R} \int_{0}^{\infty} e^{-\frac{2t}{RC}} dt\
+W_{\Sigma} = \frac{U_0^2}{R} \cdot \frac{RC}{2} = \frac{1}{2} U_0^2 C\
+$$
+总结:
+$$
+W_{\Sigma} = \frac{1}{2} (U_0 C) U_0 = \frac{1}{2} U_0 Q_0
+$$&lt;/p&gt;
+&lt;h3 id=&#34;计算电容的方法&#34;&gt;计算电容的方法
+&lt;/h3&gt;&lt;h4 id=&#34;两种主要方法&#34;&gt;两种主要方法
+&lt;/h4&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;项目&lt;/th&gt;
+&lt;th&gt;方法一（假设 Q）&lt;/th&gt;
+&lt;th&gt;方法二（假设 U）&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;已知条件&lt;/td&gt;
+&lt;td&gt;电荷分布&lt;/td&gt;
+&lt;td&gt;电压、边界条件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;核心工具&lt;/td&gt;
+&lt;td&gt;高斯定律&lt;/td&gt;
+&lt;td&gt;拉普拉斯方程 / 泊松方程&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;求解顺序&lt;/td&gt;
+&lt;td&gt;Q → E → U → C&lt;/td&gt;
+&lt;td&gt;U → φ → E → Q → C&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;难易程度&lt;/td&gt;
+&lt;td&gt;对称问题时简单&lt;/td&gt;
+&lt;td&gt;任意形状时更通用，但可能需数值求解&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;物理直观&lt;/td&gt;
+&lt;td&gt;直接对应电荷源&lt;/td&gt;
+&lt;td&gt;更符合实际实验条件（施加电压）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h5 id=&#34;先假设电荷q求电压u&#34;&gt;先假设电荷Q，求电压U
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;步骤&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;假设电容器一个极板带$+Q$，另一个带$-Q$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;由&lt;strong&gt;高斯定理&lt;/strong&gt;求电场E:&lt;/p&gt;
+&lt;p&gt;根据电荷分布的对称性（如球、柱、平行板），选取合适的高斯面，由：
+$$
+\oint \mathbf{E} \cdot d\mathbf{A} = \frac{Q_{\text{enc}}}{\varepsilon}
+$$
+求出电场大小和方向&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;积分求电压:
+$$
+U = \int_{\text{负极板}}^{\text{正极板}} \mathbf{E} \cdot d\mathbf{l}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;计算电容:
+$$
+C = \frac{Q}{U}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;适用范围&lt;/strong&gt;：电场分布有明显对称性（球、柱、无限大平板等），能直接用高斯定律解析求出 电场E&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;先假设电压u求电荷q&#34;&gt;先假设电压U，求电荷Q
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;步骤&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;假设电压:设正极板电势为U，负极为0&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;用拉普拉斯方程解决边值问题&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;在极板之间，因为没有自由电荷，所以:
+$$
+\nabla^2 \varphi = 0
+$$
+边界条件:&lt;/p&gt;
+&lt;p&gt;导体表面是等势体
+$$
+\varphi = U
+$$
+解出$\varphi(x,y,z)$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;求电场:
+$$
+\mathbf{E} = -\nabla \varphi
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;求电位移和电荷:
+$$
+\mathbf{D} = \varepsilon \mathbf{E}\
+\sigma_f = \mathbf{D} \cdot \hat{\mathbf{n}}
+$$
+总电荷:
+$$
+Q = \int \sigma_f , dS
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;计算电容:
+$$
+C = \frac{Q}{U}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;适用范围&lt;/strong&gt;：任何形状的电容器，尤其当电场无简单对称性时，需数值或解析解拉普拉斯方程&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;计算球电容器的电容&#34;&gt;计算球电容器的电容
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;构成:&lt;/p&gt;
+&lt;p&gt;球形电容器就是由一个内球（可以是空心小球）和一个外球壳（大球）同心放置构成的,空心内球和实心内球在静电学上效果相同（电荷都在外表面）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;举例1:&lt;/p&gt;
+&lt;p&gt;一个内球体半径为a，外球体半径为b中间填充$\epsilon_0$的电介质&lt;/p&gt;
+&lt;p&gt;假设内球体表面分布着q的电荷，那么根据高斯定理:
+$$
+\oint_S \mathbf{D} \cdot d\mathbf{S} = q
+$$&lt;/p&gt;
+&lt;p&gt;电位移与电场关系:
+$$
+D = \frac{q}{4\pi r^2} \mathbf{e}_r, \quad
+E = \frac{q}{4\pi \varepsilon_0 r^2} \mathbf{e}_r
+$$
+两导体之间的电压:&lt;/p&gt;
+&lt;p&gt;$$
+U = \int_a^b E , dr = \frac{q}{4\pi\varepsilon_0} \int_a^b \frac{dr}{r^2} = \frac{q}{4\pi\varepsilon_0} \left( \frac{1}{a} - \frac{1}{b} \right) = \frac{q}{4\pi\varepsilon_0} \cdot \frac{b-a}{ab}
+$$
+电容:
+$$
+C = \frac{q}{U} = \frac{4\pi\varepsilon_0 ab}{b-a}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;结论:&lt;/p&gt;
+&lt;p&gt;孤立导体球电容:
+$$
+C =\frac{4\pi\varepsilon_0 ab}{b-a}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;举例2:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;问题&lt;/strong&gt;：一个半径为 R 的金属球，置于介电常数为 $\varepsilon$​ 的无限大均匀介质中，求该球的电容，并讨论介质如何影响电容。&lt;/p&gt;
+&lt;p&gt;首先，电容表达式为:
+$$
+C = \frac{Q}{U}
+$$
+其中Q为金属球所带的自由电荷，U为求相对于无穷远处的电势(通常取无穷远处电势为零)&lt;/p&gt;
+&lt;p&gt;首先通过高斯定理:
+$$
+\oint_S \mathbf{D} \cdot d\mathbf{S} = Q_{\text{free}}
+$$
+取半径为$r \ge R$的球面为高斯面，由对称性可得:
+$$
+D \cdot 4\pi r^2 = Q \quad \Rightarrow \quad D = \frac{Q}{4\pi r^2} \mathbf{e}_r
+$$
+由电位移和电场强度关系可以得到:
+$$
+\mathbf{E} = \frac{\mathbf{D}}{\varepsilon} = \frac{Q}{4\pi \varepsilon r^2} \mathbf{e}_r
+$$&lt;/p&gt;
+&lt;p&gt;金属球表面到无穷远处的电势差为:
+$$
+U = \int_R^{\infty} E , dr = \int_R^{\infty} \frac{Q}{4\pi \varepsilon r^2} , dr = \frac{Q}{4\pi \varepsilon R}
+$$
+电容:
+$$
+C = \frac{Q}{U} = 4\pi \varepsilon R
+$$
+总结:
+$$
+C= 4\pi \varepsilon R= 4\pi \varepsilon_0 \varepsilon_r R=\varepsilon_r C_0
+$$
+其中$C_0$是在真空中的电容，也就是说，外界的电介质将球体的电容变成了原来的$\varepsilon_r$倍&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;多导体系统和部分电容-multi-conductor-systempartial-capacitance&#34;&gt;多导体系统和部分电容 Multi-conductor system,partial capacitance
+&lt;/h3&gt;&lt;h4 id=&#34;多导体系统&#34;&gt;多导体系统
+&lt;/h4&gt;&lt;p&gt;指的是&lt;strong&gt;三个及以上导体&lt;/strong&gt;组成的系统（比如三根导线、多个电极等）&lt;/p&gt;
+&lt;p&gt;电场在系统内&lt;strong&gt;闭合&lt;/strong&gt;，电场线从带电导体出发，终止在其他导体上&lt;/p&gt;
+&lt;p&gt;满足:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;高斯定律:
+$$
+\oint_S \mathbf{D} \cdot d\mathbf{S} = \sum q
+$$
+这里右边是电荷和&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;电荷守恒:
+$$
+\sum_{k=1}^{n+1} q_k = 0
+$$
+所有导体的电荷加起来等于 0,因为:&lt;/p&gt;
+&lt;p&gt;因为系统是“封闭的”，正电一定对应负电，没有“凭空多出来的电荷”&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;线性叠加关系&#34;&gt;线性叠加关系
+&lt;/h4&gt;&lt;p&gt;在线性介质中，导体的电位与所有导体上的电荷成线性关系：
+$$
+\varphi_{10} = a_0 q_0 + a_1 q_1 + a_2 q_2\
+\varphi_{20} = b_0 q_0 + b_1 q_1 + b_2 q_2
+$$&lt;/p&gt;
+&lt;p&gt;这里的$a_i, b_i$是由导体几何形状和相对位置决定的&lt;strong&gt;电位系数&lt;/strong&gt;（例如$a_1$表示单位电荷 $q_1$ 单独存在时在导体 1 上产生的电位，等等）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;孤立系统条件（总电荷为零）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如果这三个导体构成的系统是&lt;strong&gt;孤立的&lt;/strong&gt;（不与外界交换电荷），则总电荷守恒：
+$$
+q_0 + q_1 + q_2 = 0 \quad \Rightarrow \quad q_0 = -(q_1 + q_2)
+$$
+&lt;strong&gt;带入消去&lt;/strong&gt;
+$$
+\begin{aligned}
+\varphi_{10} &amp;amp;= a_0\big[-(q_1+q_2)\big] + a_1 q_1 + a_2 q_2 \
+&amp;amp;= (a_1 - a_0) q_1 + (a_2 - a_0) q_2 \[4pt]
+\varphi_{20} &amp;amp;= b_0\big[-(q_1+q_2)\big] + b_1 q_1 + b_2 q_2 \
+&amp;amp;= (b_1 - b_0) q_1 + (b_2 - b_0) q_2
+\end{aligned}
+$$
+&lt;strong&gt;定义新的电位系数&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;令:
+$$
+\alpha_{11} = a_1 - a_0,\quad \alpha_{12} = a_2 - a_0,\quad
+\alpha_{21} = b_1 - b_0,\quad \alpha_{22} = b_2 - b_0
+$$
+则得到简洁的矩阵关系：
+$$
+\boxed{\varphi_{10} = \alpha_{11} q_1 + \alpha_{12} q_2}\
+\boxed{\varphi_{20} = \alpha_{21} q_1 + \alpha_{22} q_2}
+$$
+这相当于将接地导体 0 的影响吸收进了新的系数中，使得&lt;strong&gt;两个自由导体的电位仅由它们自身的电荷决定&lt;/strong&gt;。这些新系数 $\alpha_{ij}$ 称为&lt;strong&gt;部分电容&lt;/strong&gt;或&lt;strong&gt;电位系数&lt;/strong&gt;的简化形式，常用于计算多导体系统的等效电容。&lt;/p&gt;
+&lt;h3 id=&#34;电位系数矩阵-coefficient-of-potential-matrix&#34;&gt;电位系数矩阵 Coefficient of Potential Matrix
+&lt;/h3&gt;&lt;p&gt;将上述途径扩展到多个导体&lt;/p&gt;
+&lt;p&gt;系统中有 $N+1$ 个导体（编号 $0,1,2,\dots,N$），其中导体 0 是&lt;strong&gt;接地的参考导体&lt;/strong&gt;（grounded reference conductor），其电位$\varphi_0 = 0$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;所有导体的电位都是相对于导体 0 来测量的，记作$\varphi_1, \varphi_2, \dots, \varphi_N$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;总共有$N+1$个未知电荷$q_0, q_1, \dots, q_N$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;由于整个系统是&lt;strong&gt;孤立的&lt;/strong&gt;（不与外界交换净电荷），总电荷守恒：
+$$
+q_0 + q_1 + \cdots + q_N = 0 \quad\Rightarrow\quad q_0 = -(q_1 + \cdots + q_N)
+$$
+这个关系将$q_0$用其他$N$个电荷表示，因此独立的电荷变量只有$N$个&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;因此有N个电位线性独立方程&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;消去$q_0$后的方程为:
+$$
+\begin{aligned}
+\varphi_1 &amp;amp;= \alpha_{11} q_1 + \alpha_{12} q_2 + \cdots + \alpha_{1N} q_N \
+\varphi_2 &amp;amp;= \alpha_{21} q_1 + \alpha_{22} q_2 + \cdots + \alpha_{2N} q_N \
+&amp;amp;\vdots \
+\varphi_N &amp;amp;= \alpha_{N1} q_1 + \alpha_{N2} q_2 + \cdots + \alpha_{NN} q_N
+\end{aligned}
+$$
+矩阵形式:
+$$
+[\boldsymbol{\varphi}] = [\alpha],[\mathbf{q}]
+$$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$[\boldsymbol{\varphi}]$是$N\times 1$电位列向量&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$[\mathbf{q}]$是$N\times 1$电荷列向量(不包含$q_0$)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$[\alpha]$是$N\times N$​的&lt;strong&gt;电位系数矩阵&lt;/strong&gt;（coefficient of potential matrix）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;性质一:所有系数为正
+$$
+\alpha_{ij} &amp;gt; 0 \quad \text{for all } i,j
+$$
+原因：正电荷产生的电位在所有空间点都是正的（参考点为接地导体 0，且没有负的净电荷存在）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;性质二:自然系数大于任何互系数
+$$
+\alpha_{ii} &amp;gt; \alpha_{ij} \quad (i\neq j)
+$$
+物理上：导体i上的电荷对自己电位的贡献，大于它到其他导体上产生的电位&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对称性(互易性)
+$$
+\alpha_{ij} = \alpha_{ji}
+$$
+这是静电学中的&lt;strong&gt;互易定理&lt;/strong&gt;（reciprocity theorem）的直接结果：
+单位电荷在导体 j 上时，在导体 i 上产生的电位，等于单位电荷在导体 i 上时在导体 j 上产生的电位。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;系数alpha_ij的物理意义&#34;&gt;系数$\alpha_{ij}$的物理意义
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;自电位系数&lt;/strong&gt;（self-potential coefficient）$\alpha_{ii}$&lt;/p&gt;
+&lt;p&gt;当&lt;strong&gt;只有导体 i 带单位正电荷&lt;/strong&gt;（其他导体 $j\neq i$ 净电荷为零，但导体 0 仍然存在且接地）时，在导体 $i$上产生的电位。&lt;/p&gt;
+&lt;p&gt;$\alpha_{ii} &amp;gt; 0$,因为正电荷产生正电位&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;互电位系数&lt;/strong&gt;（mutual potential coefficient）$\alpha_{ij}$($i\neq j$)&lt;/p&gt;
+&lt;p&gt;当&lt;strong&gt;只有导体 j 带单位正电荷&lt;/strong&gt;（其他导体净电荷为零）时，在导体 i 上产生的电位。
+由于静电感应，互电位系数也是正值$\alpha_{ij} &amp;gt; 0$，但通常小于自电位系数。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;实际计算或测量电位系数alpha_ij的方法&#34;&gt;实际计算或测量电位系数$\alpha_{ij}$的方法
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;自电位系数$\alpha_{ii}$
+$$
+\alpha_{ii} = \left. \frac{\varphi_i}{q_i} \right|&lt;em&gt;{\substack{q_1 = q_2 = \cdots = q&lt;/em&gt;{i-1}=q_{i+1}=\cdots = q_N = 0 \ q_i = -q_0}}
+$$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;只给导体 i 带上净电荷 $q_i$，其他导体 $1,\dots,N$ 中除了$i$ 都不带净电荷（但导体 0 会自动带上 $-q_i$）。&lt;/li&gt;
+&lt;li&gt;测量此时导体 $i$ 相对于地的电位$\varphi_i$。&lt;/li&gt;
+&lt;li&gt;比值 $\varphi_i / q_i$ 就是 $\alpha_{ii}$。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;物理含义&lt;/strong&gt;：自电位系数表示“导体 $i$​ 自己的电荷对自己电位的贡献”，且恒为正。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;互电位系数$\alpha_{ij}(i \neq j)$
+$$
+\alpha_{ij} = \left. \frac{\varphi_i}{q_j} \right|&lt;em&gt;{\substack{q_1 = q_2 = \cdots = q&lt;/em&gt;{j-1}=q_{j+1}=\cdots = q_N = 0 \ q_j = -q_0}}
+$$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;只给导体 j带上净电荷 $q_j$，其他导体 $1,\dots,N$ 中除了$j$ 都不带净电荷（但导体 0 会自动带上 $-q_j$）。&lt;/li&gt;
+&lt;li&gt;测量此时导体 $i$ 相对于地的电位$\varphi_i$。&lt;/li&gt;
+&lt;li&gt;比值 $\varphi_i / q_j$ 就是 $\alpha_{ij}$​。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;条件中写$q_i = -q_0$​的原因&lt;/p&gt;
+&lt;p&gt;这是为了强调 &lt;strong&gt;孤立系统总电荷为零&lt;/strong&gt; 的约束。因为接地导体 0 不是无限远，而是系统中的一员，它的电荷会随着其他导体的电荷变化，自动保证：
+$$
+q_0 + \sum_{k=1}^{N} q_k = 0
+$$
+所以当我们说“只有导体j带净电荷”时，实际上导体 0 也必须带 $-q_j$。这不是一个额外假设，而是由孤立条件和接地参考共同决定的必然结果&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;电容系数矩阵-coefficient-of-capacitance-matrix&#34;&gt;&lt;strong&gt;电容系数矩阵 Coefficient of Capacitance Matrix&lt;/strong&gt;
+&lt;/h3&gt;&lt;p&gt;上一部分电位系数矩阵用于在多导体系统当中，由电荷求电位的关系&lt;/p&gt;
+&lt;p&gt;而这一部分则刚好相反:&lt;/p&gt;
+&lt;p&gt;在&lt;strong&gt;多导体系统&lt;/strong&gt;中，由&lt;strong&gt;电位求电荷的逆关系&lt;/strong&gt;，它引入了&lt;strong&gt;静电感应系数矩阵 Electrostatic Induction Coefficient Matrix $\beta$&lt;strong&gt;也称&lt;/strong&gt;电容系数矩阵&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;从电位系数alpha到感应系数beta&#34;&gt;从电位系数$\alpha$到感应系数$\beta$​
+&lt;/h4&gt;&lt;p&gt;前面我们已经得到:
+$$
+[\varphi] = [\alpha],[q]
+$$
+其中 $[\alpha]$ 是 $N\times N$ 的电位系数矩阵，对称正定，各元素$\alpha_{ij}&amp;gt;0$&lt;/p&gt;
+&lt;p&gt;如果已知各导体的电位 $\varphi_i$，需要求各导体的电荷$q_i$，则直接求逆：
+$$
+[q] = [\alpha]^{-1} [\varphi] ;\equiv; [\beta],[\varphi]
+$$
+即:
+$$
+[\beta] = [\alpha]^{-1}
+$$
+矩阵$[\beta]$称为&lt;strong&gt;静电感应系数矩阵&lt;/strong&gt;，有时也叫&lt;strong&gt;电容系数矩阵&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;展开式与系数的物理意义&#34;&gt;展开式与系数的物理意义
+&lt;/h4&gt;&lt;p&gt;将矩阵方程写成分量形式：
+$$
+\begin{aligned}
+q_1 &amp;amp;= \beta_{11}\varphi_1 + \beta_{12}\varphi_2 + \cdots + \beta_{1N}\varphi_N \
+q_2 &amp;amp;= \beta_{21}\varphi_1 + \beta_{22}\varphi_2 + \cdots + \beta_{2N}\varphi_N \
+&amp;amp;\vdots \
+q_N &amp;amp;= \beta_{N1}\varphi_1 + \beta_{N2}\varphi_2 + \cdots + \beta_{NN}\varphi_N
+\end{aligned}
+$$&lt;/p&gt;
+&lt;h5 id=&#34;自感应系数beta_iiself-induction-coefficient&#34;&gt;自感应系数$\beta_{ii}$（Self-induction coefficient）
+&lt;/h5&gt;&lt;p&gt;&lt;strong&gt;定义&lt;/strong&gt;：当只有导体 i 的电位为 $1,\text{V}$（其他导体电位均为 0）时，导体 $i$ 上感应的电荷量。&lt;/p&gt;
+&lt;p&gt;即:
+$$
+\beta_{ii} = \left. q_i \right|&lt;em&gt;{\varphi_i=1,; \varphi&lt;/em&gt;{j\neq i}=0}
+$$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;物理意义:表示导体i的电位对自身电荷的贡献&lt;/li&gt;
+&lt;li&gt;符号:$\beta_{ii} \le 0$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;互感应系数beta_ijmutual-induction-coefficientineq-j&#34;&gt;互感应系数$\beta_{ij}$(Mutual induction coefficient，$i\neq j$)
+&lt;/h5&gt;&lt;p&gt;&lt;strong&gt;定义&lt;/strong&gt;：当只有导体 j 的电位为 $1,\text{V}$（其他导体电位均为 0）时，导体 $i$ 上感应的电荷量。&lt;/p&gt;
+&lt;p&gt;即:
+$$
+\beta_{ij} = \left. q_i \right|&lt;em&gt;{\varphi_j=1,; \varphi&lt;/em&gt;{k\neq j}=0}
+$$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;物理意义:表示导体j的电位对导体i上电荷的贡献&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;符号:$\beta_{ij} \le 0$&lt;/p&gt;
+&lt;p&gt;且通常为负值，因为一个导体电位升高，会使周围其他导体感应出相反符号的电荷，前提是这些导体原先电位为零&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对称性:由于$[\alpha]$对称，其逆矩阵也对称，所以$\beta_{ij} = \beta_{ji}$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;beta矩阵性质总结&#34;&gt;$\beta$矩阵性质总结
+&lt;/h4&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;性质&lt;/th&gt;
+&lt;th&gt;表达式&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;对称性&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;$\beta*{ij} = \beta*{ji}$&lt;/td&gt;
+&lt;td&gt;互易定理的直接结果&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;自感应系数正定&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;$\beta_{ii} &amp;gt; 0$&lt;/td&gt;
+&lt;td&gt;导体对自身电位的响应总是正的&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;互感应系数非正&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;$\beta_{ij} \le 0 \ (i\neq j)$&lt;/td&gt;
+&lt;td&gt;一个导体电位升高，会使其他零电位导体感应出负电荷&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;矩阵正定&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;$[\beta]$正定&lt;/td&gt;
+&lt;td&gt;因为 $[\alpha]$正定，逆矩阵也正定&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;行和（列和）性质&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;$\sum*{j=1}^{N} \beta*{ij} = C_{i0} \ge 0$&lt;/td&gt;
+&lt;td&gt;与部分电容中的对地电容有关（见下节）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;静电感应系数求法&#34;&gt;静电感应系数求法
+&lt;/h4&gt;&lt;h5 id=&#34;自感应系数-beta_ii&#34;&gt;自感应系数 $\beta_{ii}$
+&lt;/h5&gt;&lt;p&gt;设 &lt;strong&gt;只有导体 $i$ 的电位为 $\varphi_i = U$&lt;/strong&gt;（$U \neq 0$），其余导体电位均为 $0$：
+$$
+\varphi_i = U,\quad \varphi_{k \neq i} = 0
+$$&lt;/p&gt;
+&lt;p&gt;求解此时导体 $i$ 上的电荷 $q_i$，则&lt;/p&gt;
+&lt;p&gt;$$
+\beta_{ii} = \frac{q_i}{\varphi_i} = \frac{q_i}{U}
+$$&lt;/p&gt;
+&lt;p&gt;特别地，若取 $U = 1\ \mathrm{V}$，则 $\beta_{ii} = q_i$。&lt;/p&gt;
+&lt;h5 id=&#34;互感应系数-beta_iji-neq-j&#34;&gt;互感应系数 $\beta_{ij}$（$i \neq j$）
+&lt;/h5&gt;&lt;p&gt;设 &lt;strong&gt;只有导体 $j$ 的电位为 $\varphi_j = U$&lt;/strong&gt;，其余导体（包括导体 $i$）电位均为 $0$：&lt;/p&gt;
+&lt;p&gt;$$
+\varphi_j = U,\quad \varphi_{k \neq j} = 0
+$$&lt;/p&gt;
+&lt;p&gt;求解此时导体 $i$ 上的电荷 $q_i$，则&lt;/p&gt;
+&lt;p&gt;$$
+\beta_{ij} = \frac{q_i}{\varphi_j} = \frac{q_i}{U}
+$$&lt;/p&gt;
+&lt;p&gt;取 $U = 1\ \mathrm{V}$ 时，$\beta_{ij} = q_i$。&lt;/p&gt;
+&lt;p&gt;由对称性 $\beta_{ij} = \beta_{ji}$，因此也可以通过令 $\varphi_i = 1$ 测量 $q_j$ 得到相同的值。&lt;/p&gt;
+&lt;h3 id=&#34;部分电容&#34;&gt;&lt;strong&gt;部分电容&lt;/strong&gt;
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;任意两个导体之间都存在电容&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;从静电感应系数-beta-到部分电容-c&#34;&gt;从静电感应系数 $\beta$ 到部分电容 $c$
+&lt;/h4&gt;&lt;p&gt;已知多导体系统中，电荷与电位的关系为（以导体1为例）：&lt;/p&gt;
+&lt;p&gt;$$
+q_1 = \beta_{11}\varphi_1 + \beta_{12}\varphi_2 + \cdots + \beta_{1N}\varphi_N
+$$&lt;/p&gt;
+&lt;p&gt;这里 $\varphi_i$ 是导体 $i$ 相对于大地（参考导体0）的电位，$\beta_{ij}$ 是静电感应系数（电容系数）。$\beta_{ii}&amp;gt;0$，$\beta_{ij}\le0\ (i\neq j)$，且对称。&lt;/p&gt;
+&lt;p&gt;但在电路理论中，我们更习惯用&lt;strong&gt;电压&lt;/strong&gt;（电位差）而不是绝对电位来表达电荷，因为电容元件两端的电荷与&lt;strong&gt;电压差&lt;/strong&gt;成正比。因此需要将上式改写为只含电压的形式&lt;/p&gt;
+&lt;p&gt;引入以下电压定义：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$U_{i0} = \varphi_i - 0 = \varphi_i$：导体 $i$ 对大地的电压。&lt;/li&gt;
+&lt;li&gt;$U_{ij} = \varphi_i - \varphi_j$：导体 $i$ 与导体 $j$ 之间的电压。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;注意 $U_{ij} = -U_{ji}$。&lt;/p&gt;
+&lt;p&gt;现在将 $q_1$ 表达式重新组合。以 $N=3$ 为例（便于观察规律）：&lt;/p&gt;
+&lt;p&gt;$$
+q_1 = \beta_{11}\varphi_1 + \beta_{12}\varphi_2 + \beta_{13}\varphi_3
+$$&lt;/p&gt;
+&lt;p&gt;把 $\varphi_2$ 和 $\varphi_3$ 用 $\varphi_1$ 和电压差表示：
+$$
+\varphi_2 = \varphi_1 - (\varphi_1 - \varphi_2) = \varphi_1 - U_{12}
+$$&lt;/p&gt;
+&lt;p&gt;$$
+\varphi_3 = \varphi_1 - U_{13}
+$$&lt;/p&gt;
+&lt;p&gt;代入：
+$$
+\begin{aligned}
+q_1 &amp;amp;= \beta_{11}\varphi_1 + \beta_{12}(\varphi_1 - U_{12}) + \beta_{13}(\varphi_1 - U_{13}) \
+&amp;amp;= (\beta_{11} + \beta_{12} + \beta_{13})\varphi_1 - \beta_{12}U_{12} - \beta_{13}U_{13}
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;由于 $\varphi_1 = U_{10}$，得到：&lt;/p&gt;
+&lt;p&gt;$$
+q_1 = (\beta_{11} + \beta_{12} + \beta_{13})U_{10} - \beta_{12}U_{12} - \beta_{13}U_{13}
+$$&lt;/p&gt;
+&lt;p&gt;对于一般 $N$，同理有：&lt;/p&gt;
+&lt;p&gt;$$
+q_1 = (\beta_{11} + \beta_{12} + \cdots + \beta_{1N})U_{10} - \beta_{12}U_{12} - \beta_{13}U_{13} - \cdots - \beta_{1N}U_{1N}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;定义部分电容&#34;&gt;定义部分电容
+&lt;/h4&gt;&lt;p&gt;对比上式与电容元件的电荷-电压关系 $q = CU$，自然定义：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;导体1对地的&lt;strong&gt;部分电容&lt;/strong&gt;（partial capacitance）：
+$$
+C_{10} = \beta_{11} + \beta_{12} + \cdots + \beta_{1N}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;导体1与导体 $j$（$j\ge2$）之间的&lt;strong&gt;部分电容&lt;/strong&gt;：
+$$
+C_{1j} = -\beta_{1j} \quad (j=2,\dots,N)
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;由于 $\beta_{1j} \le 0$，故 $C_{1j} \ge 0$，符合电容的非负性。&lt;/p&gt;
+&lt;p&gt;于是 $q_1$ 可写为：&lt;/p&gt;
+&lt;p&gt;$$
+q_1 = C_{10}U_{10} + C_{12}U_{12} + C_{13}U_{13} + \cdots + C_{1N}U_{1N}
+$$&lt;/p&gt;
+&lt;p&gt;注意 $U_{12} = \varphi_1 - \varphi_2$，$U_{13} = \varphi_1 - \varphi_3$​，等等。所有电压均以导体1为参考的一端&lt;/p&gt;
+&lt;h4 id=&#34;更一般的情况&#34;&gt;更一般的情况
+&lt;/h4&gt;&lt;p&gt;对于任意导体 $i$，同理有：&lt;/p&gt;
+&lt;p&gt;$$
+q_i = C_{i0}U_{i0} + \sum_{\substack{j=1 \ j\neq i}}^{N} C_{ij}U_{ij}
+$$&lt;/p&gt;
+&lt;p&gt;其中：
+$$
+C_{i0} =\sum_{j=1}^N\beta_{ij}, \qquad C_{ij} = -\beta_{ij}\ (i\neq j)
+$$&lt;/p&gt;
+&lt;p&gt;注意 $U_{ij} = \varphi_i - \varphi_j$，且 $C_{ij} = C_{ji}$（因为 $\beta_{ij}=\beta_{ji}$）。&lt;/p&gt;
+&lt;p&gt;最后写出的形式是：&lt;/p&gt;
+&lt;p&gt;$$
+q_N = C_{N1}U_{N1} + \cdots + C_{Ni}U_{Ni} + \cdots + C_{N0}U_{N0}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;部分电容的矩阵形式与性质&#34;&gt;部分电容的矩阵形式与性质
+&lt;/h4&gt;&lt;p&gt;已知部分电容的定义来自静电感应系数 $\beta_{ij}$：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;互部分电容：$C_{ij} = -\beta_{ij}$（$i \neq j$）&lt;/li&gt;
+&lt;li&gt;自部分电容（对地电容）：$C_{i0} = \sum_{j=1}^{N} \beta_{ij}$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;于是电荷与电压的关系可写为矩阵形式：&lt;/p&gt;
+&lt;p&gt;$$
+[q] = [C],[U]
+$$&lt;/p&gt;
+&lt;p&gt;其中 $[q]$ 是 $N \times 1$ 电荷列向量（导体 $1$ 到 $N$），$[U]$ 是电压列向量，其元素为 $U_{i0}$ 和 $U_{ij}$ 的组合。具体展开时，每个导体 $i$ 满足：&lt;/p&gt;
+&lt;p&gt;$$
+q_i = C_{i0}U_{i0} + \sum_{\substack{j=1 \ j \neq i}}^{N} C_{ij}U_{ij}
+$$&lt;/p&gt;
+&lt;p&gt;这里 $U_{i0} = \varphi_i$，$U_{ij} = \varphi_i - \varphi_j$。&lt;/p&gt;
+&lt;p&gt;矩阵 $[C]$ 就是&lt;strong&gt;部分电容矩阵&lt;/strong&gt;（partial capacitance matrix），其元素 $C_{ij}$（$i\neq j$）和 $C_{i0}$ 具有明确的物理意义和重要性质。&lt;/p&gt;
+&lt;h4 id=&#34;性质&#34;&gt;性质
+&lt;/h4&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;性质&lt;/th&gt;
+&lt;th&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;正性&lt;/td&gt;
+&lt;td&gt;$C_{i0}&amp;gt;0,\ C_{ij}&amp;gt;0$，仅由几何和介质决定&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;对称性&lt;/td&gt;
+&lt;td&gt;$C_{ij}=C_{ji}$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;独立电容个数&lt;/td&gt;
+&lt;td&gt;$\frac{N(N+1)}{2}$，其中 N 为非地导体数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;零电容条件&lt;/td&gt;
+&lt;td&gt;两导体之间无电场线相连时，对应部分电容为零&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;部分电容为正，且只与几何、介质有关&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Partial capacitance is positive, and only have a relationship with the size, shape, mutual position and $\varepsilon$ value of the media&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;正性&lt;/strong&gt;：$C_{i0} &amp;gt; 0$，$C_{ij} &amp;gt; 0$（$i \neq j$）。这是因为 $\beta_{ii} &amp;gt; 0$ 且 $\beta_{ij} \le 0$，所以 $C_{i0} = \sum_j \beta_{ij} &amp;gt; 0$，而 $C_{ij} = -\beta_{ij} \ge 0$；在非退化几何下严格为正。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;与电位、电荷无关&lt;/strong&gt;：部分电容只由导体的&lt;strong&gt;尺寸、形状、相对位置&lt;/strong&gt;以及周围介质的&lt;strong&gt;介电常数 $\varepsilon$&lt;/strong&gt; 决定，是系统的固有参数。这与普通电容器的电容概念一致。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;互部分电容对称&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mutual partial capacitor, $C_{ij} = C_{ji}$, which is $[C]$ is a symmetric matrix.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;由于 $\beta_{ij} = \beta_{ji}$，直接得到：&lt;/p&gt;
+&lt;p&gt;$$
+C_{ij} = -\beta_{ij} = -\beta_{ji} = C_{ji}
+$$&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;独立系统的电容数目&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(N + 1) Electrostatic independent system, there should be $\frac{n(n+1)}{2}$ capacitors.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这里需要澄清符号：系统共有 $N+1$ 个导体（包括编号 $0$ 的参考地）。独立的部分电容个数为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每个非地导体 $i$ 对地的电容：$C_{i0}$，共 $N$ 个。&lt;/li&gt;
+&lt;li&gt;每两个不同非地导体之间的电容：$C_{ij}$（$i&amp;lt;j$），共 $\frac{N(N-1)}{2}$ 个。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;总数为：
+$$
+N + \frac{N(N-1)}{2} = \frac{N(N+1)}{2}
+$$&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;部分电容为零的条件&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Partial capacitance is zero or not, depending on whether there is a power line connecting two conductors.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;电力线（power line）&lt;/strong&gt; 这里指&lt;strong&gt;电场线&lt;/strong&gt;（electric field line）。&lt;/li&gt;
+&lt;li&gt;如果两个导体之间&lt;strong&gt;存在电场线&lt;/strong&gt;（即它们之间有电场联系），那么它们之间的互部分电容 $C_{ij}$ 就不为零；反之，如果两个导体被完全屏蔽（例如一个导体被另一个导体完全包围且接地），或者相距无穷远，没有电场线从一者出发终止于另一者，则 $C_{ij} = 0$。&lt;/li&gt;
+&lt;li&gt;对于对地电容 $C_{i0}$，只要导体 $i$ 与地之间存在电场线（通常总是存在，除非完全屏蔽），则 $C_{i0} &amp;gt; 0$。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这个性质直观地反映了部分电容的&lt;strong&gt;几何本质&lt;/strong&gt;：电容取决于电场线的存在与分布。&lt;/p&gt;
+&lt;h4 id=&#34;重要例题&#34;&gt;重要例题:
+&lt;/h4&gt;&lt;img src=&#34;12.png&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;题干:&lt;/p&gt;
+&lt;p&gt;有两条平行的圆柱形输电线，半径均为 $a$，架设在大地上方 $h$ 米处，两导线中心距为 $d$。大地视为理想导体，电位为 $0$。求该系统的部分电容 $C_{10}, C_{20}, C_{12}$，以及两导线之间的等效电容（考虑大地影响）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;求解:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;部分电容基本方程:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;每根导线上的总电荷 = 对地电容贡献 + 与另一根导线之间互电容的贡献（电压差驱动）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;对于两个导体（加地）的系统，部分电容模型给出：&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+\tau_1 &amp;amp;= C_{10},\varphi_1 + C_{12},(\varphi_1 - \varphi_2) \
+\tau_2 &amp;amp;= C_{21},(\varphi_2 - \varphi_1) + C_{20},\varphi_2
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;这里 $\tau_1, \tau_2$ 是单位长度电荷（因为输电线很长，通常按单位长度考虑），$\varphi_1, \varphi_2$​ 是导线对地的电位。&lt;/p&gt;
+&lt;p&gt;推导:&lt;/p&gt;
+&lt;p&gt;由前文已知：
+$$
+q_1 = \beta_{11}\varphi_1 + \beta_{12}\varphi_2,\quad q_2 = \beta_{21}\varphi_1 + \beta_{22}\varphi_2
+$$
+并且部分电容定义为：
+$$
+C_{10} = \beta_{11}+\beta_{12},\quad C_{12} = -\beta_{12},\quad C_{20} = \beta_{21}+\beta_{22},\quad C_{21}= -\beta_{21}=C_{12}
+$$
+代入验证：
+$$
+\begin{aligned}
+C_{10}\varphi_1 + C_{12}(\varphi_1-\varphi_2) &amp;amp;= (\beta_{11}+\beta_{12})\varphi_1 - \beta_{12}(\varphi_1-\varphi_2) \
+&amp;amp;= \beta_{11}\varphi_1 + \beta_{12}\varphi_2 = q_1
+\end{aligned}
+$$
+第二式同理。所以两组式子是等价的，只是部分电容形式更直观，便于电路分析。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;求解方程
+$$
+\begin{aligned}
+\tau_1 &amp;amp;= C_{10},\varphi_1 + C_{12},(\varphi_1 - \varphi_2) \
+\tau_2 &amp;amp;= C_{21},(\varphi_2 - \varphi_1) + C_{20},\varphi_2
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;这是一个线性方程组。为了确定这三个未知系数，我们只需要&lt;strong&gt;两组独立的实验&lt;/strong&gt;（或计算），每组实验给定一组 $(\tau_1, \tau_2)$，测量对应的 $(\varphi_1, \varphi_2)$​，然后解出系数&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;由于部分电容 $C_{10}, C_{12}, C_{20}$​ 是只与系统几何和介质有关的常数，与电荷、电位无关&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我们可以假设 $\tau_1=1, \tau_2=0$&lt;/p&gt;
+&lt;p&gt;因为最方便简单的就是单位电荷，同时，线性系统满足叠加原理。任何一组 $(\tau_1, \tau_2)$ 都可以写成 $(1,0)$ 和 $(0,1)$ 的线性组合。一旦我们知道了单位激励下的电位响应（即电位系数），就可以用叠加得到任意电荷下的电位。反过来，我们也是通过这些特定激励下的电位测量值来反推出 $C$ 系数&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第一组：$\tau_1=1, \tau_2=0$（只给导线1充电，导线2悬空不带净电荷）&lt;/li&gt;
+&lt;li&gt;第二组：$\tau_1=0, \tau_2=1$（只给导线2充电）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;现在我们把 $\tau_1=1, \tau_2=0$ 以及上面求出的 $\varphi_1, \varphi_2$ 代入部分电容方程：&lt;/p&gt;
+&lt;p&gt;$$
+\begin{cases}
+1 = C_{10},\varphi_1 + C_{12},(\varphi_1 - \varphi_2) \[4pt]
+0 = C_{12},(\varphi_2 - \varphi_1) + C_{20},\varphi_2
+\end{cases}
+$$&lt;/p&gt;
+&lt;p&gt;注意 $C_{21}=C_{12}$​。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;求表达式中的电势 $\varphi_1, \varphi_2$​​的具体表达式&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;镜像法&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;对于地面（导体）上方的电荷，地面会感应出相反的电荷分布。为了保持地面为等势面（$0$ 电位），我们可以用一个&lt;strong&gt;镜像电荷&lt;/strong&gt;来代替地面的影响：在地面下方对称位置放置一个等量异号的电荷。这样，原电荷与镜像电荷共同产生的电场，在原来地面所在平面上电位正好为 $0$​，并且上半空间的电场与有地面时的真实电场完全相同。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;导线1的真实电荷：$+\tau_1 = +1$（单位长度），位置 $(0, h)$（设导线1在 $x=0$）。&lt;/li&gt;
+&lt;li&gt;它的镜像：在 $(0, -h)$ 处放 $-1$ 的电荷。&lt;/li&gt;
+&lt;li&gt;导线2的真实电荷：$\tau_2 = 0$，所以它没有电荷，但它的镜像呢？如果导线2不带电，它的镜像也不带电（因为镜像电荷等于真实电荷的相反数）。所以导线2的镜像也是 $0$。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;因此，上半空间（$y&amp;gt;0$）的电场由四个“线电荷”产生：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;真实导线1：$+1$ 在 $(0, h)$&lt;/li&gt;
+&lt;li&gt;真实导线2：$0$ 在 $(d, h)$（无贡献）&lt;/li&gt;
+&lt;li&gt;镜像导线1：$-1$ 在 $(0, -h)$&lt;/li&gt;
+&lt;li&gt;镜像导线2：$0$ 在 $(d, -h)$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;实际上只有两个有电荷：$+1$ 和 $-1$。&lt;/p&gt;
+&lt;p&gt;对于一根无限长直导线，单位长度电荷为 $\tau$，在距离导线 $r$ 处产生的电位（取大地为参考，即 $y=0$ 处电位为 $0$）为：
+$$
+\varphi(r) = \frac{\tau}{2\pi\varepsilon_0} \ln\frac{r_0}{r}
+$$
+其中 $r_0$ 是某个参考距离。通常我们取 $r_0$ 使得当 $r=0$ 时电位无限大，但实际中导线表面电位需要用到导线半径。更常用的形式是：&lt;strong&gt;对于一根带电线，其自身表面的电位&lt;/strong&gt;（用镜像法计算时）为：
+$$
+\varphi = \frac{\tau}{2\pi\varepsilon_0} \ln\frac{\text{到镜像的距离}}{\text{导线半径}}
+$$
+这是因为镜像法将地面问题转化为无界空间中的一对正负线电荷，它们共同在导线表面产生的电位，就是该表达式:
+$$
+\varphi_1 = \frac{1}{2\pi\varepsilon_0} \left( \ln\frac{2h}{a} \right)
+$$
+我们需要计算导线2表面（近似中心在 $(d, h)$）的电位，由两个电荷产生：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;真实导线1（$+1$）到导线2的距离：$d$。&lt;/li&gt;
+&lt;li&gt;镜像导线1（$-1$）到导线2的距离：$\sqrt{(2h)^2 + d^2}$。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;因此：
+$$
+\varphi_2 = \frac{1}{2\pi\varepsilon_0} \left( \ln\frac{1}{d} - \ln\frac{1}{\sqrt{4h^2+d^2}} \right) = \frac{1}{2\pi\varepsilon_0} \ln\frac{\sqrt{4h^2+d^2}}{d}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;求解方程组
+$$
+1 = C_{10}\cdot\frac{1}{2\pi\varepsilon_0}\ln\frac{2h}{a} + C_{12}\cdot\frac{1}{2\pi\varepsilon_0}\left(\ln\frac{2h}{a} - \ln\frac{\sqrt{4h^2+d^2}}{d}\right)\
+0 = C_{12}\cdot\frac{1}{2\pi\varepsilon_0}\left(\ln\frac{\sqrt{4h^2+d^2}}{d} - \ln\frac{2h}{a}\right) + C_{20}\cdot\frac{1}{2\pi\varepsilon_0}\ln\frac{\sqrt{4h^2+d^2}}{d}\
+C_{10} = C_{20}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;结果:
+$$
+C_{10} = C_{20} = \frac{2\pi\varepsilon_0}{\ln\frac{2h\sqrt{4h^2+d^2}}{ad}} \
+C_{12} =\frac{2\pi\varepsilon_0 ;\ln\frac{\sqrt{4h^2+d^2}}{d}}{\left(\ln\frac{2h}{a}\right)^2 - \left(\ln\frac{\sqrt{4h^2+d^2}}{d}\right)^2}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;静电能与静电&#34;&gt;静电能与静电
+&lt;/h2&gt;&lt;p&gt;Electrostatic energy and force&lt;/p&gt;
+&lt;h3 id=&#34;连续分布电荷系统的静电能量-electrostatic-energy-in-charged-system&#34;&gt;&lt;strong&gt;连续分布电荷系统的静电能量&lt;/strong&gt; Electrostatic energy in charged system
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;静电能量的来源&lt;/strong&gt;
+静电能量本质上是建立电场过程中，&lt;strong&gt;外力克服电场力做功&lt;/strong&gt;转化而来的。换句话说，把电荷从无穷远（或参考点）搬到当前位置，外力做的功就储存在电场中，成为静电能。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;几个重要假设&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;介质是线性的&lt;/strong&gt;：电荷与电场之间满足线性关系（比如 D = εE）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;充电过程极其缓慢&lt;/strong&gt;：忽略电荷运动带来的动能和电磁辐射，所有能量都变成静电能。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;充电过程不影响最终结果&lt;/strong&gt;：无论怎么充（比如同时按比例增加所有电荷），只要最终电荷分布和电势相同，储存的静电能就一样。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;公式推导&#34;&gt;公式推导
+&lt;/h4&gt;&lt;p&gt;设最终（$t$ 时刻）的电荷体密度为 $\rho(x,y,z)$，电位为 $\varphi(x,y,z)$。&lt;/p&gt;
+&lt;p&gt;我们设想一个虚拟的充电过程：所有电荷从 $0$ 开始，按相同比例 $m$ 同步增长，$m$ 从 $0$ 到 $1$。在中间某个时刻 $t&amp;rsquo;$，对应的密度和电位为：&lt;/p&gt;
+&lt;p&gt;$$
+\rho&amp;rsquo;(x,y,z) = m \rho(x,y,z), \qquad \varphi&amp;rsquo;(x,y,z) = m \varphi(x,y,z)
+$$&lt;/p&gt;
+&lt;p&gt;这是因为在线性介质中，电位与电荷密度成正比。&lt;/p&gt;
+&lt;p&gt;在时刻 $t&amp;rsquo;$，从无穷远将一小块电荷 $dq$ 搬运到空间某点，该点的电位为 $\varphi&amp;rsquo;(x,y,z)$。外力克服电场力做的功为：&lt;/p&gt;
+&lt;p&gt;$$
+\delta A = \varphi&amp;rsquo;(x,y,z) , dq
+$$&lt;/p&gt;
+&lt;p&gt;这里 $dq$ 是&lt;strong&gt;该时刻&lt;/strong&gt;增加的电荷量。由于密度按比例增长，$dq$ 可以写成：&lt;/p&gt;
+&lt;p&gt;$$
+dq = d\rho&amp;rsquo; , dV = \big[ \rho(x,y,z) , dm \big] , dV = \rho , dm , dV
+$$&lt;/p&gt;
+&lt;p&gt;其中 $dV$ 是体积元。&lt;/p&gt;
+&lt;p&gt;整个系统在 $dt&amp;rsquo;$ 时间内获得的总能量增量为：&lt;/p&gt;
+&lt;p&gt;$$
+dW_e = \int_V \varphi&amp;rsquo; , dq = \int_V (m \varphi) \cdot (\rho , dm , dV) = m , dm \int_V \rho \varphi , dV
+$$&lt;/p&gt;
+&lt;p&gt;然后对 $m$ 从 $0$ 到 $1$ 积分，得到总静电能量：&lt;/p&gt;
+&lt;p&gt;$$
+W_e = \int_0^1 dW_e = \int_0^1 m , dm \int_V \rho \varphi , dV = \left( \int_0^1 m , dm \right) \int_V \rho \varphi , dV
+$$&lt;/p&gt;
+&lt;p&gt;由于 $\int_0^1 m , dm = \frac{1}{2}$，所以：&lt;/p&gt;
+&lt;p&gt;$$
+\boxed{W_e = \frac{1}{2} \int_V \rho \varphi , dV}
+$$&lt;/p&gt;
+&lt;p&gt;如果电荷分布在导体表面（面密度 $\sigma$）或细线上（线密度 $\tau$），只需将体积分换成面积分或线积分：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;面分布：$\displaystyle W_e = \frac{1}{2} \int_S \sigma \varphi , dS$&lt;/li&gt;
+&lt;li&gt;线分布：$\displaystyle W_e = \frac{1}{2} \int_L \tau \varphi , dl$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;对于&lt;strong&gt;导体系统&lt;/strong&gt;，每个导体是等势体，$\varphi$ 在导体表面为常数，因此 $W_e = \frac{1}{2} \sum_i q_i \varphi_i$，其中 $q_i$ 是导体 $i$​ 的总电荷。&lt;/p&gt;
+&lt;h4 id=&#34;能量密度&#34;&gt;能量密度
+&lt;/h4&gt;&lt;p&gt;$$
+w_e = \frac{1}{2} \mathbf{D} \cdot \mathbf{E}
+$$&lt;/p&gt;
+&lt;p&gt;对于线性各向同性介质，$\mathbf{D} = \varepsilon \mathbf{E}$，因此：&lt;/p&gt;
+&lt;p&gt;$$
+w_e = \frac{1}{2} \varepsilon E^2
+$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;物理意义&lt;/strong&gt;：单位体积内储存的静电能量。整个电场的总能量为 $W_e = \int_V w_e , dV$​。这是电磁场理论中最基本的能量表达式&lt;/p&gt;
+&lt;h3 id=&#34;电容-1&#34;&gt;电容
+&lt;/h3&gt;&lt;h4 id=&#34;球形电容器&#34;&gt;球形电容器
+&lt;/h4&gt;&lt;p&gt;对于球形电容器（两个同心导体球壳，内球半径 $R_1$，外球半径 $R_2$，内球带电荷 $+Q$，外球带电荷 $-Q$），电容推导如下：&lt;/p&gt;
+&lt;p&gt;由高斯定理，在两球壳之间（$R_1 &amp;lt; r &amp;lt; R_2$）的电场强度为
+$$
+E = \frac{Q}{4\pi\varepsilon_0 r^2}
+$$
+方向沿径向。内球相对于外球的电压为
+$$
+U = \int_{R_1}^{R_2} E , dr = \frac{Q}{4\pi\varepsilon_0} \int_{R_1}^{R_2} \frac{dr}{r^2} = \frac{Q}{4\pi\varepsilon_0} \left( \frac{1}{R_1} - \frac{1}{R_2} \right)
+$$
+由电容定义 $C = Q/U$，得
+$$
+C = \frac{Q}{U} = \frac{4\pi\varepsilon_0}{\frac{1}{R_1} - \frac{1}{R_2}} = 4\pi\varepsilon_0 \frac{R_1 R_2}{R_2 - R_1}
+$$
+若外球半径 $R_2 \to \infty$，则得到孤立球电容 $C = 4\pi\varepsilon_0 R_1$&lt;/p&gt;
+&lt;h3 id=&#34;电容器能量&#34;&gt;电容器能量
+&lt;/h3&gt;&lt;h4 id=&#34;导体系统的静电能量&#34;&gt;导体系统的静电能量
+&lt;/h4&gt;&lt;p&gt;对于 $n$ 个导体，每个导体的电位为 $\varphi_K$，总电荷为 $q_K$，静电能量为：&lt;/p&gt;
+&lt;p&gt;$$
+W_e = \frac{1}{2} \sum_{K=1}^{n} \varphi_K q_K
+$$&lt;/p&gt;
+&lt;p&gt;这是因为导体是等势体，$\int_S \sigma \varphi dS = \varphi \int_S \sigma dS = \varphi q$​。&lt;/p&gt;
+&lt;h4 id=&#34;电容器&#34;&gt;电容器
+&lt;/h4&gt;&lt;p&gt;当只有两个导体（例如平行板电容器）且它们带有等量异号电荷时：&lt;/p&gt;
+&lt;p&gt;$$
+q_1 = q,\quad q_2 = -q
+$$&lt;/p&gt;
+&lt;p&gt;电位差为 $U = \varphi_1 - \varphi_2$。能量表达式简化为：&lt;/p&gt;
+&lt;p&gt;$$
+W_e = \frac{1}{2} (\varphi_1 q_1 + \varphi_2 q_2) = \frac{1}{2} \big[ \varphi_1 q + \varphi_2 (-q) \big] = \frac{1}{2} q (\varphi_1 - \varphi_2) = \frac{1}{2} q U
+$$&lt;/p&gt;
+&lt;p&gt;这就是 $\frac{1}{2} q_1 (U)&lt;em&gt;{12}$（注意 $U&lt;/em&gt;{12}=\varphi_1-\varphi_2$）&lt;/p&gt;
+&lt;p&gt;由电容定义 $C = q / U$（$q$ 是正极板电荷，$U$ 是电压），代入得：&lt;/p&gt;
+&lt;p&gt;$$
+W_e = \frac{1}{2} q U = \frac{1}{2} C U^2 = \frac{q^2}{2C}
+$$&lt;/p&gt;
+&lt;p&gt;从 $W_e = \frac{q^2}{2C}$ 解出 $C$：&lt;/p&gt;
+&lt;p&gt;$$
+C = \frac{q^2}{2W_e} \quad \text{或等价地} \quad C = \frac{2W_e}{q^2}
+$$&lt;/p&gt;
+&lt;p&gt;注意这里 $q$ 是其中一个导体上的电荷绝对值&lt;/p&gt;
+&lt;h4 id=&#34;例题&#34;&gt;例题
+&lt;/h4&gt;&lt;p&gt;题干:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个半径为 $a$ 的球体，&lt;strong&gt;体电荷密度&lt;/strong&gt; $\rho$ 均匀分布（总电荷 $Q = \frac{4}{3}\pi a^3 \rho$）。&lt;/li&gt;
+&lt;li&gt;球体位于真空中（介电常数 $\varepsilon_0$)&lt;/li&gt;
+&lt;li&gt;求整个空间的静电能 $W_e$。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;解答:&lt;/p&gt;
+&lt;p&gt;由于电荷分布球对称，电场沿径向，大小只与 $r$ 有关。作半径为 $r$ 的高斯球面。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;球内&lt;/strong&gt;（$r &amp;lt; a$）：包围的电荷 $q_{\text{in}} = \rho \cdot \frac{4}{3}\pi r^3$。
+高斯定理：$\oint \mathbf{E} \cdot d\mathbf{S} = E \cdot 4\pi r^2 = \frac{q_{\text{in}}}{\varepsilon_0} = \frac{\rho \cdot \frac{4}{3}\pi r^3}{\varepsilon_0}$
+解得 $E = \frac{\rho r}{3\varepsilon_0}$​，方向向外。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;球外&lt;/strong&gt;（$r &amp;gt; a$）：包围的电荷为总电荷 $Q = \rho \cdot \frac{4}{3}\pi a^3$。
+高斯定理：$E \cdot 4\pi r^2 = \frac{Q}{\varepsilon_0} = \frac{\rho \cdot \frac{4}{3}\pi a^3}{\varepsilon_0}$
+解得 $E = \frac{\rho a^3}{3\varepsilon_0 r^2}$。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;对于静电场，能量密度 $w_e = \frac{1}{2} \mathbf{D} \cdot \mathbf{E}$。在真空中 $\mathbf{D} = \varepsilon_0 \mathbf{E}$，所以 $w_e = \frac{1}{2} \varepsilon_0 E^2$。总能量为 $W_e = \int_{\text{all space}} w_e , dV = \frac{1}{2} \varepsilon_0 \int_0^\infty E^2 \cdot 4\pi r^2 , dr$。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;分两段积分&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;球内&lt;/strong&gt;（$0 \le r \le a$）：
+$E^2 = \left(\frac{\rho r}{3\varepsilon_0}\right)^2 = \frac{\rho^2 r^2}{9\varepsilon_0^2}$
+被积函数：$\frac{1}{2} \varepsilon_0 E^2 \cdot 4\pi r^2 = \frac{1}{2} \varepsilon_0 \cdot \frac{\rho^2 r^2}{9\varepsilon_0^2} \cdot 4\pi r^2 = \frac{2\pi \rho^2}{9\varepsilon_0} r^4$
+积分：$\int_0^a \frac{2\pi \rho^2}{9\varepsilon_0} r^4 dr = \frac{2\pi \rho^2}{9\varepsilon_0} \cdot \frac{a^5}{5} = \frac{2\pi \rho^2 a^5}{45\varepsilon_0}$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;球外&lt;/strong&gt;（$r \ge a$）：
+$E^2 = \left(\frac{\rho a^3}{3\varepsilon_0 r^2}\right)^2 = \frac{\rho^2 a^6}{9\varepsilon_0^2 r^4}$
+被积函数：$\frac{1}{2} \varepsilon_0 E^2 \cdot 4\pi r^2 = \frac{1}{2} \varepsilon_0 \cdot \frac{\rho^2 a^6}{9\varepsilon_0^2 r^4} \cdot 4\pi r^2 = \frac{2\pi \rho^2 a^6}{9\varepsilon_0 r^2}$
+积分：$\int_a^\infty \frac{2\pi \rho^2 a^6}{9\varepsilon_0 r^2} dr = \frac{2\pi \rho^2 a^6}{9\varepsilon_0} \left[ -\frac{1}{r} \right]_a^\infty = \frac{2\pi \rho^2 a^6}{9\varepsilon_0} \cdot \frac{1}{a} = \frac{2\pi \rho^2 a^5}{9\varepsilon_0}$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;相加&lt;/strong&gt;：
+$$
+W_e = \frac{2\pi \rho^2 a^5}{45\varepsilon_0} + \frac{2\pi \rho^2 a^5}{9\varepsilon_0}= \frac{2\pi \rho^2 a^5}{\varepsilon_0} \left( \frac{1}{45} + \frac{1}{9} \right) \
+= \frac{2\pi \rho^2 a^5}{\varepsilon_0} \cdot \frac{1+5}{45}
+= \frac{2\pi \rho^2 a^5}{\varepsilon_0} \cdot \frac{6}{45} = \frac{12\pi \rho^2 a^5}{45\varepsilon_0} \
+= \frac{4\pi \rho^2 a^5}{15\varepsilon_0}
+$$&lt;/p&gt;
+&lt;p&gt;方法二:&lt;/p&gt;
+&lt;p&gt;对于球对称的电荷分布（体电荷密度 $\rho$ 常数，球半径 $a$），电位 $\varphi$ 只与 $r$ 有关。在球坐标系下，泊松方程为：&lt;/p&gt;
+&lt;p&gt;$$
+\frac{1}{r^2} \frac{d}{dr} \left( r^2 \frac{d\varphi}{dr} \right) =
+\begin{cases}
+-\dfrac{\rho}{\varepsilon_0}, &amp;amp; r \le a \quad \text{(球内)} \[6pt]
+0, &amp;amp; r &amp;gt; a \quad \text{(球外)}
+\end{cases}
+$$&lt;/p&gt;
+&lt;p&gt;球外是拉普拉斯方程（$\nabla^2 \varphi = 0$​）&lt;/p&gt;
+&lt;p&gt;方程：
+$$
+\frac{1}{r^2} \frac{d}{dr} \left( r^2 \frac{d\varphi_1}{dr} \right) = -\frac{\rho}{\varepsilon_0}
+$$&lt;/p&gt;
+&lt;p&gt;两边乘以 $r^2$：
+$$
+\frac{d}{dr} \left( r^2 \frac{d\varphi_1}{dr} \right) = -\frac{\rho}{\varepsilon_0} r^2
+$$&lt;/p&gt;
+&lt;p&gt;积分一次：
+$$
+r^2 \frac{d\varphi_1}{dr} = -\frac{\rho}{\varepsilon_0} \cdot \frac{r^3}{3} + C_1
+$$
+即
+$$
+\frac{d\varphi_1}{dr} = -\frac{\rho}{3\varepsilon_0} r + \frac{C_1}{r^2}
+$$&lt;/p&gt;
+&lt;p&gt;由于球心处电场有限，$r \to 0$ 时 $\frac{d\varphi_1}{dr}$ 不能发散，所以 $C_1 = 0$。于是：
+$$
+\frac{d\varphi_1}{dr} = -\frac{\rho}{3\varepsilon_0} r
+$$&lt;/p&gt;
+&lt;p&gt;再积分一次：
+$$
+\varphi_1(r) = -\frac{\rho}{6\varepsilon_0} r^2 + C_2
+$$&lt;/p&gt;
+&lt;p&gt;球外拉普拉斯方程：
+$$
+\frac{1}{r^2} \frac{d}{dr} \left( r^2 \frac{d\varphi_2}{dr} \right) = 0
+$$
+积分一次：$r^2 \frac{d\varphi_2}{dr} = C_3$，即 $\frac{d\varphi_2}{dr} = \frac{C_3}{r^2}$。再积分：
+$$
+\varphi_2(r) = -\frac{C_3}{r} + C_4
+$$&lt;/p&gt;
+&lt;p&gt;无穷远处电位为零：$\varphi_2(\infty)=0 \Rightarrow C_4=0$。所以：
+$$
+\varphi_2(r) = \frac{A}{r}, \quad \text{其中 } A = -C_3
+$$&lt;/p&gt;
+&lt;p&gt;电位连续：
+$$
+\varphi_1(a) = \varphi_2(a) \quad \Rightarrow \quad -\frac{\rho}{6\varepsilon_0} a^2 + C_2 = \frac{A}{a}
+$$&lt;/p&gt;
+&lt;p&gt;电场连续（$E = -\frac{d\varphi}{dr}$，无面电荷时 $D$ 法向连续，这里 $\varepsilon_0$ 相同，所以 $E$ 连续）：
+$$
+\left. \frac{d\varphi_1}{dr} \right|&lt;em&gt;{r=a} = \left. \frac{d\varphi_2}{dr} \right|&lt;/em&gt;{r=a}
+$$
+左边：$-\frac{\rho}{3\varepsilon_0} a$；右边：$-\frac{A}{a^2}$。所以：
+$$
+-\frac{\rho}{3\varepsilon_0} a = -\frac{A}{a^2} \quad \Rightarrow \quad A = \frac{\rho a^3}{3\varepsilon_0}
+$$&lt;/p&gt;
+&lt;p&gt;代入电位连续方程：
+$$
+-\frac{\rho}{6\varepsilon_0} a^2 + C_2 = \frac{\rho a^3}{3\varepsilon_0} \cdot \frac{1}{a} = \frac{\rho a^2}{3\varepsilon_0}
+$$
+解得：
+$$
+C_2 = \frac{\rho a^2}{3\varepsilon_0} + \frac{\rho a^2}{6\varepsilon_0} = \frac{\rho a^2}{2\varepsilon_0}
+$$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;球内：$\varphi_1(r) = -\frac{\rho}{6\varepsilon_0} r^2 + \frac{\rho a^2}{2\varepsilon_0} = \frac{\rho}{2\varepsilon_0} \left( a^2 - \frac{r^2}{3} \right)$&lt;/li&gt;
+&lt;li&gt;球外：$\varphi_2(r) = \frac{\rho a^3}{3\varepsilon_0 r}$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;检查：当 $r=a$ 时，$\varphi_1(a)=\frac{\rho}{2\varepsilon_0}(a^2 - a^2/3)=\frac{\rho a^2}{3\varepsilon_0}$，$\varphi_2(a)=\frac{\rho a^3}{3\varepsilon_0 a}=\frac{\rho a^2}{3\varepsilon_0}$，一致。&lt;/p&gt;
+&lt;p&gt;注意：电荷只分布在球内（$r \le a$），所以积分区域只是球体内部。$\rho$ 是常数，$\varphi$ 用球内表达式 $\varphi_1(r)$。&lt;/p&gt;
+&lt;p&gt;$$
+W_e = \frac{1}{2} \int_0^a \rho \cdot \varphi_1(r) \cdot 4\pi r^2 , dr
+$$&lt;/p&gt;
+&lt;p&gt;代入 $\varphi_1(r) = \frac{\rho}{2\varepsilon_0} \left( a^2 - \frac{r^2}{3} \right)$：&lt;/p&gt;
+&lt;p&gt;$$
+W_e = \frac{1}{2} \rho \cdot \frac{\rho}{2\varepsilon_0} \int_0^a \left( a^2 - \frac{r^2}{3} \right) 4\pi r^2 , dr = \frac{\rho^2}{4\varepsilon_0} \cdot 4\pi \int_0^a \left( a^2 r^2 - \frac{r^4}{3} \right) dr
+$$&lt;/p&gt;
+&lt;p&gt;$$
+= \frac{\pi \rho^2}{\varepsilon_0} \left[ a^2 \cdot \frac{a^3}{3} - \frac{1}{3} \cdot \frac{a^5}{5} \right] = \frac{\pi \rho^2}{\varepsilon_0} \left( \frac{a^5}{3} - \frac{a^5}{15} \right) = \frac{\pi \rho^2}{\varepsilon_0} \cdot \frac{5a^5 - a^5}{15} = \frac{\pi \rho^2}{\varepsilon_0} \cdot \frac{4a^5}{15} = \frac{4\pi \rho^2 a^5}{15\varepsilon_0}
+$$&lt;/p&gt;
+&lt;p&gt;与 Solution 1 结果完全相同。&lt;/p&gt;
+&lt;h3 id=&#34;自能self-energy和互能mutual-energy&#34;&gt;&lt;strong&gt;自能（Self-energy）&lt;strong&gt;和&lt;/strong&gt;互能（Mutual-energy）&lt;/strong&gt;
+&lt;/h3&gt;&lt;h4 id=&#34;定义-1&#34;&gt;定义
+&lt;/h4&gt;&lt;p&gt;对于一个多导体系统，总静电能 $W_e = \frac{1}{2} \sum_{k} \varphi_k q_k$。但这个总能量可以分解为两部分：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;自能&lt;/strong&gt;：每个带电体&lt;strong&gt;自己&lt;/strong&gt;的电荷之间相互作用的能量。可以理解为：如果把某个带电体上的所有电荷从无穷远（或分散状态）聚集到它上面所需要做的功。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;互能&lt;/strong&gt;：不同的带电体&lt;strong&gt;之间&lt;/strong&gt;相互作用的能量。可以理解为：把一个带电体从无穷远移到另一个带电体产生的电场中，外力克服电场力所做的功。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;假设有两个带电体（导体），编号 1 和 2。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当&lt;strong&gt;只有&lt;/strong&gt;导体 1 存在时，它的电位为 $\varphi_1$（由它自己的电荷产生），电荷为 $q_1$。&lt;/li&gt;
+&lt;li&gt;当&lt;strong&gt;只有&lt;/strong&gt;导体 2 存在时，它的电位为 $\varphi_2$，电荷为 $q_2$。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;现在把两者都放在空间中，它们会互相影响。最终，导体 1 的电位不再是 $\varphi_1$，而是 $\varphi_1 + \Delta \varphi_{12}$，其中 $\Delta \varphi_{12}$ 是导体 2 的电荷在导体 1 处产生的额外电位。类似地，导体 2 的电位为 $\varphi_2 + \Delta \varphi_{21}$​。&lt;/p&gt;
+&lt;h4 id=&#34;总能量&#34;&gt;总能量
+&lt;/h4&gt;&lt;p&gt;总静电能：&lt;/p&gt;
+&lt;p&gt;$$
+W_e = \frac{1}{2} \left[ q_1 (\varphi_1 + \Delta \varphi_{12}) + q_2 (\varphi_2 + \Delta \varphi_{21}) \right]
+$$&lt;/p&gt;
+&lt;p&gt;展开括号：&lt;/p&gt;
+&lt;p&gt;$$
+W_e = \frac{1}{2} (q_1 \varphi_1 + q_2 \varphi_2) ;+; \frac{1}{2} (q_1 \Delta \varphi_{12} + q_2 \Delta \varphi_{21})
+$$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;第一项&lt;/strong&gt; $\frac{1}{2}(q_1\varphi_1 + q_2\varphi_2)$：这就是&lt;strong&gt;自能&lt;/strong&gt;。它只依赖于每个导体自己的电荷和它单独存在时的电位（即自身电荷产生的电位）。注意：这里的 $\varphi_1$ 是&lt;strong&gt;只有导体1时的电位&lt;/strong&gt;，不是最终电位。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;第二项&lt;/strong&gt; $\frac{1}{2}(q_1 \Delta \varphi_{12} + q_2 \Delta \varphi_{21})$​：这就是&lt;strong&gt;互能&lt;/strong&gt;。它依赖于一个导体的电荷与另一个导体的电荷在该处产生的额外电位&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;意义&#34;&gt;意义
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;在计算系统总能量时，直接使用 $\frac{1}{2}\sum \varphi_k q_k$ 就可以了，不需要分解。&lt;/li&gt;
+&lt;li&gt;但在研究&lt;strong&gt;相互作用力&lt;/strong&gt;、&lt;strong&gt;电容系数&lt;/strong&gt;的物理意义，或者考虑&lt;strong&gt;多体系统的能量变化&lt;/strong&gt;时，分解为自能和互能有助于理解能量的来源和分配&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;虚位移法-virtual-displacement-method&#34;&gt;虚位移法 Virtual Displacement Method
+&lt;/h3&gt;&lt;h4 id=&#34;静电力&#34;&gt;静电力
+&lt;/h4&gt;&lt;p&gt;由电场强度的定义，一个点电荷 $q$ 在电场 $\mathbf{E}$ 中受到的静电力为：&lt;/p&gt;
+&lt;p&gt;$$
+\mathbf{f} = q \mathbf{E}
+$$&lt;/p&gt;
+&lt;p&gt;对于连续分布的电荷，电荷元 $dq$ 受到的力为：&lt;/p&gt;
+&lt;p&gt;$$
+d\mathbf{f} = \mathbf{E} , dq
+$$&lt;/p&gt;
+&lt;p&gt;这是最基本的库仑力公式，也是计算静电力的出发点。但在实际工程中，直接对电荷分布积分往往很复杂（尤其是导体表面电荷分布未知），因此需要更巧妙的方法——&lt;strong&gt;虚位移法&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;虚位移法virtual-displacement-method&#34;&gt;虚位移法（Virtual Displacement Method）
+&lt;/h4&gt;&lt;p&gt;虚位移法基于&lt;strong&gt;虚功原理&lt;/strong&gt;：当系统在静电力作用下发生一个&lt;strong&gt;虚拟的、无限小的位移&lt;/strong&gt;时，电场能量的变化等于外力所做的功（或反过来，静电力做的功等于能量减少）。通过分析能量随广义坐标的变化，可以求出广义力。&lt;/p&gt;
+&lt;h5 id=&#34;广义坐标generalized-coordinates&#34;&gt;广义坐标（Generalized Coordinates）
+&lt;/h5&gt;&lt;p&gt;广义坐标是描述系统位形的独立参数，例如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;距离（如两导体板的间距）&lt;/li&gt;
+&lt;li&gt;面积（如电容器的极板面积）&lt;/li&gt;
+&lt;li&gt;体积（如介质的体积）&lt;/li&gt;
+&lt;li&gt;角度（如旋转电机的转角）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;广义力generalized-forces&#34;&gt;广义力（Generalized Forces)
+&lt;/h5&gt;&lt;p&gt;广义力是试图改变相应广义坐标的力。它定义为：&lt;strong&gt;广义力 × 广义位移 = 功&lt;/strong&gt;。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;广义坐标&lt;/th&gt;
+&lt;th&gt;距离&lt;/th&gt;
+&lt;th&gt;面积&lt;/th&gt;
+&lt;th&gt;体积&lt;/th&gt;
+&lt;th&gt;角度&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;广义力&lt;/td&gt;
+&lt;td&gt;机械力 (N)&lt;/td&gt;
+&lt;td&gt;表面张力 (N/m)&lt;/td&gt;
+&lt;td&gt;压强 (N/m²)&lt;/td&gt;
+&lt;td&gt;力矩 (N·m)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;当广义坐标是&lt;strong&gt;距离&lt;/strong&gt;（如极板间距 $x$）时，广义力就是通常的&lt;strong&gt;机械力&lt;/strong&gt; $F$，满足 $\delta W = F \cdot \delta x$。&lt;/li&gt;
+&lt;li&gt;当广义坐标是&lt;strong&gt;面积&lt;/strong&gt; $S$ 时，广义力是&lt;strong&gt;表面张力&lt;/strong&gt; $\gamma$，满足 $\delta W = \gamma \cdot \delta S$。&lt;/li&gt;
+&lt;li&gt;当广义坐标是&lt;strong&gt;体积&lt;/strong&gt; $V$ 时，广义力是&lt;strong&gt;压强&lt;/strong&gt; $p$，满足 $\delta W = p \cdot \delta V$。&lt;/li&gt;
+&lt;li&gt;当广义坐标是&lt;strong&gt;角度&lt;/strong&gt; $\theta$ 时，广义力是&lt;strong&gt;力矩&lt;/strong&gt; $T$，满足 $\delta W = T \cdot \delta \theta$​。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;能量守恒关系&#34;&gt;能量守恒关系
+&lt;/h4&gt;&lt;p&gt;虚功原理的核心是能量守恒：&lt;strong&gt;外界对系统做的总功&lt;/strong&gt; = &lt;strong&gt;系统静电能增量&lt;/strong&gt; + &lt;strong&gt;机械力对外做的功&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;设：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$dW$：外界（例如电源）对系统做的总功。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$dW_e$：系统静电能（电场能）的增量。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$f dg$：机械力 $f$（广义力）在虚位移 $dg$ 上做的功。注意：如果力是系统对外界做功，通常表达式为 $f , dg$（系统输出机械能），因此能量守恒写为：
+$$
+dW = dW_e + f , dg
+$$
+或等价地，外界提供的能量一部分变成静电能，一部分变成机械功。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;虚位移法基本公式&#34;&gt;虚位移法基本公式
+&lt;/h4&gt;&lt;p&gt;对于导体系统，静电能量 $W_e$ 是广义坐标 $g$（如极板间距）的函数。有两种常见情况：&lt;/p&gt;
+&lt;h5 id=&#34;1-电荷保持不变孤立系统q--textconst&#34;&gt;(1) 电荷保持不变（孤立系统，$q = \text{const}$）
+&lt;/h5&gt;&lt;p&gt;此时静电力为：
+$$
+F = -\left. \frac{\partial W_e}{\partial g} \right|_{q=\text{const}}
+$$
+负号表示力指向能量减少的方向。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;推导:&lt;/p&gt;
+&lt;p&gt;系统与外界无电源连接，故$dW = 0$,代入能量守恒方程:
+$$
+0 = dW_e + f,dg \quad\Rightarrow\quad f,dg = -dW_e.
+$$
+在q固定的情况下，$W_e$只是$g$的函数，因此:
+$$
+f = -\left.\frac{\partial W_e}{\partial g}\right|_{q=\text{const}}.
+$$
+负号表示静电力指向使静电能减小的方向（如极板间的吸引力使间距减小，静电能降低）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;2-电位保持不变接恒压源varphi--textconst&#34;&gt;(2) 电位保持不变（接恒压源，$\varphi = \text{const}$）
+&lt;/h5&gt;&lt;p&gt;此时电源会做功，系统能量与电源做功之和为 $W_e&amp;rsquo; = \frac{1}{2} \sum \varphi q$，但力仍可表示为：
+$$
+F = +\left. \frac{\partial W_e}{\partial g} \right|_{\varphi=\text{const}}
+$$
+（推导时需要包括电源的贡献，最终结果与电荷恒定时的力相同，但表达式形式不同。）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;推导:&lt;/p&gt;
+&lt;p&gt;系统通过导线与恒定电压$\varphi$的电源相连。当电荷变化 $dq$ 时，电源做功为
+$$
+dW = \varphi,dq
+$$
+静电能为:
+$$
+W_e = \frac{1}{2}\varphi q
+$$
+微分为:
+$$
+dW_e = \frac{1}{2}\varphi,dq + \frac{1}{2}q,d\varphi
+$$
+电势恒定，$d\varphi = 0$，也就是:
+$$
+dW_e = \frac{1}{2}\varphi,dq
+$$
+代入能量守恒方程:
+$$
+\varphi,dq = \frac{1}{2}\varphi,dq + f,dg \quad\Rightarrow\quad f,dg = \frac{1}{2}\varphi,dq
+$$&lt;/p&gt;
+&lt;p&gt;$$
+dW_e = \left.\frac{\partial W_e}{\partial g}\right|_{\varphi} dg = \frac{1}{2}\varphi,\frac{dq}{dg},dg
+$$&lt;/p&gt;
+&lt;p&gt;最后得:
+$$
+f = \frac{1}{2}\varphi,\frac{dq}{dg} = \left.\frac{\partial W_e}{\partial g}\right|_{\varphi=\text{const}}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;例题-1&#34;&gt;例题:
+&lt;/h5&gt;&lt;img src=&#34;13.png&#34;&gt;
+&lt;img src=&#34;14.png&#34;&gt;
+&lt;p&gt;球形电容器公式见前文&lt;/p&gt;
+&lt;h3 id=&#34;法拉第电场观点&#34;&gt;法拉第电场观点
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;法拉第提出的电场力观点&lt;/strong&gt;，后来发展为&lt;strong&gt;麦克斯韦应力张量&lt;/strong&gt;的基础。简单来说：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;法拉第认为电场线（电力线）具有&lt;strong&gt;纵向张力&lt;/strong&gt;和&lt;strong&gt;横向侧压力&lt;/strong&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;沿电场线方向，单位面积上的&lt;strong&gt;张力&lt;/strong&gt;等于垂直电场线方向的&lt;strong&gt;侧压力&lt;/strong&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;它们的数值均为：
+$$
+f = \frac{1}{2} \mathbf{D} \cdot \mathbf{E}
+$$
+在线性各向同性介质中，$\mathbf{D} = \varepsilon \mathbf{E}$，所以 $f = \frac{1}{2} \varepsilon E^2$，恰好等于电场能量密度 $w_e$。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;计算某个带电体所受的电场力&#34;&gt;计算某个带电体所受的电场力
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;画出电场线分布。&lt;/li&gt;
+&lt;li&gt;在带电体表面取一个微元，该微元处的电场线方向已知。&lt;/li&gt;
+&lt;li&gt;该微元受到的电应力为：法向力（由侧压力贡献）和切向力（由张力贡献），但最终等效为&lt;strong&gt;单位面积上的力 $f = \frac{1}{2} D \cdot E$ 沿电场线方向拉，垂直于电场线方向推&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;对整个表面积分，得到总力&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;电场能量密度 $w_e = \frac{1}{2} \mathbf{D} \cdot \mathbf{E}$，所以 $f = w_e$。这意味着：&lt;strong&gt;单位面积上的电应力大小等于该处的电场能量密度&lt;/strong&gt;。这个结论对于许多简单情况（如平行板电容器极板间的吸引力）可以直接推出正确结果&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;两种情况&#34;&gt;两种情况
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;电场垂直于界面&lt;/li&gt;
+&lt;/ol&gt;
+&lt;img src=&#34;15.png&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;设两种介质的介电常数分别为 $\varepsilon_1$ 和 $\varepsilon_2$，电场方向与分界面垂直。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在界面上，电位移 $\mathbf{D}$ 的法向分量连续：$D_1 = D_2 = D$。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;根据虚功原理（或麦克斯韦应力张量），单位面积上的力为：
+$$
+f_a = f_1 - f_2 = \frac{D^2}{2} \left( \frac{1}{\varepsilon_1} - \frac{1}{\varepsilon_2} \right)
+$$
+其中 $f_1 = \frac{D^2}{2\varepsilon_1}$ 和 $f_2 = \frac{D^2}{2\varepsilon_2}$ 分别是两种介质中垂直于界面的应力（等于电场能量密度 $w_e = \frac{1}{2} D E = \frac{D^2}{2\varepsilon}$）。界面受力等于两侧应力之差。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;若 $\varepsilon_2 &amp;gt; \varepsilon_1$，则 $1/\varepsilon_1 &amp;gt; 1/\varepsilon_2$，$f_a &amp;gt; 0$，力指向 $\varepsilon_2$ 一侧，即介质被拉向介电常数大的方向。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;电场平行于界面&lt;/li&gt;
+&lt;/ol&gt;
+&lt;img src=&#34;16.png&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;电场方向与分界面平行，此时电场强度 $\mathbf{E}$ 的切向分量连续：$E_1 = E_2 = E$。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;单位面积上的力为：
+$$
+f_b = f_4 - f_3 = \frac{E^2}{2} (\varepsilon_2 - \varepsilon_1)
+$$
+这里 $f_3 = \frac{1}{2} \varepsilon_1 E^2$，$f_4 = \frac{1}{2} \varepsilon_2 E^2$ 是两种介质中的能量密度。力等于能量密度之差。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;若 $\varepsilon_2 &amp;gt; \varepsilon_1$，$f_b &amp;gt; 0$，力同样指向介电常数大的介质。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ps:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;图 (b) 电场平行于分界面&lt;/strong&gt;：根据静电场的边界条件，电场强度的切向分量在界面上连续，即 $E_{1t} = E_{2t}$。如果电场方向完全平行于界面，那么两种介质中的电场强度大小相等：$E_1 = E_2 = E$。所以公式 $f_b = \frac{E^2}{2}(\varepsilon_2 - \varepsilon_1)$ 正是基于这个条件。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;图 (a) 电场垂直于分界面&lt;/strong&gt;：此时连续的是电位移的法向分量 $D_1 = D_2 = D$，而电场强度不相等：$E_1 = D/\varepsilon_1$，$E_2 = D/\varepsilon_2$，所以 $E_1 \neq E_2$。对应的力公式为 $f_a = \frac{D^2}{2}(1/\varepsilon_1 - 1/\varepsilon_2)$。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;重要公式总结&#34;&gt;重要公式总结
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;静电场梯度
+$$
+\nabla \cdot \mathbf{E}(\mathbf{r}) = \frac{\rho(\mathbf{r})}{\varepsilon_0}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;静电场的旋度
+$$
+\nabla \times \mathbf{E} = 0 \quad \text{(无旋性)}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;环路定理
+$$
+\oint_l \mathbf{E} \cdot d\mathbf{l} = 0
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;电势
+$$
+\varphi(\mathbf{r}) = \frac{1}{4\pi\varepsilon_0} \int_V \frac{\rho(\mathbf{r}&amp;rsquo;)}{|\mathbf{r} - \mathbf{r}&amp;rsquo;|} , dV&#39;
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;泊松方程
+$$
+\mathbf{E} = -\nabla \varphi
+$$&lt;/p&gt;
+&lt;p&gt;$$
+\nabla ^2\phi=-\frac{\rho}{\varepsilon_0}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$$
+\nabla \varphi \cdot d\mathbf{r} = d\varphi
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;电势差:
+$$
+\int_P^M \mathbf{E} \cdot d\mathbf{r} = -\int_P^M \nabla \varphi \cdot d\mathbf{r} = -\int_P^M d\varphi = \varphi(P) - \varphi(M)
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;无限长导线、无限大平面电场强度&amp;amp;电势&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;模型&lt;/th&gt;
+&lt;th&gt;电场强度 $E$&lt;/th&gt;
+&lt;th&gt;电势 $\varphi$（常见参考点）&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;无限长均匀带电导线（线电荷密度 $\lambda$）&lt;/td&gt;
+&lt;td&gt;$\dfrac{\lambda}{2\pi\varepsilon_0 d}$&lt;/td&gt;
+&lt;td&gt;$\dfrac{\lambda}{2\pi\varepsilon_0} \ln\dfrac{r_0}{d}$（取距导线 $r_0$ 处为零电势）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;无限大均匀带电平面（面电荷密度 $\sigma$）&lt;/td&gt;
+&lt;td&gt;$\dfrac{\sigma}{2\varepsilon_0}$（常数）&lt;/td&gt;
+&lt;td&gt;$-\dfrac{\sigma}{2\varepsilon_0}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;电偶极子&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;物理量&lt;/th&gt;
+&lt;th&gt;表达式（远场近似）&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;电势 $\varphi$&lt;/td&gt;
+&lt;td&gt;$\dfrac{\mathbf{p}\cdot\mathbf{e}_r}{4\pi\varepsilon_0 r^2}$&lt;/td&gt;
+&lt;td&gt;球坐标系下 $\varphi = \dfrac{p\cos\theta}{4\pi\varepsilon_0 r^2}$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;电场 $\mathbf{E}$&lt;/td&gt;
+&lt;td&gt;$\dfrac{1}{4\pi\varepsilon_0 r^3} \left[ \dfrac{3(\mathbf{p}\cdot\mathbf{r})}{r^2} \mathbf{r} - \mathbf{p} \right]$&lt;/td&gt;
+&lt;td&gt;矢量形式&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;球坐标分量&lt;/td&gt;
+&lt;td&gt;$E_r = \dfrac{2p\cos\theta}{4\pi\varepsilon_0 r^3},\quad E_\theta = \dfrac{p\sin\theta}{4\pi\varepsilon_0 r^3}$&lt;/td&gt;
+&lt;td&gt;$E_\varphi = 0$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;边界条件:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;物理量&lt;/th&gt;
+&lt;th&gt;分量&lt;/th&gt;
+&lt;th&gt;边界条件（关系式）&lt;/th&gt;
+&lt;th&gt;连续与否&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;电势 $\varphi$&lt;/td&gt;
+&lt;td&gt;标量&lt;/td&gt;
+&lt;td&gt;$\varphi_1 = \varphi_2$&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;连续&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;电势的法向导数 $\frac{\partial \varphi}{\partial n}$&lt;/td&gt;
+&lt;td&gt;法向&lt;/td&gt;
+&lt;td&gt;$\varepsilon_1 \frac{\partial \varphi_1}{\partial n} - \varepsilon_2 \frac{\partial \varphi_2}{\partial n} = \sigma$&lt;br&gt;（注意 $\frac{\partial \varphi}{\partial n} = -E_n$）&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;一般不连续&lt;/strong&gt;&lt;br&gt;仅当 $\sigma=0$ 且 $\varepsilon_1=\varepsilon_2$ 时连续&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;电场强度 $\mathbf{E}$&lt;/td&gt;
+&lt;td&gt;切向 $E_t$&lt;/td&gt;
+&lt;td&gt;$E_{1t} = E_{2t}$&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;连续&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;法向 $E_n$&lt;/td&gt;
+&lt;td&gt;$\varepsilon_2 E_{2n} - \varepsilon_1 E_{1n} = \sigma$&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;一般不连续&lt;/strong&gt;&lt;br&gt;仅当 $\sigma=0$ 且 $\varepsilon_1=\varepsilon_2$ 时连续&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;电位移 $\mathbf{D}$&lt;/td&gt;
+&lt;td&gt;切向 $D_t$&lt;/td&gt;
+&lt;td&gt;$\frac{D_{1t}}{\varepsilon_1} = \frac{D_{2t}}{\varepsilon_2}$（由 $E_t$ 连续导出）&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;一般不连续&lt;/strong&gt;&lt;br&gt;仅当 $\varepsilon_1=\varepsilon_2$ 时连续&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;法向 $D_n$&lt;/td&gt;
+&lt;td&gt;$D_{2n} - D_{1n} = \sigma$&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;当 $\sigma=0$ 时连续&lt;/strong&gt;，否则不连续&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ol start=&#34;11&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;孤立球电容:
+$$
+C =\frac{4\pi\varepsilon_0 ab}{b-a}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;无限长导线&lt;/p&gt;
+&lt;p&gt;对于一根无限长直导线，单位长度电荷为 $\tau$，在距离导线 $r$ 处产生的电位（取大地为参考，即 $y=0$ 处电位为 $0$）为：
+$$
+\varphi(r) = \frac{\tau}{2\pi\varepsilon_0} \ln\frac{r_0}{r}
+$$
+其中 $r_0$ 是某个参考距离。通常我们取 $r_0$ 使得当 $r=0$ 时电位无限大，但实际中导线表面电位需要用到导线半径。更常用的形式是：&lt;strong&gt;对于一根带电线，其自身表面的电位&lt;/strong&gt;（用镜像法计算时）为：
+$$
+\varphi = \frac{\tau}{2\pi\varepsilon_0} \ln\frac{\text{到镜像的距离}}{\text{导线半径}}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;部分电容&lt;/p&gt;
+&lt;h1 id=&#34;heading&#34;&gt;
+&lt;/h1&gt;&lt;p&gt;$$
+\varphi_N = \alpha_{N1} q_1 + \alpha_{N2} q_2 + \cdots + \alpha_{NN} q_N
+$$&lt;/p&gt;
+&lt;p&gt;自电位系数$\alpha_{ii}$
+$$
+\alpha_{ii} = \left. \frac{\varphi_i}{q_i} \right|&lt;em&gt;{\substack{q_1 = q_2 = \cdots = q&lt;/em&gt;{i-1}=q_{i+1}=\cdots = q_N = 0 \ q_i = -q_0}}
+$$&lt;/p&gt;
+&lt;p&gt;互电位系数$\alpha_{ij}(i \neq j)$
+$$
+\alpha_{ij} = \left. \frac{\varphi_i}{q_j} \right|&lt;em&gt;{\substack{q_1 = q_2 = \cdots = q&lt;/em&gt;{j-1}=q_{j+1}=\cdots = q_N = 0 \ q_j = -q_0}}
+$$&lt;/p&gt;
+&lt;p&gt;$$
+q_N = \beta_{N1}\varphi_1 + \beta_{N2}\varphi_2 + \cdots + \beta_{NN}\varphi_N
+$$&lt;/p&gt;
+&lt;p&gt;注意!：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;$\alpha_{ii} &amp;gt; 0$&lt;/p&gt;
+&lt;p&gt;$\alpha_{ij} &amp;gt; 0$&lt;/p&gt;
+&lt;p&gt;$\beta_{ii} \le 0$&lt;/p&gt;
+&lt;p&gt;$\beta_{ij} \le 0$&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;对于任意导体 $i$，同理有：&lt;/p&gt;
+&lt;p&gt;$$
+q_i = C_{i0}U_{i0} + \sum_{\substack{j=1 \ j\neq i}}^{N} C_{ij}U_{ij}
+$$&lt;/p&gt;
+&lt;p&gt;其中：
+$$
+C_{i0} =\sum_{j=1}^N\beta_{ij}, \qquad C_{ij} = -\beta_{ij}\ (i\neq j)
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;静电场能量&lt;/p&gt;
+&lt;p&gt;如果电荷分布在导体表面（面密度 $\sigma$）或细线上（线密度 $\tau$），只需将体积分换成面积分或线积分：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;面分布：$\displaystyle W_e = \frac{1}{2} \int_S \sigma \varphi , dS$&lt;/li&gt;
+&lt;li&gt;线分布：$\displaystyle W_e = \frac{1}{2} \int_L \tau \varphi , dl$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$$
+W = \frac12 \int \rho \varphi , dV \quad \text{或} \quad W = \frac12 \int \mathbf{D} \cdot \mathbf{E} , dV
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;导体系统静电能&lt;/p&gt;
+&lt;p&gt;对于 $n$ 个导体，每个导体的电位为 $\varphi_K$，总电荷为 $q_K$，静电能量为：&lt;/p&gt;
+&lt;p&gt;$$
+W_e = \frac{1}{2} \sum_{K=1}^{n} \varphi_K q_K
+$$&lt;/p&gt;
+&lt;p&gt;这是因为导体是等势体，$\int_S \sigma \varphi dS = \varphi \int_S \sigma dS = \varphi q$​。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;能量密度&lt;/p&gt;
+&lt;p&gt;$$
+w_e = \frac{1}{2} \mathbf{D} \cdot \mathbf{E}
+$$&lt;/p&gt;
+&lt;p&gt;对于线性各向同性介质，$\mathbf{D} = \varepsilon \mathbf{E}$，因此：&lt;/p&gt;
+&lt;p&gt;$$
+w_e = \frac{1}{2} \varepsilon E^2
+$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;物理意义&lt;/strong&gt;：单位体积内储存的静电能量。整个电场的总能量为 $W_e = \int_V w_e , dV$。这是电磁场理论中最基本的能量表达式，也是你图片中最后一行明确写出的结果。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 </description>
